@@ -1,0 +1,26 @@
+options:
+
+rules:
+  extends-before-mixins: 2
+  extends-before-declarations: 2
+  no-ids: 2
+  hex-notation:
+    - 2
+    - style: uppercase
+  indentation:
+    - 2
+    - size: 2
+
+  trailing-semicolon: 2 # default
+  zero-unit: 2
+  space-before-colon: 2
+  space-before-brace: 2
+  space-before-bang: 2
+  space-after-colon: 2
+  quotes:
+    - 2
+    - single
+  one-declaration-per-line: 2
+  no-trailing-zero: 0
+  no-trailing-whitespace: 2
+  empty-line-between-blocks: 2
