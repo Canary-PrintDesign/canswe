@@ -1,35 +1,39 @@
+/* global $ window */
 // Select all links with hashes
 $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
-  .click(function(event) {
+  .click(function clickHandler(event) {
     // On-page links
-    var isOnPage = location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '');
-    var isSameHost = location.hostname == this.hostname;
+    const isOnPage = window.location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '');
+    const isSameHost = window.location.hostname === this.hostname;
+
+    function callback(target) {
+      // Callback after animation
+      // Must change focus!
+      const $target = $(target);
+      $target.focus();
+      if ($target.is(':focus')) { // Checking if the target was focused
+        return false;
+      }
+
+      $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+      $target.focus(); // Set focus again
+      return true;
+    }
 
     if (isOnPage && isSameHost) {
       // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      let target = $(this.hash);
+      target = target.length ? target : $(`[name=${this.hash.slice(1)}]`);
       // Does a scroll target exist?
       if (target.length) {
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
         $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 500, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
+          scrollTop: target.offset().top,
+        }, 500, callback(target));
       }
     }
   });
