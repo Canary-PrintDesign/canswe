@@ -1,0 +1,67 @@
+/*
+
+  Margin
+  ---
+
+*/
+
+@mixin margin-left($size) {
+  margin-left: -size($size);
+}
+
+@mixin margin-right($size) {
+  margin-right: -size($size);
+}
+
+@mixin margin-top($size) {
+  margin-top: -size($size);
+}
+
+@mixin margin-bottom($size) {
+  margin-bottom: -size($size);
+}
+
+@mixin margin-vertical($top, $bottom: null) {
+  @if ($bottom == null) {
+    $bottom: $top;
+  }
+
+  @include margin-top($top);
+  @include margin-bottom($bottom);
+}
+
+@mixin margin-vertical-even($size) {
+  @include margin-vertical($size, $size);
+}
+
+@mixin margin-horizontal($left, $right: null) {
+  @if ($right == null) {
+    $right: $left;
+  }
+
+  @include margin-left($left);
+  @include margin-right($right);
+}
+
+@mixin margin-horizontal-even($size) {
+  @include margin-horizontal($size, $size);
+}
+
+@mixin margin($top, $right: null, $bottom: null, $left: null) {
+  @if ($right == null) {
+    $right: $top;
+  }
+
+  @if ($left == null) {
+    $left: $right;
+  }
+
+  @if ($bottom == null) {
+    $bottom: $top;
+  }
+
+  @include margin-top($top);
+  @include margin-right($right);
+  @include margin-bottom($bottom);
+  @include margin-left($left);
+}

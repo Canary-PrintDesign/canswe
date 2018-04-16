@@ -1,0 +1,24 @@
+/*
+
+  Sizing
+  ---
+  Useable spacing for elements
+
+*/
+
+// Spacing values - created from the baseline
+$global-spacing-unit-tiny:  -size(4px);
+$global-spacing-unit-small: -size(8px);
+$global-spacing-unit:       -size(16px);
+$global-spacing-unit-large: -size(32px);
+$global-spacing-unit-xl:    -size(64px);
+$global-spacing-unit-huge:  -size(128px);
+
+// Gutters based on grid above
+$gutter--tiny:  $global-spacing-unit-tiny;
+$gutter--small: $global-spacing-unit-small;
+$gutter:        $global-spacing-unit;
+$gutter--large: $global-spacing-unit-large;
+$gutter--xl:    $global-spacing-unit-xl;
+$gutter--huge:  $global-spacing-unit-huge;
+

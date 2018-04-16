@@ -1,0 +1,47 @@
+/*
+
+  Colors
+  ---
+
+*/
+
+// Fun colors names
+$fruit-salad: #60A24F;
+$gun-powder: #414456;
+$glacier: #6EACC2;
+$jumbo: #83848C;
+$surf-crest: #cce2c7;
+$french-grey: #c1c3c9;
+$botticelli: #d1e5ec;
+$martinique: #32364C;
+
+// Greys
+$color-grey--darkest: #000;
+$color-grey--dark: $martinique;
+$color-grey: $jumbo;
+$color-grey--light: #F1F1F1;
+$color-grey--lightest: #fff;
+
+// Prime Colors
+$color-green: $fruit-salad;
+$color-green--lighter: $surf-crest;
+$color-blue: $gun-powder;
+$color-blue--lighter: $french-grey;
+$color-light-blue: $glacier;
+$color-light-blue--lighter: $botticelli;
+
+$color-brand-one: $fruit-salad;
+$color-brand-one--light: $surf-crest;
+$color-brand-two: $gun-powder;
+$color-brand-two--light: $french-grey;
+$color-brand-three: $glacier;
+$color-brand-three--light: $botticelli;
+
+$color-text: $color-grey--dark;
+$color-text--light: $color-grey--lightest;
+$color-text--dark: $color-grey--dark;
+
+$color-background--dark: $color-grey--dark;
+$color-background--light: $color-grey--lightest;
+
+$color-box-shadow: rgba(0, 0, 0, 0.5);

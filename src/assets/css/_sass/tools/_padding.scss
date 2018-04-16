@@ -1,0 +1,67 @@
+/*
+
+  Padding
+  ---
+
+*/
+
+@mixin padding-left($size) {
+  padding-left: -size($size);
+}
+
+@mixin padding-right($size) {
+  padding-right: -size($size);
+}
+
+@mixin padding-top($size) {
+  padding-top: -size($size);
+}
+
+@mixin padding-bottom($size) {
+  padding-bottom: -size($size);
+}
+
+@mixin padding-vertical($top, $bottom: null) {
+  @if ($bottom == null) {
+    $bottom: $top;
+  }
+
+  @include padding-top($top);
+  @include padding-bottom($bottom);
+}
+
+@mixin padding-vertical-even($size) {
+  @include padding-vertical($size, $size);
+}
+
+@mixin padding-horizontal($left, $right: null) {
+  @if ($right == null) {
+    $right: $left;
+  }
+
+  @include padding-left($left);
+  @include padding-right($right);
+}
+
+@mixin padding-horizontal-even($size) {
+  @include padding-horizontal($size, $size);
+}
+
+@mixin padding($top, $right: null, $bottom: null, $left: null) {
+  @if ($right == null) {
+    $right: $top;
+  }
+
+  @if ($left == null) {
+    $left: $right;
+  }
+
+  @if ($bottom == null) {
+    $bottom: $top;
+  }
+
+  @include padding-top($top);
+  @include padding-right($right);
+  @include padding-bottom($bottom);
+  @include padding-left($left);
+}

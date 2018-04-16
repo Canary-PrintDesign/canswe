@@ -1,0 +1,15 @@
+#
+# - url: /
+#   text: Home
+#
+# - url: /blog
+#   text: Blog
+#   - subitems:
+#       - url: /blog/random
+#         text: Random Post
+#       - list:
+#           - url: /blog/cats
+#             text: Cats
+#
+- url: /
+  text: Home

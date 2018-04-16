@@ -1,0 +1,27 @@
+/*
+
+  Fonts
+  ---
+  Finds and inserts the font family based on the type sent. Basic usage is simply:
+
+    @include font(body);
+
+*/
+
+@mixin font-display {
+  @include font(display);
+}
+
+@mixin font-body {
+  @include font(body);
+}
+
+@mixin font-mono {
+  @include font(mono);
+}
+
+@mixin font($type) {
+  @if map-has-key($fonts, $type) {
+    font-family: #{map-get($fonts, $type)};
+  }
+}

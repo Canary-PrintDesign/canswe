@@ -1,0 +1,39 @@
+/*
+
+  Functions
+  ---
+  Useful functions for generating values
+
+*/
+
+// Remove unit suffix from a value
+@function -strip-units($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// Return value nearest multiple of baseline
+@function -size($desired-value) {
+  $baseline: $global-baseline;
+  @if ($desired-value <= ($baseline + ($baseline / 2))) {
+    //@warn "#{$desired-value} is smaller than #{$baseline + ($baseline / 2)}, did you mean it?";
+    $baseline: $global-baseline / 4;
+  }
+
+  $value: round($desired-value / $baseline);
+
+  $return-value: $value * $baseline;
+
+  @if (unitless($return-value)) {
+    $return-value: $return-value + 'px';
+  }
+
+  @if (type-of($return-value) != 'number') {
+    $return-value: unquote($return-value);
+  }
+
+  @return $return-value;
+}

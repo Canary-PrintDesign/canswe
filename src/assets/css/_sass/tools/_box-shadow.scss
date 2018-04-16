@@ -1,0 +1,14 @@
+/*
+
+  Box Shadow
+  ---
+
+*/
+
+@mixin box-shadow($x: 0, $y: 0, $blur: 4px, $spread: 0, $inner: false) {
+  @if ($inner == false) {
+    $inner: null;
+  }
+
+  box-shadow: $inner $x $y $blur $color-box-shadow;
+}

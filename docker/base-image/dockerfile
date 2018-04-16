@@ -1,0 +1,28 @@
+FROM node:alpine
+MAINTAINER Gregory Daynes <gregdaynes@gmail.com>
+
+# Build tooling
+
+RUN apk upgrade --update \
+ && apk add build-base \
+ && apk add git \
+ && apk add zlib libxml2 libxml2-dev \
+ && apk add ruby ruby-dev ruby-bundler ruby-json
+
+# Gems, Jekyll & Plugins
+
+RUN gem install --no-document rdoc \
+ && gem install --no-document jekyll \
+ && gem install --no-document bundler
+
+# APK Cleanup
+
+#RUN rm -rf /root/src /tmp/* /usr/share/man /var/cache/apk/* \
+# && apk del build-base ruby-dev libxml2-dev \
+# && apk search --update \
+# && rm -rf /opt/yarn-v1.5.1
+
+WORKDIR /opt
+
+EXPOSE 4000
+CMD jekyll --version

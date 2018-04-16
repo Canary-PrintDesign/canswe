@@ -1,0 +1,11 @@
+email: info@example.com
+
+phone:
+  value: 15555555555
+  display: 1 (555) 555-5555
+
+address:
+  street: 123 Fake St.
+  city: Fakeville
+  state: Fakeland
+  zip: A1A 1A1

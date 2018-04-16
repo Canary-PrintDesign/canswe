@@ -1,0 +1,32 @@
+plugins:
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
+  - jekyll-default-layout
+  - jekyll-contentblocks
+
+# !Build Stuff
+markdown:    kramdown
+exclude:     ["assets/css", "assets/js"] # Files and folders to skip when building
+keep_files:  ["assets/css", "assets/js"] # when clobbering the dest, keep the files
+destination: "../dist" # Where jekyll will build the site to
+permalink:   /:title # how urls will be created. eg: "website.com/category/title"
+charset:     utf-8 # Website character set
+baseurl:     /     # root
+
+kramdown:
+  parse_block_html: true
+
+optional_front_matter:
+  enabled: true
+  remove_originals: true
+
+titles_from_headings:
+  enabled: true
+  collections: true
+
+pagination:
+  enabled: true
+
+relative_links:
+  enabled: true
+  collections: true

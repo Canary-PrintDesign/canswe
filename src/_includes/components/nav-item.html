@@ -1,0 +1,17 @@
+{% if include.item.text %}
+  {% capture class %}
+    {% if include.item.class %}
+      {{ include.item.class }}
+    {% else %}
+      {{ include.item.text | downcase | replace: " ", "-" }}
+    {% endif %}
+  {% endcapture %}
+
+  {% capture active %}
+    {% if page.class contains class %}is-active{% endif %}
+  {% endcapture %}
+
+  <a class="{{ class }} " href="{{ include.item.url }}">
+    <span>{{ include.item.text }}</span>
+  </a>
+{% endif %}

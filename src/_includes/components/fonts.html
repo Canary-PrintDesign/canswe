@@ -1,0 +1,14 @@
+{%- if site.fonts %}
+  {% capture fontstring %}
+  {% for font in site.data.fonts %}
+    {{ font.name -}}
+
+    {%- if font.weight -%}
+      :{{ font.weight | join: ',' }}
+    {%- endif -%}
+  {% endfor %}
+  {% endcapture %}
+<style>
+  @import url('https://fonts.googleapis.com/css?family={{ fontstring | split: ' ' | join: '|' }}');
+</style>
+{% endif -%}

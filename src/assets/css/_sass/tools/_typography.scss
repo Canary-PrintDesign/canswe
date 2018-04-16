@@ -1,0 +1,59 @@
+@mixin measure() {
+  max-width: $measure;
+}
+
+@mixin columns($count: 2, $gap: $gutter--large, $width: null) {
+  @if ($width != null) {
+    column-width: $width;
+  } @else {
+    column-count: $count;
+  }
+
+  column-gap: -size($gap);
+  column-fill: balance-all;
+  orphans: 2;
+  widows: 2;
+}
+
+@mixin column-span($count: all) {
+  column-span: $count;
+}
+
+@mixin avoid-column-break {
+  break-inside: avoid-column;
+}
+
+@mixin line-break {
+  &:after {
+    content: "\A";
+    white-space: pre;
+  }
+}
+
+.columns--two {
+  @media screen and (min-width: $bp-tablet) {
+    @include columns(2, $gutter--large);
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    @include columns(2);
+  }
+}
+
+.columns--three {
+  @media screen and (min-width: $bp-tablet) {
+    @include columns(3, $gutter--large);
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    @include columns(3);
+  }
+}
+
+.breakable {
+  break-inside: inherit;
+}
+
+.column--no-break {
+  @include avoid-column-break;
+}

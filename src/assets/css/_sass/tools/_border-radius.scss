@@ -1,0 +1,26 @@
+/*
+
+  Border Radius
+  ---
+
+*/
+
+@mixin border-radius($positions...) {
+  @if (length($positions) > 0) {
+    @each $position in $positions  {
+      border-#{$position}-radius: $global-radius;
+    }
+  } @else {
+    border-radius: $global-radius;
+  }
+}
+
+@mixin border-radius-size($size, $positions...) {
+  @if (length($positions) > 0) {
+    @each $position in $positions  {
+      border-#{$position}-radius: -size($size);
+    }
+  } @else {
+    border-radius: -size($size);
+  }
+}

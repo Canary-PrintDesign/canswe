@@ -1,0 +1,21 @@
+/*
+
+  Breakpoints
+  ---
+  Setup breakpoints
+
+*/
+
+$bp-phone: 20em;
+$bp-tablet: 48em;
+$bp-desktop: 64em;
+$bp-large: 77em;
+$bp-extra-large: 90em;
+
+$breakpoints: (
+  'phone': $bp-phone,
+  'tablet': $bp-tablet,
+  'desktop': $bp-desktop,
+  'large': $bp-large,
+  'extra-large': $bp-extra-large,
+);

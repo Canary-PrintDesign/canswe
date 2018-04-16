@@ -1,0 +1,13 @@
+/*
+
+  Transitions
+  ---
+
+*/
+
+@mixin transition($properties...) {
+  transition-delay: $global-transition-delay;
+  transition-property: if ($properties, $properties, $global-transition-property);
+  transition-duration: $global-transition-duration;
+  transition-timing-function: $global-transition-timing-function;
+}

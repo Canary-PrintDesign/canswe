@@ -1,0 +1,25 @@
+{% if include.item.subitems %}
+
+<ul>
+  <li>
+    {% for subitem in include.item.subitems %}
+      {% include components/nav-item.html item=subitem %}
+
+      {% if subitem.list %}
+        <ul>
+          {% for list in subitem.list %}
+            <li>
+              {% include components/nav-item.html item=list %}
+
+              {% include components/nav-subitems.html item=list %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        {% include components/nav-subitems.html item=subitem %}
+      {% endif %}
+    {% endfor %}
+  </li>
+</ul>
+
+{% endif %}

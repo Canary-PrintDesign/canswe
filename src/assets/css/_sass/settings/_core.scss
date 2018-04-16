@@ -1,0 +1,26 @@
+/*
+
+  Core
+  ---
+  Setup important variables, feature flags for project
+
+*/
+
+$global-baseline: 8px !default; // All spacing metrics based on this.
+$global-radius: 3px !default;
+$paragraph-sibling-margin: true;
+
+$global-transition-delay: 0 !default;
+$global-transition-property: all !default;
+$global-transition-duration: 300ms !default;
+$global-transition-timing-function: ease-in-out !default;
+
+// In case you don't have control over generated `width` and `height` attributes
+// on `<img>` elements in your markup, but still want the images to be fluid,
+// set this to `false`.
+$static-images: true !default;
+
+// Majors element sizes
+$size-header: -size(56px);
+$size-header--desktop: -size(80px);
+$size-site-nav: -size(88px);
