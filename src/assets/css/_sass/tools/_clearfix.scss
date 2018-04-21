@@ -6,14 +6,10 @@
 
 */
 
-@mixin clearfix() {
-  &:after {
-    content: "" !important;
-    display: block !important;
+@mixin clearfix {
+  &::after {
     clear: both !important;
+    content: '' !important;
+    display: block !important;
   }
-}
-
-.clearfix {
-  @include clearfix();
 }

@@ -15,7 +15,7 @@
 
 html {
   line-height: $global-line-height; // 1
-  -webkit-text-size-adjust: 100%; // 2
+  text-size-adjust: 100%; // 2
 }
 
 // Sections
@@ -31,7 +31,7 @@ body {
 // `article` contexts in Chrome, Firefox, and Safari.
 
 h1 {
-  margin: 0.67em 0;
+  margin: .67em 0;
 }
 
 // Text-level semantics
@@ -81,8 +81,8 @@ button {
 // Correct the inability to style clickable types in iOS and Safari.
 
 button,
-[type="submit"] {
-  -webkit-appearance: button;
+[type='submit'] {
+  appearance: button;
 }
 
 // Remove the inner border and padding in Firefox.
@@ -104,6 +104,6 @@ button:-moz-focusring,
 // 2. Change font properties to `inherit` in Safari.
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; // 1
+  appearance: button; // 1
   font: inherit; // 2
 }

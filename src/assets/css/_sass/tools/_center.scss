@@ -28,11 +28,3 @@
     transform: translate(-$top, -$left);
   }
 }
-
-.margin-center {
-  @include margin-center;
-}
-
-.transform-center {
-  @include transform-center;
-}

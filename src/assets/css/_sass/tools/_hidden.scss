@@ -6,7 +6,7 @@
 
 */
 
-@mixin hidden-visually() {
+@mixin hidden-visually {
   border: 0 !important;
   clip: rect(0 0 0 0) !important;
   clip-path: inset(50%) !important;
@@ -17,12 +17,4 @@
   position: absolute !important;
   white-space: nowrap !important;
   width: 1px !important;
-}
-
-.hidden-visually {
-  @include hidden-visually();
-}
-
-.hidden {
-  display: none !important;
 }

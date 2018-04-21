@@ -10,9 +10,9 @@ $fruit-salad: #60A24F;
 $gun-powder: #414456;
 $glacier: #6EACC2;
 $jumbo: #83848C;
-$surf-crest: #cce2c7;
-$french-grey: #c1c3c9;
-$botticelli: #d1e5ec;
+$surf-crest: #CCE2C7;
+$french-grey: #C1C3C9;
+$botticelli: #D1E5EC;
 $martinique: #32364C;
 
 // Greys
@@ -20,7 +20,7 @@ $color-grey--darkest: #000;
 $color-grey--dark: $martinique;
 $color-grey: $jumbo;
 $color-grey--light: #F1F1F1;
-$color-grey--lightest: #fff;
+$color-grey--lightest: #FFF;
 
 // Prime Colors
 $color-green: $fruit-salad;
@@ -44,4 +44,4 @@ $color-text--dark: $color-grey--dark;
 $color-background--dark: $color-grey--dark;
 $color-background--light: $color-grey--lightest;
 
-$color-box-shadow: rgba(0, 0, 0, 0.5);
+$color-box-shadow: rgba(0, 0, 0, .5);

@@ -1,4 +1,4 @@
-@mixin measure() {
+@mixin measure {
   max-width: $measure;
 }
 
@@ -9,8 +9,8 @@
     column-count: $count;
   }
 
-  column-gap: -size($gap);
   column-fill: balance-all;
+  column-gap: -size($gap);
   orphans: 2;
   widows: 2;
 }
@@ -24,36 +24,8 @@
 }
 
 @mixin line-break {
-  &:after {
-    content: "\A";
+  &::after {
+    content: '\A';
     white-space: pre;
   }
-}
-
-.columns--two {
-  @media screen and (min-width: $bp-tablet) {
-    @include columns(2, $gutter--large);
-  }
-
-  @media screen and (min-width: $bp-desktop) {
-    @include columns(2);
-  }
-}
-
-.columns--three {
-  @media screen and (min-width: $bp-tablet) {
-    @include columns(3, $gutter--large);
-  }
-
-  @media screen and (min-width: $bp-desktop) {
-    @include columns(3);
-  }
-}
-
-.breakable {
-  break-inside: inherit;
-}
-
-.column--no-break {
-  @include avoid-column-break;
 }

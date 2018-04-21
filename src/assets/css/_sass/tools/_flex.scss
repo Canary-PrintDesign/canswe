@@ -59,14 +59,14 @@
     $basis: calc(50% - #{$gap / 2});
   }
 
-  @if ($justify-content != null) {
-    justify-content: $justify-content;
-  }
-
   > * {
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: $basis;
+  }
+
+  @if ($justify-content != null) {
+    justify-content: $justify-content;
   }
 }
 
@@ -77,16 +77,17 @@
     $basis: calc((100% - #{$gap * ($count - 1)}) / #{$count});
   }
 
-  @if ($justify-content != null) {
-    justify-content: $justify-content;
-  }
-
   > * {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: $basis;
     max-width: $basis;
   }
+
+  @if ($justify-content != null) {
+    justify-content: $justify-content;
+  }
+
 }
 
 @mixin half-width($gap) {

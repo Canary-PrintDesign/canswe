@@ -24,3 +24,4 @@ rules:
   no-trailing-zero: 0
   no-trailing-whitespace: 2
   empty-line-between-blocks: 2
+  no-important: 0
