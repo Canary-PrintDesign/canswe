@@ -7,7 +7,6 @@ services:
     ports:
       - "4000:4000" # jekyll server
       - "35729:35729" # live reload
-    restart: always
     volumes:
       - ./src:/opt/src
       - ./dist:/opt/dist
