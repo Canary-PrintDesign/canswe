@@ -1,11 +1,11 @@
-- name: Roboto
+- name: Ruda
+  weight:
+    - 400
+    - 700
+    - 900
+
+- name: Work+Sans
   weight:
     - 300
     - 400
-
-- name: Open+Sans
-  weight:
-    - 300
-    - 300i
-  fallback:
-    -
+    - 700

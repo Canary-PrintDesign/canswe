@@ -16,9 +16,9 @@ $global-type-legible: false !default;
 // eg: mono spaced stack would be
 //       'Fira-Mono', Hasklig, $monospace-stack
 $fonts: (
-  body: $helvetica-stack,
-  display: $garamond-stack,
-  mono: Hasklig, $monospace-stack,
+  body: '\'Work Sans\', $helvetica-stack',
+  display: 'Ruga, $garamond-stack',
+  mono: $monospace-stack,
 );
 
 
