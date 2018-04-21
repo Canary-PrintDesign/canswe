@@ -8,7 +8,5 @@
     {%- endif -%}
   {% endfor %}
   {% endcapture %}
-<style>
-  @import url('https://fonts.googleapis.com/css?family={{ fontstring | split: ' ' | join: '|' }}');
-</style>
+<link href="https://fonts.googleapis.com/css?family={{ fontstring | split: ' ' | join: '|' }}" rel="stylesheet">
 {% endif -%}
