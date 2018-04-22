@@ -5,9 +5,11 @@
 
 */
 
-@mixin font-size($args...) {
+@mixin font-size($default, $args...) {
   $length: length($breakpoints);
   $i: 1;
+
+  font-size: -size($default);
 
   @each $var in $args {
 
@@ -24,33 +26,37 @@
 }
 
 @mixin h1 {
-  @include font-size(36, 36, 48, 64);
+  @include font-size(100);
 }
 
 @mixin h2 {
-  @include font-size(30, 30, 36, 48);
+  @include font-size(64);
 }
 
 @mixin h3 {
-  @include font-size(24, 24, 30, 36);
+  @include font-size(48);
 }
 
 @mixin h4 {
-  @include font-size(20, 24, 24, 30);
+  @include font-size(36);
 }
 
 @mixin h5 {
-  @include font-size(18, 18, 20, 24);
+  @include font-size(24);
 }
 
-@mixin body-large {
-  @include font-size(16, 16, 18, 20);
+@mixin h6 {
+  @include font-size(22);
 }
 
 @mixin body {
-  @include font-size(16, 16, 16, 18);
+  @include font-size(20);
 }
 
 @mixin small {
-  @include font-size(10, 10, 12, 14);
+  @include font-size(18);
+}
+
+@mixin tiny {
+  @include font-size(16);
 }
