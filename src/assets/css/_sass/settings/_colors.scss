@@ -6,42 +6,38 @@
 */
 
 // Fun colors names
-$fruit-salad: #60A24F;
-$gun-powder: #414456;
-$glacier: #6EACC2;
-$jumbo: #83848C;
-$surf-crest: #CCE2C7;
-$french-grey: #C1C3C9;
-$botticelli: #D1E5EC;
-$martinique: #32364C;
+$sunset-orange: hsl(11%, 81%, 90%);
+$lightning-yellow: hsl(46%, 92%, 100%);
 
 // Greys
-$color-grey--darkest: #000;
-$color-grey--dark: $martinique;
-$color-grey: $jumbo;
-$color-grey--light: #F1F1F1;
-$color-grey--lightest: #FFF;
+$color-grey: (
+    0: hsl(0, 0,   0),
+   10: hsl(0, 0,  10%),
+   15: hsl(0, 0,  16%),
+   20: hsl(0, 0,  23%),
+   55: hsl(0, 0,  54%),
+   60: hsl(0, 0,  61%),
+   75: hsl(0, 0,  76%),
+   85: hsl(0, 0,  85%),
+   95: hsl(0, 0,  94%),
+  100: hsl(0, 0, 100%),
+);
 
-// Prime Colors
-$color-green: $fruit-salad;
-$color-green--lighter: $surf-crest;
-$color-blue: $gun-powder;
-$color-blue--lighter: $french-grey;
-$color-light-blue: $glacier;
-$color-light-blue--lighter: $botticelli;
+$color-grey--alpha: (
+  40: hsla(0, 0, 16%, .40),
+  50: hsla(0, 0, 16%, .50),
+  70: hsla(0, 0, 16%, .70),
+  75: hsla(0, 0, 16%, .75),
+);
 
-$color-brand-one: $fruit-salad;
-$color-brand-one--light: $surf-crest;
-$color-brand-two: $gun-powder;
-$color-brand-two--light: $french-grey;
-$color-brand-three: $glacier;
-$color-brand-three--light: $botticelli;
+$color-grey--lightest: map-get($color-grey, 100);
+$color-grey--light:    map-get($color-grey,  75);
+$color-grey--darkest:  map-get($color-grey,   0);
+$color-grey--dark:     map-get($color-grey,  15);
+$color-grey:           map-get($color-grey,  50);
 
-$color-text: $color-grey--dark;
+$color-text: $color-grey--darkest;
 $color-text--light: $color-grey--lightest;
 $color-text--dark: $color-grey--dark;
 
-$color-background--dark: $color-grey--dark;
-$color-background--light: $color-grey--lightest;
-
-$color-box-shadow: rgba(0, 0, 0, .5);
+$color-box-shadow: map-get($color-grey--alpha, 50);
