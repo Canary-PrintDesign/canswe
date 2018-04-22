@@ -7,12 +7,12 @@
 */
 
 // Spacing values - created from the baseline
-$global-spacing-unit-tiny:  -size(4px);
-$global-spacing-unit-small: -size(8px);
-$global-spacing-unit:       -size(16px);
-$global-spacing-unit-large: -size(32px);
-$global-spacing-unit-xl:    -size(64px);
-$global-spacing-unit-huge:  -size(128px);
+$global-spacing-unit-tiny:  -size(5px);
+$global-spacing-unit-small: -size(10px);
+$global-spacing-unit:       -size(20px);
+$global-spacing-unit-large: -size(40px);
+$global-spacing-unit-xl:    -size(80px);
+$global-spacing-unit-huge:  -size(160px);
 
 // Gutters based on grid above
 $gutter--tiny:  $global-spacing-unit-tiny;
