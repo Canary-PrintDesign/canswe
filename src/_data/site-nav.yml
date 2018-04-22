@@ -13,3 +13,15 @@
 #
 - url: /
   text: Home
+
+- url: /products
+  text: Products
+
+- url: /about
+  text: About
+
+- url: /contact
+  text: Contact
+
+- url: /retaliers
+  text: Retailers
