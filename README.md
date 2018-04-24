@@ -46,6 +46,19 @@ cd canswe
 
 Once inside the project directory follow instructions for whichever method you decided to go with.
 
+## Kill Start
+
+_Note: This will stop all running containers, and processes using port 3000/3001_
+
+A quick (all though agressive) way to start the project is to run the script
+`./start`. This will find and close any programs that are currently using the
+ports we need. It also stops all running docker containers. Afterwards it will
+run the command `docker-compose up --build` (which you can read more about below)
+
+You can open the site running at `http://localhost:3000`
+
+When you're finished you can kill all the processes by pressing `Ctrl-C`
+
 ## Docker
 
 Run Docker-Compose
