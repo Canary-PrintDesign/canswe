@@ -7,7 +7,7 @@
   background-image: repeating-linear-gradient(to right, rgba(0,0,0,0) 0, rgba(0,0,0,0) $global-baseline - 1px, rgba(0,0,0,0.3) $global-baseline);
 }
 
-@if ($debug-mode: true) {
+@if ($debug-mode == true) {
   body {
     &::after {
       content: '';
