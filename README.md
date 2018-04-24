@@ -190,6 +190,7 @@ It starts the following automations
 - `dev:css`
 - `dev:js`
 - `dev:jekyll`
+- `dev:browsersync`
 
 Which you can find out more about below
 
