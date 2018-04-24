@@ -5,8 +5,8 @@ services:
     build: .
     command: npm run start
     ports:
-      - "4000:4000" # jekyll server
-      - "35729:35729" # live reload
+      - "3000:3000" # server
+      - "3001:3001" # browsersync ui
     volumes:
       - ./src:/opt/src
       - ./dist:/opt/dist

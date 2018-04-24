@@ -4,7 +4,7 @@
   "description": "",
   "main": "README.md",
   "scripts": {
-    "start": "npm run dir:css; npm run dir:js; npm run dev:jekyll & npm run dev:css & npm run dev:js",
+    "start": "npm run dir:css; npm run dir:js; npm run dev:jekyll & npm run dev:css & npm run dev:js & npm run dev:browsersync",
     "precommit": "npm run lint",
     "prepush": "npm run lint",
     "lint": "npm run lint:css & npm run lint:js",
@@ -13,6 +13,7 @@
     "dev:css": "node-sass-watcher src/assets/css/main.scss --output dist/assets/css/main.css -c 'node-sass <input> --source-map-root file://${PWD}/ --source-map-embed true -s | npm run postcss:autoprefixer -s'",
     "dev:js": "npx babel-cli src/ --out-file dist/assets/js/app.js --watch --source-maps",
     "dev:jekyll": "bundle exec jekyll build --watch --config 'src/_config.yml,src/_config-common.yml,src/_config-development.yml' --source src/ --destination dist/ --incremental",
+    "dev:browsersync": "npx browser-sync start --server dist --files \"*/**.css\" \"*/**.js\" \"*/**.html\"",
     "build": "npm run clean:css; npm run clean:js; npm run build:jekyll; npm run build:js; npm run build:css; npm run clean:maps",
     "build:jekyll": "JEKYLL_ENV=production bundle exec jekyll build --config 'src/_config.yml,src/_config-common.yml,src/_config-production.yml' --source src/ --destination dist/",
     "build:css": "npm run clean:css; npm run css:scss -s | npm run postcss:autoprefixer -s | npm run postcss:cssnano -s | npm run exorcist -s",
