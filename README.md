@@ -60,9 +60,9 @@ _Note_ The download of the base image and installation only happens the first ti
 
 Once the container is up and running, you can now edit the project using your editor of choice.
 
-You should now be able to see the Jekyll site running at `http://localhost:4000`
+You should now be able to see the Jekyll site running at `http://localhost:3000`
 
-The container runs the project using the npm script `Start`. This kicks off the CSS & JS piplines, as well as runs the Jekyll Development Server
+The container runs the project using the npm script `Start`. This kicks off the CSS & JS piplines, the Jekyll Build Watcher, as well as Browsersync for serving the files.
 
 When you're done with development, you can stop the container by pressing `Ctrl-C` in the Terminal window where you started the container
 
@@ -92,7 +92,7 @@ Start up the development pipelines
 npm start
 ```
 
-You should now be able to see the project site running at `http://localhost:4000`
+You should now be able to see the project site running at `http://localhost:3000`
 
 Project Structure
 -----------------
@@ -208,7 +208,13 @@ JS is transpiled with sourcemaps, to make tracing in the browser easier to manag
 
 #### Dev:Jekyll - `dev:jekyll`
 
-The core of the automations, this kicks off the Jekyll development server, starts up a livereload server, pulls in the base, common, and development configurations, and outputs the project to the /dist directory. The Jekyll server is available on [localhost:4000](http://localhost:4000) (or wherever 0.0.0.0 gets bound on your host).
+The core of the automations, this kicks off the Jekyll build, pulls in the base, common, and development configurations, and outputs the project to the /dist directory.
+
+#### Dev:Browsersync - `dev:browsersync`
+
+Browserync is the process that serves up the site on [localhost:3000](http://localhost:3000) (or wherever 0.0.0.0 gets bound on your host).
+
+There is also a ui config for browsersync located at [localhost:3001](http://localhost:3001)
 
 #### Build - `build`
 
