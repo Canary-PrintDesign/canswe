@@ -3,109 +3,35 @@ CAN-SWE
 
 Can-Swe manufactures quality outdoor work garments, protective apparel, rainwear, chainsaw chaps, and high-visibility garments.
 
-Getting Started
----------------
-
-These instructions will get the project up and running on your computer for development and testing.
-
-### Pre-Requisites
-
-There are 2 ways to work on Can-Swe. Pick whichever you're more comfortable with.
-
-#### Docker
-
-Uses a Docker container to maintain your build environment and not pollute your project directory with build-time files, node packages or ruby gems. This requires that you have Docker CE installed.
-
-Download the docker application that matches your operating system.
-
-[MacOS](https://store.docker.com/editions/community/docker-ce-desktop-mac) - [Windows](https://store.docker.com/editions/community/docker-ce-desktop-windows) - [Linux/Ubuntu](https://store.docker.com/editions/community/docker-ce-server-ubuntu) - [Other OS](https://store.docker.com/search?offering=community&type=edition)
-
-#### Local
-
-Installs the necessary tooling to the project directory. This requires that you understand how to install NPM packages and Ruby Gems using Bundler.
-
-You will need the following to work on the project.
-
-1. [Node](https://nodejs.org)
-2. [NPMJS](https://npmjs.org)
-3. [Ruby](https://ruby-lang.org)
-
-
 Installing
 ----------
 
-Once you've installed the packages above (Either Docker CE, or Node/Npm/Ruby)
-Proceed with the following, according to which method you've chosen.
+In your terminal
 
-Clone down the project (if you haven't already). Then navigate into the project directory
-
+1) Clone the repo
 ```sh
 git clone https://github.com/Canary-PrintDesign/canswe
+```
+
+2) Navigate into the project director
+```sh
 cd canswe
 ```
 
-Once inside the project directory follow instructions for whichever method you decided to go with.
-
-## Kill Start
-
-_Note: This will stop all running containers, and processes using port 3000/3001_
-
-A quick (all though agressive) way to start the project is to run the script
-`./start`. This will find and close any programs that are currently using the
-ports we need. It also stops all running docker containers. Afterwards it will
-run the command `docker-compose up --build` (which you can read more about below)
-
-You can open the site running at `http://localhost:3000`
-
-When you're finished you can kill all the processes by pressing `Ctrl-C`
-
-## Docker
-
-Run Docker-Compose
-
+3) Run Docker
 ```sh
-docker-compose up --build
+docker-compose up
 ```
-
-This will reach out to Docker Hub and pull down the latest copy of the Can-Swe Base Image. Which contains Ruby, Node, NPM, and other necessary tools. These are only available inside the Running Container, and not on your local path.
-
-_Note_ The download of the base image and installation only happens the first time you the image is requested.
-
-Once the container is up and running, you can now edit the project using your editor of choice.
 
 You should now be able to see the Jekyll site running at `http://localhost:3000`
 
-The container runs the project using the npm script `Start`. This kicks off the CSS & JS piplines, the Jekyll Build Watcher, as well as Browsersync for serving the files.
+If this is the first time running the project, Docker will fetch the required base container, download and install all required Ruby Gems, and NPM modules for the project.
 
-When you're done with development, you can stop the container by pressing `Ctrl-C` in the Terminal window where you started the container
+Subsequent calls to `docker-compose up` will use cached version of the containers, gems, and node modules, only needing to pull in changes (if any).
 
-## Local
+_Info: If you find there are errors running the project, you can try using the kill script, which will close any programs running on ports required for the project, as well as any current docker containers. Enter `./start` in your terminal_
 
-Install the required NPM modules
-
-```sh
-npm install
-```
-
-Install bundler
-
-```sh
-gem install bundler
-```
-
-Install Ruby Gems
-
-```sh
-bundle install
-```
-
-Start up the development pipelines
-
-```sh
-npm start
-```
-
-You should now be able to see the project site running at `http://localhost:3000`
+When you're done with development, you can stop the container by pressing `Ctrl-C` in the Terminal window where you started docker
 
 Project Structure
 -----------------
@@ -267,3 +193,14 @@ License
 -------
 
 This project is licensed under the GNU GPL V3 - see the [LICENSE](LICENSE) file for details
+
+
+
+#### Docker
+
+Download the Docker CE application that matches your operating system.
+
+[MacOS](https://store.docker.com/editions/community/docker-ce-desktop-mac)
+• [Windows](https://store.docker.com/editions/community/docker-ce-desktop-windows)
+• [Linux/Ubuntu](https://store.docker.com/editions/community/docker-ce-server-ubuntu)
+• [Other OS](https://store.docker.com/search?offering=community&type=edition)
