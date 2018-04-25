@@ -6,7 +6,16 @@ Can-Swe manufactures quality outdoor work garments, protective apparel, rainwear
 Installing
 ----------
 
-In your terminal
+**Pre-Requisits**
+
+Make sure you have the following installed:
+
+- [Git](//git-scm.org)
+- [Docker](#docker)
+
+---
+
+**In Your Terminal/Command Prompt**
 
 1) Clone the repo
 ```sh
