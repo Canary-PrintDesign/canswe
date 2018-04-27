@@ -2,12 +2,10 @@ FROM gregdaynes/project-hyde:latest
 
 COPY ./Gemfile /opt/Gemfile
 COPY ./Gemfile.lock /opt/Gemfile.lock
-RUN bundle --path vendor
+COPY ./docker-start.sh /opt/docker-start
 
-COPY ./package.json /opt/package.json
-COPY ./yarn.lock /opt/yarn.lock
-RUN yarn install
+RUN bundle --path vendor
 
 COPY .git /opt/.git
 
-CMD npm start
+CMD sh /opt/docker-start
