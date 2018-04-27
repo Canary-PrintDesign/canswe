@@ -3,10 +3,9 @@ version: '3'
 services:
   jekyll:
     build: .
-    command: npm run start
-    ports:
-      - "3000:3000" # server
-      - "3001:3001" # browsersync ui
+    command: sh docker-start
+    environment:
+      - ENV
     volumes:
       - ./src:/opt/src
       - ./dist:/opt/dist
