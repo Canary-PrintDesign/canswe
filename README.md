@@ -12,6 +12,7 @@ Make sure you have the following installed:
 
 - [Git](//git-scm.org)
 - [Docker](#docker)
+- [Yarn](//yarnpkg.com/en/docs/install)
 
 ---
 
@@ -27,20 +28,18 @@ git clone https://github.com/Canary-PrintDesign/canswe
 cd canswe
 ```
 
-3) Run Docker
+3) Run Start Script
 ```sh
-docker-compose up
+yarn start
 ```
 
 You should now be able to see the Jekyll site running at `http://localhost:3000`
 
 If this is the first time running the project, Docker will fetch the required base container, download and install all required Ruby Gems, and NPM modules for the project.
 
-Subsequent calls to `docker-compose up` will use cached version of the containers, gems, and node modules, only needing to pull in changes (if any).
+Subsequent calls to `start` will use cached version of the containers, gems, and node modules, only needing to pull in changes (if any).
 
-_Info: If you find there are errors running the project, you can try using the kill script, which will close any programs running on ports required for the project, as well as any current docker containers. Enter `./start` in your terminal_
-
-When you're done with development, you can stop the container by pressing `Ctrl-C` in the Terminal window where you started docker
+When you're done with development, you can stop the container by pressing `Ctrl-C` in the Terminal window where you ran `start`
 
 Project Structure
 -----------------
