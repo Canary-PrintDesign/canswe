@@ -1,4 +1,10 @@
 <footer>
+  {% include components/site-logo.html %}
+
+  <p><a href="mailto:info@canswe.com">info@canswe.com</a></p>
+
+  {% include components/nav.html items=site.data.site-nav %}
+
   {% include fragment/html-copyright.html %}
   <a href="/privacy">Privacy Policy</a>
 </footer>
