@@ -2,27 +2,30 @@
 layout: products-page
 permalink: /products/index.html
 ---
-{% assign categories = site.products | map: 'category' | uniq %}
-
 <header>
   <h1>Products</h1>
   <p>At Can-Swe, we manufacture quality outdoor work garments, protective apparel, rainwear, chainsaw chaps, high-visibility garments, etc.</p>
 </header>
 
 <nav>
-  {% assign categories = site.products | map: 'category' | uniq %}
-
-  {% for category in categories %}
-    <a class="product__link" href="/products/#{{category | replace: " ", "-" | downcase }}">{{ category }}</a>
+  {% for category in site.data.categories %}
+    <a class="product__link" href="/products/#{{category.safe}}">{{ category.name }}</a>
   {% endfor %}
 </nav>
 
-{% for category in categories %}
-  <h1>{{ category }}</h1>
+{% for category in site.data.categories %}
+  <h1>{{ category.name }}</h1>
+  <p>{{ category.lead }}</p>
+
+  <label for="{{ category.safe }}-toggle">Read More</label>
+  <input type="checkbox" name="{{ category.safe }}-toggle" />
+  <div>
+    <p>{{ category.description }}</p>
+  </div>
 
   {% for item in site.products %}
-    {% if item.category == category %}
-      <div>{{ item.title }}</div>
+    {% if item.category == category.safe %}
+      <h2>{{ item.title }}</h2>
     {% endif %}
   {% endfor %}
 {% endfor %}

@@ -1,5 +1,5 @@
 ---
-category: Safety Pants
+category: safety-pants
 sku: M001
 name: POLY PROMAX
 description: The Poly PROMAX is an all season pant that is light weight and breathable with excellent range of motion. The same design as our popular POLY PRO with added protection of 4100 TCS protective pad.

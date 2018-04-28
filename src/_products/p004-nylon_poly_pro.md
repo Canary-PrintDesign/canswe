@@ -1,5 +1,5 @@
 ---
-category: Safety Pants
+category: safety-pants
 sku: P004
 name: NYLON / POLY PRO
 description: If you are looking for some ventilation in the Nylon Pro we can meet half way with the NYLON / POLY PRO 3600. Dubbed the "Half Half" this pant keeps the snow and rain off the front and lets the heat out the back.

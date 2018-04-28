@@ -1,5 +1,5 @@
 ---
-category: Chaps & Workwear
+category: chaps-workwear
 sku: P008
 name: CHAP PRO (3 Buckles)
 description: Easy on Easy off the P008 CHAP PRO 3600 is great for intermittant use. If you are a commercial faller or out gathering firewood for the winter, these will help get you home.

@@ -1,5 +1,5 @@
 ---
-category: Chaps & Workwear
+category: chaps-workwear
 sku: P008B
 name: CHAP PRO BP (Zipper Back)
 description: The P008B CHAP PRO BACKPAD 3600 Provides added protection and
