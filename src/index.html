@@ -25,9 +25,9 @@ layout: default
 
   <div class="section__body">
     <div class="products">
-      {% assign categories = site.data.products | map: 'category' | uniq %}
+      {% assign categories = site.products | map: 'category' | uniq %}
       {% for category in categories %}
-        <a class="product__link" href="#">
+        <a class="product__link" href="/products/#{{category | replace: " ", "-" | downcase }}">
           <div class="product">
             <h1 class="product__title">
               {{ category }}
