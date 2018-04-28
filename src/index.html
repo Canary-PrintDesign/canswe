@@ -25,41 +25,17 @@ layout: default
 
   <div class="section__body">
     <div class="products">
-      <a class="product__link" href="#">
-        <div class="product">
-          <h1 class="product__title">
-            Safety Pants
-            <small>View All Safety Pants</small>
-          </h1>
-        </div>
-      </a>
-
-      <a class="product__link" href="#">
-        <div class="product">
-          <h1 class="product__title">
-            Hurricane Rainwear
-            <small>View All Rainwear</small>
-          </h1>
-        </div>
-      </a>
-
-      <a class="product__link" href="#">
-        <div class="product">
-          <h1 class="product__title">
-            Chaps & Workwear
-            <small>View All Workwear</small>
-          </h1>
-        </div>
-      </a>
-
-      <a class="product__link" href="#">
-        <div class="product">
-          <h1 class="product__title">
-            High Visibility Garments
-            <small>View All High-Viz Garments</small>
-          </h1>
-        </div>
-      </a>
+      {% assign categories = site.data.products | map: 'category' | uniq %}
+      {% for category in categories %}
+        <a class="product__link" href="#">
+          <div class="product">
+            <h1 class="product__title">
+              {{ category }}
+              <small>View All {{ category }}</small>
+            </h1>
+          </div>
+        </a>
+      {% endfor %}
     </div>
   </div>
 </section>
