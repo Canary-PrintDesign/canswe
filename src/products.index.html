@@ -2,10 +2,19 @@
 layout: products-page
 permalink: /products/index.html
 ---
+{% assign categories = site.products | map: 'category' | uniq %}
 
 <header>
   <h1>Products</h1>
   <p>At Can-Swe, we manufacture quality outdoor work garments, protective apparel, rainwear, chainsaw chaps, high-visibility garments, etc.</p>
 </header>
+
+<nav>
+  {% assign categories = site.products | map: 'category' | uniq %}
+
+  {% for category in categories %}
+    <a class="product__link" href="/products/#{{category | replace: " ", "-" | downcase }}">{{ category }}</a>
+  {% endfor %}
+</nav>
 
 {% endfor %}
