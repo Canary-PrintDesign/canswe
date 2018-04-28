@@ -1,5 +1,5 @@
 ---
-category: Safety Pants
+category: safety-pants
 sku: P001
 name: POLY PRO 3600
 description: The P001 POLY PRO 3600 is the industry standard for comercial and recreational sawyers, and is the favorite amoung consumers. This all season pant is light weight and breathable with excellent range of motion.

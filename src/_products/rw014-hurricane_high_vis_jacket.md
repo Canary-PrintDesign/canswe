@@ -1,5 +1,5 @@
 ---
-category: Rainwear
+category: rainwear
 sku: RW014
 name: HURRICANE HIGH VIS JACKET
 description: Design to meet WCB PPE 2 this jacket offer all the great benefits of the HURRICANE CLASSIC with added protection of fluerecent yellow colouring and high vis markings. Meeting the requirements of type 1, 2 and 3 garments this jacket will keep you visible in all conditions

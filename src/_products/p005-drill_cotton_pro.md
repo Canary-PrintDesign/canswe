@@ -1,5 +1,5 @@
 ---
-category: Safety Pants
+category: safety-pants
 sku: P005
 name: DRILL COTTON PRO
 description: The P005 DRILL COTTON PRO 3600 is a welcome addtion for the warm season. 100% cotton wicks moisture and provides great ventilation for cool comfortable protection.

@@ -1,5 +1,5 @@
 ---
-category: Safety Pants
+category: safety-pants
 sku: M002
 name: SEISMIC PROMAX
 description: The SEISMIC PRO covers all the bases. The rugged durability of the Rigger Pro with 4100 TCS protection and full wrap backpad. This product was design inconjuntion with indusry professionals for seismic slashing in the oil and gas industry. Top of line function and protection.

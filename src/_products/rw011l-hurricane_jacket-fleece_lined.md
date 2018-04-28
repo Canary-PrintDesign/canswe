@@ -1,5 +1,5 @@
 ---
-category: Rainwear
+category: rainwear
 sku: RW011L
 name: HURRICANE JACKET (Fleece Lined)
 description: All the benefits of the Hurricane Classic with the added warmth of a polar feece lining.

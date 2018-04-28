@@ -25,13 +25,12 @@ layout: default
 
   <div class="section__body">
     <div class="products">
-      {% assign categories = site.products | map: 'category' | uniq %}
-      {% for category in categories %}
-        <a class="product__link" href="/products/#{{category | replace: " ", "-" | downcase }}">
+      {% for category in site.data.categories %}
+        <a class="product__link" href="/products/#{{category.safe}}">
           <div class="product">
             <h1 class="product__title">
-              {{ category }}
-              <small>View All {{ category }}</small>
+              {{ category.name }}
+              <small>View All {{ category.name }}</small>
             </h1>
           </div>
         </a>

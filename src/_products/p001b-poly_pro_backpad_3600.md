@@ -1,5 +1,5 @@
 ---
-category: Safety Pants
+category: safety-pants
 sku: P001B
 name: POLY PRO BACKPAD 3600
 description: The P001B POLY PRO BACKPAD 3600 offers all of the user benfits of the P001 Poly Pro with the added protection of ankle to knee safety pad wrapping around the calf.
