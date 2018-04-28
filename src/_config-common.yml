@@ -1,5 +1,15 @@
 # !- Content Details
 collections:
+  products:
+    output: true
+defaults:
+  - scope:
+      path: ""
+      type: "products"
+    values:
+      permalink: /products/:path/
+      layout: product-page
+
 
 # !- Site Configuration
 url: "" # primary url the website will reside at
