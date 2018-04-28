@@ -27,23 +27,7 @@ permalink: /products/index.html
     {% if item.category == category.safe %}
       <h2>{{ item.title }}</h2>
 
-      {% capture imagePath %}assets/images/products/{{ item.sku | downcase }}{% endcapture %}
-      {% capture solo %}{{imagePath}}/solo.jpg{% endcapture %}
-      {% capture first %}{{imagePath}}/1.jpg{% endcapture %}
-
-      {% capture soloExists %}{% file_exists {{ solo }} %}{% endcapture %}
-      {% capture firstExists %}{% file_exists {{ first }} %}{% endcapture %}
-      {% if soloExists == "true" %}
-        {% assign imagePath = solo %}
-      {% elsif firstExists == "true" %}
-        {% assign imagePath = first %}
-      {% else %}
-        {% assign imagePath = false %}
-      {% endif %}
-
-      {% if imagePath != false %}
-        <img src="/{{ imagePath }}" />
-      {% endif %}
+      {% include components/product-image.html item=item %}
     {% endif %}
   {% endfor %}
 {% endfor %}
