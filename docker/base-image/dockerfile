@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM alpine:latest
 MAINTAINER Gregory Daynes <gregdaynes@gmail.com>
 
 # Build tooling
@@ -14,13 +14,6 @@ RUN apk upgrade --update \
 RUN gem install --no-document rdoc \
  && gem install --no-document jekyll \
  && gem install --no-document bundler
-
-# APK Cleanup
-
-#RUN rm -rf /root/src /tmp/* /usr/share/man /var/cache/apk/* \
-# && apk del build-base ruby-dev libxml2-dev \
-# && apk search --update \
-# && rm -rf /opt/yarn-v1.5.1
 
 WORKDIR /opt
 
