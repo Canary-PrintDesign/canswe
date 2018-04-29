@@ -3,3 +3,40 @@
   Navs
 
 */
+
+#nav-header {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 50px;
+  width: 100%;
+}
+
+#main-nav {
+  display: flex;
+  flex-direction: row; // width: 400px;
+  justify-content: flex-start;
+  -webkit-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.75);
+  ul {
+    background-color: #2b2b2b;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-left: auto;
+    margin-bottom: 0;
+    li {
+      padding: 20px 35px 20px;
+      a {
+        color: $color-text--light;
+        font-family: $helvetica-stack;
+      }
+      a:hover {
+        color: $color-grey--light;
+      }
+    }
+  }
+}
