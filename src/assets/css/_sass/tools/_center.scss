@@ -2,9 +2,17 @@
 
   Centering Tools
   ---
+  Common centering techniques
 
 */
 
+// use margin: auto to center element horizontally
+//
+// All params are optional, use named params
+// $left: bool - sets left margin to auto
+// $right: bool - sets right margin to auto
+//
+// Example: main { @include margin-cener }
 @mixin margin-center($left: true, $right: true) {
   @if ($right == true) {
     margin-left: auto;
@@ -15,6 +23,15 @@
   }
 }
 
+
+// use transforms to center element horizontally and vertically
+//
+// All params are optional, use named params
+// $top: sets top offset
+// $left: sets left offset
+// Set either direction to false to skip centering that direction
+//
+// Example: main { @include transform-center }
 @mixin transform-center($top: 50%, $left: 50%) {
   @if $top and $left == false {
     transform: translateY(-$top);
