@@ -1,11 +1,11 @@
 function toggleFade(position) {
-  const el = $('.back-to-top');
+  const el = $('.back-to-top-link');
   position > 800 ? el.fadeIn() : el.fadeOut();
 }
 
-function scrollTop() {
+function scrollHandler() {
   toggleFade($(this).scrollTop());
 }
 
-$(document).scroll(scrollTop());
-$(document).ready(scrollTop());
+$(document).ready(scrollHandler);
+$(document).scroll(scrollHandler);

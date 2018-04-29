@@ -1,27 +1,15 @@
 /* global $ window */
 // Select all links with hashes
+// /**/
 $('a[href*="#"]')
   // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
+
   .click(function clickHandler(event) {
     // On-page links
     const isOnPage = window.location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '');
     const isSameHost = window.location.hostname === this.hostname;
-
-    function callback(target) {
-      // Callback after animation
-      // Must change focus!
-      const $target = $(target);
-      $target.focus();
-      if ($target.is(':focus')) { // Checking if the target was focused
-        return false;
-      }
-
-      $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-      $target.focus(); // Set focus again
-      return true;
-    }
 
     if (isOnPage && isSameHost) {
       // Figure out element to scroll to
@@ -31,9 +19,7 @@ $('a[href*="#"]')
       if (target.length) {
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top,
-        }, 500, callback(target));
+        $('html, body').animate({ scrollTop: target.offset().top }, 500);
       }
     }
   });
