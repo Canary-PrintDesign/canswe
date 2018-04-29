@@ -10,6 +10,7 @@ $global-font-size: -size($base-font-size);
 $global-line-height: -size($base-font-size * 1.5);
 $global-font-smoothing: false !default;
 $global-type-legible: false !default;
+$global-measure: 65ch !default;
 
 // Define font stacks here
 // You can used existing font stacks as fallbacks
