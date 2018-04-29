@@ -30,14 +30,16 @@ fi
 if [ ! -d ./dist/assets/css ]; then
   echo 'Creating build CSS directory...'
   mkdir -p ./dist/assets/css
+  yarn build:css
 fi
 
 # Create build JS directory
 if [ ! -d ./dist/assets/js ]; then
   echo 'Creating build js directory...'
   mkdir -p ./dist/assets/js
+  yarn build:js
 fi
 
 # Run the processes, but trap them to kill easier
 trap 'kill %1; kill %2; kill %3' SIGINT
-yarn run dev:css & yarn run dev:js & yarn run dev:browsersync & docker-compose up
+yarn dev:css & yarn dev:js & yarn dev:browsersync & docker-compose up
