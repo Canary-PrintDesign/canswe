@@ -2,9 +2,18 @@
 
   Font-Size
   ---
+  Helpers for defining font-sizes at certain breakpoints
+  forces alignment with the baseline grid
 
 */
 
+// sets the element font size rounded to the nearest multiple of baseline grid
+//
+// $default !required default font size
+// $args...: !optional font size to use at each breakpoint in order of the array in settings.breakpoints
+//
+// example h1 { @include font-size(16, 32, 64) }
+//   ouputs an h1 element that is 16px by default, 32px on a tablet, and 64px on a desktop
 @mixin font-size($default, $args...) {
   $length: length($breakpoints);
   $i: 1;
