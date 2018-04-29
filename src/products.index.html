@@ -26,6 +26,7 @@ permalink: /products/index.html
   {% for item in site.products %}
     {% if item.category == category.safe %}
       <h2>{{ item.title }}</h2>
+      <a href="{{ item.url }}">See Product Details</a>
 
       {% include components/product-image.html item=item %}
     {% endif %}
