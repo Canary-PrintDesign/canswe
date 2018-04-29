@@ -2,6 +2,11 @@
 
   Transitions
   ---
+  Helper to define transitions while maintaining global settings
+  Takes in a list of properties that can be transitions
+
+  example: .button::hover { @include transition(opacity) }
+  example: .button::active { @include transition(opacity, scale) }
 
 */
 
