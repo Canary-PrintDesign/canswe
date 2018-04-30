@@ -35,9 +35,12 @@ $color-grey--light:    map-get($color-grey,  75);
 $color-grey--darkest:  map-get($color-grey,   0);
 $color-grey--dark:     map-get($color-grey,  15);
 $color-grey:           map-get($color-grey,  50);
+$color-primary--yellow: #FFC016;
+$color-primary--yellow-hover: #c29417;
 
 $color-text: $color-grey--darkest;
 $color-text--light: $color-grey--lightest;
 $color-text--dark: $color-grey--dark;
+$color-text--orange: #ff522b;
 
 $color-box-shadow: map-get($color-grey--alpha, 50);
