@@ -55,16 +55,23 @@ main {
       }
       .hero__divider {
         width: 60%;
+        border-color: $color-text--orange;
       }
       .hero__date {
-        @include h4;
+        @include h3;
         font-family: Ruda;
         font-weight: 400;
+        text-shadow: 2px 2px 1px #1a1a1a;
       }
       .hero__tagline {
         font-family: 'Ruda';
         font-weight: 400;
+        text-shadow: 2px 2px 1px #1a1a1a;
       }
+    }
+    .button {
+      font-family: 'Work Sans';
+      font-weight: bold;
     }
   }
 }
