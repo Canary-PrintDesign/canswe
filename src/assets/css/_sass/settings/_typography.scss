@@ -17,8 +17,8 @@ $global-measure: 65ch !default;
 // eg: mono spaced stack would be
 //       'Fira-Mono', Hasklig, $monospace-stack
 $fonts: (
-  body: '\'Work Sans\', $helvetica-stack',
-  display: 'Ruga, $garamond-stack',
+  body: "Work Sans, #{$helvetica-stack}",
+  display: "Ruga, #{$garamond-stack}",
   mono: $monospace-stack,
 );
 
