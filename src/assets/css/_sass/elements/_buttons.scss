@@ -5,3 +5,23 @@
   Don't forget hover, active states
 
 */
+
+.button {
+  padding: .575rem .75rem;
+  text-decoration: none;
+  box-shadow: 2px 2px 1px #1a1a1a;
+}
+
+.button:hover {
+  background-color: $color-primary--yellow-hover;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.button-yellow {
+  color: $color-text--dark;
+  background-color: $color-primary--yellow;
+}
