@@ -47,7 +47,7 @@ main {
       line-height: normal;
      .hero__title {
         @include h1;
-        font-family: Ruda; // Temporary
+        @include font-display;
         margin: 0;
         color: $color-text--orange;
         text-shadow: 2px 2px 1px #1a1a1a;
@@ -59,18 +59,18 @@ main {
       }
       .hero__date {
         @include h3;
-        font-family: Ruda;
+        @include font-display;
         font-weight: 400;
         text-shadow: 2px 2px 1px #1a1a1a;
       }
       .hero__tagline {
-        font-family: 'Ruda';
+        @include font-display;
         font-weight: 400;
         text-shadow: 2px 2px 1px #1a1a1a;
       }
     }
     .button {
-      font-family: 'Work Sans';
+      @include font-body;
       font-weight: bold;
     }
   }
