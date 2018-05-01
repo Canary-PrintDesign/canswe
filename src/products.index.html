@@ -2,9 +2,33 @@
 layout: products-page
 permalink: /products/index.html
 ---
+<header>
+  <h1>Products</h1>
+  <p>At Can-Swe, we manufacture quality outdoor work garments, protective apparel, rainwear, chainsaw chaps, high-visibility garments, etc.</p>
+</header>
 
-{% for item in site.products %}
-  {{ item.title }}
-  {{ item.description }}
-  <a href="{{ item.url }}">{{ item.title }}</a>
+<nav>
+  {% for category in site.data.categories %}
+    <a class="product__link" href="/products/#{{category.safe}}">{{ category.name }}</a>
+  {% endfor %}
+</nav>
+
+{% for category in site.data.categories %}
+  <h1 id={{ category.safe }}>{{ category.name }}</h1>
+  <p>{{ category.lead }}</p>
+
+  <label for="{{ category.safe }}-toggle">Read More</label>
+  <input type="checkbox" name="{{ category.safe }}-toggle" />
+  <div>
+    <p>{{ category.description }}</p>
+  </div>
+
+  {% for item in site.products %}
+    {% if item.category == category.safe %}
+      <h2>{{ item.title }}</h2>
+      <a href="{{ item.url }}">See Product Details</a>
+
+      {% include components/product-image.html item=item %}
+    {% endif %}
+  {% endfor %}
 {% endfor %}

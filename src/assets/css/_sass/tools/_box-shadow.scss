@@ -2,13 +2,29 @@
 
   Box Shadow
   ---
+  Standard box shadow mixin.
 
 */
 
-@mixin box-shadow($x: 0, $y: 0, $blur: 4px, $spread: 0, $inner: false) {
-  @if ($inner == false) {
-    $inner: null;
-  }
+// Creates a standard box-shadow
+//
+// All params are optional, use named params
+// $x: x-offset
+// $y: y-offset
+// $blur: size of blur
+// $spread: size of spread
+// $inset: true insets the shadow
+//
+// Example: aside { @include box-shadow($inset: true) }
+@mixin box-shadow(
+  $x: $box-shadow-x,
+  $y: $box-shadow-y,
+  $blur: $box-shadow-blur,
+  $spread: $box-shadow-spread,
+  $inset: $box-shadow-inset) {
+    @if ($inset == false) {
+      $inset: null;
+    }
 
-  box-shadow: $inner $x $y $blur $color-box-shadow;
+    box-shadow: $inset $x $y $blur $color-box-shadow;
 }

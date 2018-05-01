@@ -1,5 +1,5 @@
 ---
-category: Safety Pants
+category: safety-pants
 sku: P003
 name: NYLON PRO
 description: The P003 NYLON PRO 3600 is your best friend through the cold, wet, soggy, snowy fall winter spring of the Pacific North West. Made with the same polyurethane backed 420 denier nylon from our rainwear, these pants provide excellent moisture protection.

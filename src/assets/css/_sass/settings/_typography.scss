@@ -10,14 +10,15 @@ $global-font-size: -size($base-font-size);
 $global-line-height: -size($base-font-size * 1.5);
 $global-font-smoothing: false !default;
 $global-type-legible: false !default;
+$global-measure: 65ch !default;
 
 // Define font stacks here
 // You can used existing font stacks as fallbacks
 // eg: mono spaced stack would be
 //       'Fira-Mono', Hasklig, $monospace-stack
 $fonts: (
-  body: '\'Work Sans\', $helvetica-stack',
-  display: 'Ruga, $garamond-stack',
+  body: "Work Sans, #{$helvetica-stack}",
+  display: "Ruda, #{$garamond-stack}",
   mono: $monospace-stack,
 );
 

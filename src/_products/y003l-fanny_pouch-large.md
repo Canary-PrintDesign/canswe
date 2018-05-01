@@ -1,5 +1,5 @@
 ---
-category: Rainwear
+category: accessories
 sku: Y003L
 name: FANNY POUCH (Large)
 description: if you need a little extra storage this easily slide onto your belt or suspenders
