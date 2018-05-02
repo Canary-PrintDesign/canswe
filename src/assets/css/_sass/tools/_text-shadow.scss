@@ -1,0 +1,26 @@
+/*
+
+  Text Shadow
+  ---
+  Standard text shadow mixin.
+
+*/
+
+// Creates a standard text-shadow
+//
+// All params are optional, use named params
+// $x: x-offset
+// $y: y-offset
+// $blur: size of blur
+//
+// Example: @include text-shadow(2px, 2px, 1px);
+@mixin text-shadow(
+  $x: $text-shadow-x,
+  $y: $text-shadow-y,
+  $blur: $text-shadow-blur) {
+    text-shadow: $x $y $blur $color-text-shadow;
+}
+
+@mixin text-shadow--sharp {
+  @include text-shadow(2px, 2px, 1px);
+}
