@@ -12,7 +12,7 @@
   padding: 30px 50px;
   width: 100%;
   #main-nav {
-    @include box-shadow(2px, 2px, 0, 3px, 0);
+    @include box-shadow--sharp;
     ul {
       background-color: $color-grey--dark;
       display: flex;
