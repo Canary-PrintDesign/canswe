@@ -28,3 +28,7 @@
 
     box-shadow: $inset $x $y $blur $color-box-shadow;
 }
+
+@mixin box-shadow--sharp {
+  @include box-shadow(2px, 2px, 0, 3px, 0);
+}
