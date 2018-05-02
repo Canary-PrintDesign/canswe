@@ -9,15 +9,15 @@
 .button {
   padding: .575rem .75rem;
   text-decoration: none;
-  box-shadow: 2px 2px 1px #1a1a1a;
+  @include box-shadow--sharp;
 }
 
 .button:hover {
   background-color: $color-primary--yellow-hover;
-  transition: all .5s ease;
+  @include button-transition;
 }
 
-.button-yellow {
+.button--yellow {
   color: $color-text--dark;
   background-color: $color-primary--yellow;
 }
