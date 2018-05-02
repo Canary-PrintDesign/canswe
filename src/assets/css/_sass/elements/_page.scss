@@ -48,10 +48,10 @@ main {
      .hero__title {
         @include h1;
         @include font-display;
+        @include text-shadow--sharp;
         text-transform: uppercase;
         margin: 0;
         color: $color-text--orange;
-        text-shadow: 2px 2px 1px #1a1a1a;
         br {
           display: block;
           margin-top: -45px;
@@ -66,13 +66,9 @@ main {
       }
       .hero__tagline {
         @include font-display;
+        @include text-shadow--sharp;
         font-weight: 400;
-        text-shadow: 2px 2px 1px #1a1a1a;
       }
-    }
-    .button {
-      @include font-body;
-      font-weight: bold;
     }
   }
 }
