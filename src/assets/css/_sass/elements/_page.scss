@@ -64,10 +64,6 @@ main {
           color: $color-grey--lightest;
         }
       }
-      .hero__divider {
-        width: 60%;
-        border-color: $color-text--orange;
-      }
       .hero__tagline {
         @include font-display;
         font-weight: 400;
