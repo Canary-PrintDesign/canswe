@@ -16,3 +16,7 @@
   transition-property: if ($properties, $properties, $global-transition-property);
   transition-timing-function: $global-transition-timing-function;
 }
+
+@mixin button-transition {
+  @include transition(0, 0.5);
+}
