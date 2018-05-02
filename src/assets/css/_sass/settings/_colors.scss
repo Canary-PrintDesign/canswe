@@ -43,4 +43,4 @@ $color-text--light: $color-grey--lightest;
 $color-text--dark: $color-grey--dark;
 $color-text--orange: #ff522b;
 
-$color-box-shadow: map-get($color-grey--alpha, 50);
+$color-box-shadow: $color-grey--darkest;
