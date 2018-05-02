@@ -33,6 +33,11 @@ $box-shadow-spread: 0;
 $box-shadow-inset: 0;
 $box-shadow-inner: false;
 
+// Text Shadow Params
+$text-shadow-x: 0;
+$text-shadow-y: 0;
+$text-shadow-blur: 4px;
+
 $debug-mode: false !default;
 $debug-baseline: true !default;
 $debug-outline: false !default;
