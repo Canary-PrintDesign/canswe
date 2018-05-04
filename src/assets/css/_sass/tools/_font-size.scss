@@ -69,3 +69,7 @@
 @mixin tiny {
   @include font-size(16);
 }
+
+@mixin micro {
+  @include font-size(14);
+}
