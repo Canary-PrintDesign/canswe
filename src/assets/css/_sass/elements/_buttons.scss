@@ -8,10 +8,14 @@
 
 .button {
   font-weight: bold;
-  padding: 12px 15px;
-  text-decoration: none;
+  text-transform: uppercase;
+  @include padding(12px, 15px);
   @include font-body;
   @include box-shadow($blur: (2px, 5px));
+}
+
+a.button {
+  text-decoration: none;
 }
 
 .button--yellow {
