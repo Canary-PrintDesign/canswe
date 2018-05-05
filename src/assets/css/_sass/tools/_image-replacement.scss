@@ -16,3 +16,7 @@
   position: absolute;
   width: 1px;
 }
+
+.ir {
+  @include image-replacement;
+}
