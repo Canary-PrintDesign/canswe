@@ -12,6 +12,7 @@
   font-weight: bold;
   @include font-body;
   @include box-shadow($blur: (2px, 5px));
+    @include transition;
 }
 
 .button:hover {
