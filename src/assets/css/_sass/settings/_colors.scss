@@ -44,6 +44,7 @@ $color-grey--dark:     map-get($color-grey,  15);
 $color-grey:           map-get($color-grey,  50);
 $color-primary--yellow:  map-get($lightning-yellow,  55);
 $color-primary--yellow-hover: map-get($lightning-yellow,  40);
+$color-orange: map-get($sunset-orange, 55);
 
 $color-text: $color-grey--darkest;
 $color-text--light: $color-grey--lightest;
