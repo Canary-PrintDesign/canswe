@@ -24,10 +24,13 @@
   @include text-shadow;
 
   small {
-    color: $color-grey--lightest;
+    color: $color-text--orange;
+    font-weight: 400;
+    letter-spacing: 5px;
     display: block;
     word-spacing: normal;
     @include h3;
+    @include margin-bottom(22px);
   }
 }
 
