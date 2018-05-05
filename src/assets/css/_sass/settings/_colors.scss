@@ -17,7 +17,7 @@ $lightning-yellow: (
 );
 
 // Greys
-$color-grey: (
+$color-greys: (
     0: hsl(0, 0,   0),
    10: hsl(0, 0,  10%),
    15: hsl(0, 0,  16%),
@@ -30,18 +30,20 @@ $color-grey: (
   100: hsl(0, 0, 100%),
 );
 
-$color-grey--alpha: (
-  40: hsla(0, 0, 16%, .40),
-  50: hsla(0, 0, 16%, .50),
-  70: hsla(0, 0, 16%, .70),
+$color-greys--alpha: (
+  20: hsla(0, 0, 16%, .2),
+  40: hsla(0, 0, 16%, .4),
+  50: hsla(0, 0, 16%, .5),
+  70: hsla(0, 0, 16%, .7),
   75: hsla(0, 0, 16%, .75),
 );
 
-$color-grey--lightest: map-get($color-grey, 100);
-$color-grey--light:    map-get($color-grey,  75);
-$color-grey--darkest:  map-get($color-grey,   0);
-$color-grey--dark:     map-get($color-grey,  15);
-$color-grey:           map-get($color-grey,  50);
+$color-grey--lightest: map-get($color-greys, 100);
+$color-grey--light:    map-get($color-greys,  75);
+$color-grey--darkest:  map-get($color-greys,   0);
+$color-grey--dark:     map-get($color-greys,  15);
+$color-grey:           map-get($color-greys,  50);
+
 $color-primary--yellow:  map-get($lightning-yellow,  55);
 $color-primary--yellow-hover: map-get($lightning-yellow,  40);
 $color-orange: map-get($sunset-orange, 55);
@@ -52,5 +54,5 @@ $color-text--dark: $color-grey--dark;
 $color-text--orange: map-get($sunset-orange, 55);
 $color-text--orange-hover: map-get($sunset-orange, 70);
 
-$color-box-shadow: $color-grey--darkest;
-$color-text-shadow: $color-grey--darkest;
+$color-box-shadow: map-get($color-greys--alpha, 20);
+$color-text-shadow: map-get($color-greys--alpha, 50);
