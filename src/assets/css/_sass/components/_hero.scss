@@ -1,0 +1,37 @@
+.hero {
+  background-image: url('/assets/img/trees.png');
+  background-size: cover;
+  color: $color-text--light;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  @include margin-left(60px);
+}
+
+.hero__title {
+  color: $color-text--orange;
+  text-transform: uppercase;
+  word-spacing: 999em;
+  @include h1;
+  @include font-display;
+  @include margin-vertical(0);
+  @include text-shadow--sharp;
+
+  small {
+    color: $color-grey--lightest;
+    display: block;
+    word-spacing: normal;
+    @include h3;
+  }
+}
+
+.hero__tagline {
+  @include font-display;
+  @include text-shadow--sharp;
+}
