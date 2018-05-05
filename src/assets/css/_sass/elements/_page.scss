@@ -12,6 +12,7 @@ html {
   font-size: $global-font-size;
   line-height: $global-line-height;
   overflow-y: scroll; // 1
+  line-height: 1;
   min-height: 100vh; // 2
 }
 
