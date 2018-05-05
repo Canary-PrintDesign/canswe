@@ -10,8 +10,8 @@
   padding: 12px 15px;
   text-decoration: none;
   font-weight: bold;
-  @include box-shadow--sharp;
   @include font-body;
+  @include box-shadow($blur: (2px, 5px));
 }
 
 .button:hover {

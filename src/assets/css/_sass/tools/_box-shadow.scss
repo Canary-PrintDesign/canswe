@@ -11,8 +11,8 @@
 // All params are optional, use named params
 // $x: x-offset
 // $y: y-offset
-// $blur: size of blur
-// $spread: size of spread
+// $blur: size of blur - can receive a list of blurs 1px, 2px, 4px)
+// $spread: size of spread - can receive a list of spreads (1px, 2px, 4px, 8px)
 // $inset: true insets the shadow
 //
 // Example: aside { @include box-shadow($inset: true) }
@@ -22,13 +22,24 @@
   $blur: $box-shadow-blur,
   $spread: $box-shadow-spread,
   $inset: $box-shadow-inset) {
-    @if ($inset == false) {
-      $inset: null;
+    @if ($inset) { $inset: inset }
+
+    $color: $color-box-shadow;
+    $shadow: (null,);
+    $spread-length: length($spread);
+    $blur-length: length($blur);
+
+    @for $i from 1 through $blur-length {
+      @for $n from 1 through $spread-length {
+        $val: $inset -shadow($x, $y, nth($blur, $i), nth($spread, $n), $color);
+        $shadow: append($shadow, $val);
+      }
     }
 
-    box-shadow: $inset $x $y $blur $color-box-shadow;
+    box-shadow: $shadow;
 }
 
 @mixin box-shadow--sharp {
-  @include box-shadow(2px, 2px, 0, 3px, 0);
+  @include box-shadow($x: 2px, $y: 2px, $blur: 3px);
 }
+
