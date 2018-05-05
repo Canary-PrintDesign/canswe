@@ -3,32 +3,3 @@
   Navs
 
 */
-
-#nav-header {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px 50px;
-  width: 100%;
-  #main-nav {
-    @include box-shadow--sharp;
-    ul {
-      background-color: $color-grey--dark;
-      display: flex;
-      list-style: none;
-      margin-left: auto;
-      margin-bottom: 0;
-      li {
-        padding: 20px 35px;
-        a {
-          color: $color-text--light;
-          @include font-body;
-        }
-        a:hover {
-          color: $color-grey--light;
-        }
-      }
-    }
-  }
-}
