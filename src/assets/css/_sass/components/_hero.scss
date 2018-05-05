@@ -21,7 +21,7 @@
   @include h1;
   @include font-display;
   @include margin-vertical(0);
-  @include text-shadow--sharp;
+  @include text-shadow;
 
   small {
     color: $color-grey--lightest;
@@ -33,5 +33,5 @@
 
 .hero__tagline {
   @include font-display;
-  @include text-shadow--sharp;
+  @include text-shadow;
 }

@@ -10,16 +10,16 @@
   font-weight: bold;
   padding: 12px 15px;
   text-decoration: none;
-  @include box-shadow--sharp;
   @include font-body;
+  @include box-shadow($blur: (2px, 5px));
 }
 
 .button--yellow {
-  background-color: $color-yellow;
+  background-color: $color-primary--yellow;
   color: $color-text--dark;
 
   &:hover {
     background-color: $color-primary--yellow-hover;
-    @include button-transition;
+    @include transition;
   }
 }
