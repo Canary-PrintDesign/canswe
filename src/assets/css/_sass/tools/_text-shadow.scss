@@ -18,9 +18,15 @@
   $x: $text-shadow-x,
   $y: $text-shadow-y,
   $blur: $text-shadow-blur) {
-    text-shadow: $x $y $blur $color-text-shadow;
+    $color: $color-text-shadow;
+    $shadow: (null,);
+    $blur-length: length($blur);
+
+    @for $i from 1 through $blur-length {
+      $val: -shadow($x, $y, nth($blur, $i), $color);
+      $shadow: append($shadow, $val);
+    }
+
+    text-shadow: $shadow;
 }
 
-@mixin text-shadow--sharp {
-  @include text-shadow(2px, 2px, 1px);
-}
