@@ -6,11 +6,12 @@
 */
 
 // Fun colors names
-$sunset-orange: hsl(11%, 81%, 90%);
-$lightning-yellow: hsl(46%, 92%, 100%);
+$sunset-orange: hsl(11, 79%, 54%);
+$lightning-yellow: hsl(46, 100%, 54%);
+$pizza: hsl(47, 79%, 43%);
 
 // Greys
-$color-grey: (
+$color-greys: (
     0: hsl(0, 0,   0),
    10: hsl(0, 0,  10%),
    15: hsl(0, 0,  16%),
@@ -23,25 +24,28 @@ $color-grey: (
   100: hsl(0, 0, 100%),
 );
 
-$color-grey--alpha: (
-  40: hsla(0, 0, 16%, .40),
-  50: hsla(0, 0, 16%, .50),
-  70: hsla(0, 0, 16%, .70),
+$color-greys--alpha: (
+  20: hsla(0, 0, 16%, .2),
+  40: hsla(0, 0, 16%, .4),
+  50: hsla(0, 0, 16%, .5),
+  70: hsla(0, 0, 16%, .7),
   75: hsla(0, 0, 16%, .75),
 );
 
-$color-grey--lightest: map-get($color-grey, 100);
-$color-grey--light:    map-get($color-grey,  75);
-$color-grey--darkest:  map-get($color-grey,   0);
-$color-grey--dark:     map-get($color-grey,  15);
-$color-grey:           map-get($color-grey,  50);
-$color-primary--yellow: #FFC016;
-$color-primary--yellow-hover: #c29417;
+$color-grey--lightest: map-get($color-greys, 100);
+$color-grey--light:    map-get($color-greys,  75);
+$color-grey--darkest:  map-get($color-greys,   0);
+$color-grey--dark:     map-get($color-greys,  15);
+$color-grey:           map-get($color-greys,  50);
+
+$color-yellow: $lightning-yellow;
+$color-yellow--hover: $pizza;
+$color-orange: $sunset-orange;
 
 $color-text: $color-grey--darkest;
 $color-text--light: $color-grey--lightest;
 $color-text--dark: $color-grey--dark;
-$color-text--orange: #ff522b;
+$color-text--orange: $color-orange;
 
-$color-box-shadow: $color-grey--darkest;
-$color-text-shadow: $color-grey--darkest;
+$color-box-shadow: map-get($color-greys--alpha, 20);
+$color-text-shadow: map-get($color-greys--alpha, 50);
