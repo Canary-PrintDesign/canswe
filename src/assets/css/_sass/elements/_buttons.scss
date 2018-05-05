@@ -5,3 +5,25 @@
   Don't forget hover, active states
 
 */
+
+.button {
+  font-weight: bold;
+  text-transform: uppercase;
+  @include padding(12px, 15px);
+  @include font-body;
+  @include box-shadow($blur: (2px, 5px));
+
+  &:hover {
+    background-color: $color-yellow--hover;
+    @include transition;
+  }
+}
+
+a.button {
+  text-decoration: none;
+}
+
+.button--yellow {
+  background-color: $color-yellow;
+  color: $color-text--dark;
+}

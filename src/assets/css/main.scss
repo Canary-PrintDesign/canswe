@@ -9,6 +9,7 @@
 
 @import '_sass/tools/media';
 @import '_sass/tools/box-shadow';
+@import '_sass/tools/text-shadow';
 @import '_sass/tools/clearfix';
 @import '_sass/tools/hidden';
 @import '_sass/tools/center';
@@ -34,6 +35,7 @@
 
 @import '_sass/elements/page';
 @import '_sass/elements/body';
+@import '_sass/elements/main';
 @import '_sass/elements/headings';
 @import '_sass/elements/paragraph';
 @import '_sass/elements/images';
@@ -50,6 +52,11 @@
 
 // Components
 @import '_sass/components/back-to-top';
+@import '_sass/components/site-logo';
+@import '_sass/components/site-footer';
+@import '_sass/components/hero';
+@import '_sass/components/site-header';
+@import '_sass/components/site-nav';
 
 // Pages
 
