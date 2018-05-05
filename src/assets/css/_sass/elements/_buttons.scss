@@ -7,17 +7,17 @@
 */
 
 .button {
+  font-weight: bold;
   padding: 12px 15px;
   text-decoration: none;
-  font-weight: bold;
   @include box-shadow--sharp;
   @include font-body;
 }
 
 .button--yellow {
+  background-color: $color-yellow;
   color: $color-text--dark;
-  background-color: $color-primary--yellow;
-  
+
   &:hover {
     background-color: $color-primary--yellow-hover;
     @include button-transition;
