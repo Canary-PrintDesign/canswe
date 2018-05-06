@@ -70,7 +70,7 @@
 @mixin flex-even($count, $space-between: null) {
   $basis: 100% / $count;
 
-  @if ($gap) {
+  @if ($space-between) {
     $basis: calc((100% - #{$space-between * ($count - 1)}) / #{$count});
   }
 
