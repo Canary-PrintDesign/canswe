@@ -3,6 +3,8 @@ layout: products-page
 permalink: /products/index.html
 class: products
 ---
+{% assign categories = site.data.categories | sort: 'name' %}
+
 <header class="products-hero">
   <div class="products-hero__intro">
     <h1 class="products-hero__title">Products</h1>
@@ -12,7 +14,6 @@ class: products
 
 <nav class="products-navbar">
   <div class="products-navbar__wrapper">
-    {% assign categories = site.data.categories | sort: 'name' %}
     {% for category in categories | limit: 2 %}
       <a class="products-navbar__link" href="/products/#{{category.safe}}">
         <span class="products-navbar__text">{{ category.name }}</span>
@@ -21,7 +22,7 @@ class: products
 
     <i class="products-navbar__separator"></i>
 
-    {% for category in categories | offset: 2 | limit: 2 %}
+    {% for category in categories | offset: 2 %}
       <a class="products-navbar__link" href="/products/#{{category.safe}}">
         <span class="products-navbar__text">{{ category.name }}</span>
       </a>
@@ -30,21 +31,40 @@ class: products
 </nav>
 
 {% for category in site.data.categories %}
-  <h1 id={{ category.safe }}>{{ category.name }}</h1>
-  <p>{{ category.lead }}</p>
+  <div class="product-category">
+    <header class="product-category__header">
+      <h1 id={{ category.safe }} class="product-category__title">{{ category.name }}</h1>
+      <p class="product-category__lead">{{ category.lead }}</p>
+    </header>
 
-  <label for="{{ category.safe }}-toggle">Read More</label>
-  <input type="checkbox" name="{{ category.safe }}-toggle" />
-  <div>
-    <p>{{ category.description }}</p>
+
+    <div class="product-category__article">
+      <input type="checkbox" class="product-category__checkbox" name="{{ category.safe }}-toggle" id="{{ category.safe }}-toggle" />
+
+      <div class="product-category__description">
+        {{ category.description }}
+      </div>
+
+      <label class="product-category__label" for="{{ category.safe }}-toggle">Read More {% include icons/logic-or.svg %}</label>
+    </div>
+
+    <div class="product-category__grid product-grid">
+      {% for item in site.products %}
+        {% if item.category == category.safe %}
+          <div class="product-grid__item-wrapper">
+            <a class="product-grid__item" href="{{ item.url }}">
+              <div class="product-grid__item-details">
+                <h2 class="product-grid__item-title">{{ item.name }}</h2>
+                <span class="product-grid__item-link">See Product Details</span>
+              </div>
+
+              <div class="product-grid__item-image">
+                {% include components/product-image.html item=item %}
+              </div>
+            </a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
-
-  {% for item in site.products %}
-    {% if item.category == category.safe %}
-      <h2>{{ item.title }}</h2>
-      <a href="{{ item.url }}">See Product Details</a>
-
-      {% include components/product-image.html item=item %}
-    {% endif %}
-  {% endfor %}
 {% endfor %}
