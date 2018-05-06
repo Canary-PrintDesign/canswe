@@ -14,6 +14,7 @@ class: products
 
 <nav class="products-navbar">
   <div class="products-navbar__wrapper">
+    {% assign categories = site.data.categories | sort: 'name' %}
     {% for category in categories | limit: 2 %}
       <a class="products-navbar__link" href="/products/#{{category.safe}}">
         <span class="products-navbar__text">{{ category.name }}</span>
