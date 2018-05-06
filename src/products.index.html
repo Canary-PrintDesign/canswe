@@ -1,16 +1,32 @@
 ---
 layout: products-page
 permalink: /products/index.html
+class: products
 ---
-<header>
-  <h1>Products</h1>
-  <p>At Can-Swe, we manufacture quality outdoor work garments, protective apparel, rainwear, chainsaw chaps, high-visibility garments, etc.</p>
+<header class="products-hero">
+  <div class="products-hero__intro">
+    <h1 class="products-hero__title">Products</h1>
+    <p class="products-hero__lead">At Can-Swe, we manufacture quality outdoor work garments, protective apparel, rainwear, chainsaw chaps, high-visibility garments, etc.</p>
+  </div>
 </header>
 
-<nav>
-  {% for category in site.data.categories %}
-    <a class="product__link" href="/products/#{{category.safe}}">{{ category.name }}</a>
-  {% endfor %}
+<nav class="products-navbar">
+  <div class="products-navbar__wrapper">
+    {% assign categories = site.data.categories | sort: 'name' %}
+    {% for category in categories | limit: 2 %}
+      <a class="products-navbar__link" href="/products/#{{category.safe}}">
+        <span class="products-navbar__text">{{ category.name }}</span>
+      </a>
+    {% endfor %}
+
+    <i class="products-navbar__separator"></i>
+
+    {% for category in categories | offset: 2 | limit: 2 %}
+      <a class="products-navbar__link" href="/products/#{{category.safe}}">
+        <span class="products-navbar__text">{{ category.name }}</span>
+      </a>
+    {% endfor %}
+  </div>
 </nav>
 
 {% for category in site.data.categories %}

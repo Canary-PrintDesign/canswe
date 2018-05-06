@@ -1,0 +1,31 @@
+/*
+
+  Products
+
+*/
+
+.products-hero {
+  align-items: center;
+  background-image: url('/assets/img/wood-3241848_1920.jpg');
+  color: $color-text--light;
+  display: flex;
+  height: -size(488px);
+  justify-content: center;
+}
+
+.products-hero__title {
+  color: $color-yellow;
+  font-weight: 600;
+  text-transform: uppercase;
+  @include h1;
+  @include font-display;
+}
+
+.products-hero__intro {
+  text-align: center;
+  width: 600px;
+}
+
+.products-hero__lead {
+  line-height: 1.6;
+}
