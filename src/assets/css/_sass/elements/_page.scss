@@ -31,44 +31,4 @@ body {
 
 main {
   flex: 1 0 auto; // 3
-  .hero {
-    height: 100vh;
-    background: url('/assets/img/trees.png');
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: $color-text--light;
-    .hero__container {
-      display: flex;
-      flex-direction: column;
-      padding-left: 60px; 
-      width: 500px;
-      line-height: normal;
-     .hero__title {
-        @include h1;
-        @include font-display;
-        @include text-shadow--sharp;
-        text-transform: uppercase;
-        margin: 0;
-        color: $color-text--orange;
-        br {
-          display: block;
-          margin-top: -45px;
-          line-height: 20px;
-          content: " ";
-        }
-        small {
-          @include h3;
-          display: inline-wrap;
-          color: $color-grey--lightest;
-        }
-      }
-      .hero__tagline {
-        @include font-display;
-        @include text-shadow--sharp;
-        font-weight: 400;
-      }
-    }
-  }
 }
