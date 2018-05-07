@@ -2,4 +2,66 @@
 layout: default
 ---
 
-<h1>{{ page.name }}</h1>
+<header class="product-header">
+  <h1 class="product-title">{{ page.name }}</h1>
+</header>
+
+<div class="product-collage">
+  <span><img src="//placehold.it/790x500"></span>
+  <span><img src="//placehold.it/378x244"></span>
+  <span><img src="//placehold.it/378x244"></span>
+</div>
+
+<div class="product-body">
+  <article class="product-article">
+    <h2 class="product-article__title">Description & Features</h2>
+    <p>{{ page.description }}</p>
+  </article>
+
+  <aside class="products-specs">
+    <section class="spec-weather">
+      <h3>Weather</h3>
+      {% for condition in page.specs.weather %}
+        <i class="icon-{{ condition }}">{{ condition }}</i>
+      {% endfor %}
+    </section>
+
+    <section class="spec-cost">
+      <h3>Cost</h3>
+      {% for cost in (1..page.specs.cost) %}
+        <i class="icon-cost">{{ cost }}</i>
+      {% endfor %}
+    </section>
+
+    <section class="spec-safety">
+      <h3>Safety</h3>
+      {% for rating in (1..page.specs.safety.score) %}
+        <i class="icon-safety">{{ rating }}</i>
+      {% endfor %}
+
+      <ul class="product-safety">
+        {% for point in page.specs.safety.details %}
+          <li>{{ point }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section class="spec-features">
+      <h3>Features</h3>
+      <ul class="product-features">
+        {% for point in page.specs.features %}
+          <li>{{ point }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section class="spec-misc">
+      <h3>Extra Information</h3>
+      <ul class="product-details">
+        {% for point in page.specs.misc %}
+          <li>{{ point }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+  </aside>
+</div>
