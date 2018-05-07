@@ -14,12 +14,12 @@
   @include font-body;
 }
 
-.button:hover {
-  background-color: $color-primary--yellow-hover;
-  @include button-transition;
-}
-
 .button--yellow {
   color: $color-text--dark;
   background-color: $color-primary--yellow;
+  
+  &:hover {
+    background-color: $color-primary--yellow-hover;
+    @include button-transition;
+  }
 }
