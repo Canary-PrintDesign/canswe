@@ -14,27 +14,27 @@
 
   .main-nav {
     @include box-shadow--sharp;
+  }
 
-    ul {
-      background-color: $color-grey--dark;
-      display: flex;
-      list-style: none;
-      margin-left: auto;
-      margin-bottom: 0;
+  ul {
+    background-color: $color-grey--dark;
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    margin-bottom: 0;
+  }
 
-      li {
-        padding: 15px 35px;
-        text-transform: uppercase;
+  li {
+    padding: 15px 35px;
+    text-transform: uppercase;
 
-        a {
-          color: $color-text--light;
-          @include font-body;
-          @include micro;
-        }
+    a {
+      color: $color-text--light;
+      @include font-body;
+      @include micro;
 
-        a:hover {
-          color: $color-grey--light;
-        }
+      &:hover {
+        color: $color-grey--light;
       }
     }
   }
