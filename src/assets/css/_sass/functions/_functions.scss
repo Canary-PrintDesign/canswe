@@ -41,3 +41,7 @@
 @function -shadow($x: null, $y: null, $blur: null, $spread: null, $color: null) {
   @return unquote("#{$x} #{$y} #{$blur} #{$spread} #{$color}");
 }
+
+@function -color($color, $variant: base) {
+  @return map-get($color, $variant);
+}
