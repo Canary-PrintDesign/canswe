@@ -15,7 +15,7 @@
     @include transition;
 
     &:hover {
-      background-color: map-get($color-greys,  20);
+      background-color: -color($greys, 20);
     }
   }
 }
