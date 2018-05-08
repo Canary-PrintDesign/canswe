@@ -1,10 +1,19 @@
-<footer>
-  {% include components/site-logo.html %}
+<footer class="site-footer">
+  <div class="site-footer__colophon">
+    {% include components/site-logo.html %}
 
-  <p><a href="mailto:info@canswe.com">info@canswe.com</a></p>
+    <p>Can-Swe Distributors Inc.</p>
 
-  {% include components/nav.html items=site.data.site-nav %}
+    <a href="mailto:info@canswe.com">info@canswe.com</a>
+  </div>
 
+  <nav class="site-footer-nav site-nav">
+    {% include components/nav.html items=site.data.site-nav class="site-footer-nav" %}
+  </nav>
+
+</footer>
+
+<div class="site-copyright">
   {% include fragment/html-copyright.html %}
   <a href="/privacy">Privacy Policy</a>
-</footer>
+</div>

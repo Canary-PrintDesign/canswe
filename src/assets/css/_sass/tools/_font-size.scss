@@ -34,72 +34,38 @@
   }
 }
 
-@mixin line-height($default, $args...) {
-  $length: length($breakpoints);
-  $i: 1;
-
-  line-height: $default;
-
-  @each $var in $args {
-
-    @if ($length >= $i) {
-      $bp: nth(nth($breakpoints, $i), 2);
-
-      @media screen and (min-width: $bp) {
-        line-height: $var;
-      }
-    }
-
-    $i: $i + 1;
-  }
-}
-
 @mixin h1 {
   @include font-size(100);
-  @include line-height(1.2)
 }
 
 @mixin h2 {
   @include font-size(64);
-  @include line-height(1.2)
 }
 
 @mixin h3 {
   @include font-size(48);
-  @include line-height(1.2)
 }
 
 @mixin h4 {
   @include font-size(36);
-  @include line-height(1.2)
 }
 
 @mixin h5 {
   @include font-size(24);
-  @include line-height(1.2)
 }
 
 @mixin h6 {
   @include font-size(22);
-  @include line-height(1.2)
 }
 
 @mixin body {
   @include font-size(20);
-  @include line-height(1.6)
 }
 
 @mixin small {
   @include font-size(18);
-  @include line-height(1)
 }
 
 @mixin tiny {
-  @include font-size(16);
-  @include line-height(1)
-}
-
-@mixin micro {
   @include font-size(14);
-  @include line-height(1)
 }

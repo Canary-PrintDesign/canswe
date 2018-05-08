@@ -1,14 +1,15 @@
 {% assign recurse = include.recurse %}
+{% assign navclass = include.class %}
 {% capture link %}{{ include.link | default: false }}{% endcapture %}
 
-<ul>
-  {% for item in include.items %}
-    <li>
-      {% include components/nav-item.html item=item link=link %}
+{% for item in include.items %}
+  <span class="{% if navclass %}{{ navclass }}__item {% endif %} nav__item">
+    {% include components/nav-item.html item=item link=link navclass=navclass %}
 
-      {% if include.recurse == true %}
-        {% include components/nav-subitems.html item=item %}
-      {% endif %}
-    </li>
-  {% endfor %}
-</ul>
+    {% if include.recurse == true %}
+      <div class="{% if navclass %}{{ navclass }}__item {% endif %} nav__item--parent">
+        {% include components/nav-subitems.html item=item navclass=navclass %}
+      </div>
+    {% endif %}
+  </span>
+{% endfor %}

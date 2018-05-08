@@ -1,0 +1,58 @@
+/*
+
+  Site Footer
+
+*/
+
+.site-footer {
+  background-color: $color-grey--dark;
+  text-align: center;
+  @include padding-vertical(51px, 71px);
+}
+
+.site-footer__colophon {
+  color: $color-text--light;
+
+  .site-logo {
+    fill: $color-grey--light;
+    @include margin-bottom(20px);
+
+    svg {
+      height: -size(81px);
+    }
+  }
+
+  p {
+    font-weight: 900;
+    @include font-display;
+    @include margin-bottom(19px);
+  }
+
+  a {
+    color: $color-yellow;
+    text-decoration: none;
+    @include tiny;
+    @include margin-bottom(54px);
+  }
+}
+
+.site-footer-nav {
+  a {
+    color: $color-text--light;
+    text-decoration: none;
+    @include small;
+  }
+}
+
+.site-copyright {
+  background-color: $color-grey--dark;
+  color: $color-text--light;
+  text-align: center;
+  @include padding-bottom(10px);
+  @include tiny;
+
+  a {
+    text-decoration: none;
+    color: $color-text--light;
+  }
+}

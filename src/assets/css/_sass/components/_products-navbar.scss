@@ -1,0 +1,52 @@
+/*
+
+  Products Navbar
+
+*/
+
+.products-navbar {
+  transform: translateY(-50%);
+}
+
+.products-navbar__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include margin-center;
+}
+
+.products-navbar__link {
+  background-color: $color-grey--darkest;
+  flex-grow: 1;
+  flex-shrink: 1;
+  color: $color-text--light;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  height: -size(45px);
+  @include box-shadow($blur: (2px, 5px));
+
+  &:hover {
+    background-color: $color-grey--dark;
+    @include transition;
+  }
+}
+
+.products-navbar__separator {
+  background-color: $color-orange;
+  background-image: url('/assets/icons/logic-or.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: block;
+  height : -size(70px);
+  width: -size(97px);
+  @include box-shadow($blur: (2px, 5px));
+}
+
+.products-navbar__text {
+  flex-grow: 1;
+}

@@ -1,17 +1,18 @@
+{% assign navclass = include.navclass %}
 {% if include.item.text %}
   {% capture class %}
-    {% if include.item.class %}
-      {{ include.item.class }}
+    {%- if include.item.class %}
+      {{- include.item.class -}}
     {% else %}
-      {{ include.item.text | downcase | replace: " ", "-" }}
-    {% endif %}
+      {{- include.item.text | downcase | replace: " ", "-" -}}
+    {% endif -%}
   {% endcapture %}
 
   {% capture active %}
     {% if page.class contains class %}is-active{% endif %}
   {% endcapture %}
 
-  <a class="{{ class }} " href="{{ include.item.url }}">
-    <span>{{ include.item.text }}</span>
+  <a class="{{ class }} {% if navclass %}{{ navclass}}__link{% endif %} nav__link" href="{{ include.item.url }}">
+    <span class="{% if navclass %}{{ navclass }}__text{% endif %} nav__text">{{ include.item.text }}</span>
   </a>
 {% endif %}
