@@ -38,8 +38,3 @@
 
     box-shadow: $shadow;
 }
-
-@mixin box-shadow--sharp {
-  @include box-shadow($x: 2px, $y: 2px, $blur: 3px);
-}
-

@@ -19,11 +19,12 @@ a.button {
 }
 
 .button--yellow {
-  background-color: $color-primary--yellow;
+  background-color: $color-yellow;
   color: $color-text--dark;
 
   &:hover {
-    background-color: $color-primary--yellow-hover;
+    background-color: $color-yellow--hover;
     @include transition;
   }
 }
+

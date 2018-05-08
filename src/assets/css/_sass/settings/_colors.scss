@@ -11,6 +11,7 @@ $sunset-orange: (
   70: hsl(11, 81%, 70%),
   90: hsl(11, 81%, 90%)
 );
+
 $lightning-yellow: (
   40: hsl(44, 100%,  40%),
   55: hsl(44, 100%,  54%),
@@ -44,8 +45,8 @@ $color-grey--darkest:  map-get($color-greys,   0);
 $color-grey--dark:     map-get($color-greys,  15);
 $color-grey:           map-get($color-greys,  50);
 
-$color-primary--yellow:  map-get($lightning-yellow,  55);
-$color-primary--yellow-hover: map-get($lightning-yellow,  40);
+$color-yellow: map-get($lightning-yellow,  55);
+$color-yellow--hover: map-get($lightning-yellow,  40);
 $color-orange: map-get($sunset-orange, 55);
 
 $color-text: $color-grey--darkest;
