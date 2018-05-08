@@ -37,3 +37,7 @@
 
   @return $return-value;
 }
+
+@function -color($color, $variant: base) {
+  @return map-get($color, $variant);
+}
