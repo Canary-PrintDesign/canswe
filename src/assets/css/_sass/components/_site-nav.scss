@@ -1,0 +1,21 @@
+.site-header {
+  .site-nav {
+    background-color: $color-grey--dark;
+    display: flex;
+    @include box-shadow;
+  }
+
+  .site-nav__link {
+    align-items: center;
+    color: $color-text--light;
+    display: flex;
+    height: -size(73px);
+    text-decoration: none;
+    @include padding-horizontal(36px);
+    @include transition;
+
+    &:hover {
+      background-color: -color($greys, 20);
+    }
+  }
+}
