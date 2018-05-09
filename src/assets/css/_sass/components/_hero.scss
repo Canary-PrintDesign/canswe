@@ -1,0 +1,41 @@
+.hero {
+  background-image: url('/assets/img/pexels-photo-113339-forest-logs-nature.jpg');
+  background-size: cover;
+  color: $color-text--light;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  @include margin-left(60px);
+}
+
+.hero__title {
+  color: $color-text--orange;
+  text-transform: uppercase;
+  word-spacing: 999em;
+  @include h1;
+  @include font-display;
+  @include margin-vertical(0);
+  @include text-shadow;
+
+  small {
+    color: $color-text--orange;
+    font-weight: 400;
+    letter-spacing: 5px;
+    display: block;
+    word-spacing: normal;
+    @include h3;
+    @include margin-bottom(22px);
+  }
+}
+
+.hero__tagline {
+  @include font-display;
+  @include text-shadow;
+}
+
