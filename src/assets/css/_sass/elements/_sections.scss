@@ -4,32 +4,3 @@
 
 */
 
-.products-section {
-  background: $color-grey--dark;
-  @include font-body;
-  font-weight: 100;
-  color: $color-text--light;
-  
-  .section__header {
-    text-align: center;
-    width: 600px;
-    @include margin-center;
-  }
-
-  .section__title {
-    @include h3;
-    @include font-display;
-    text-transform: uppercase;
-  }
-
-  .section__link {
-    @include micro;
-    text-transform: uppercase;
-    color: $color-text--orange;
-    text-decoration: none;
-    
-    &:hover {
-      color: $color-text--orange-hover;
-    }
-  }
-}
