@@ -5,3 +5,4 @@ vendor
 .DS_Store
 .sass-cache
 dist/
+geo-json.json
