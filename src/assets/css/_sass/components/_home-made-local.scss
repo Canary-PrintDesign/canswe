@@ -33,6 +33,10 @@
 
     &:hover {
       color: $color-text--orange-hover;
+
+      img {
+        opacity: 0.65;
+      }
     }
   }
 }
