@@ -3,7 +3,7 @@ layout: default
 ---
 
 <header class="product-header">
-  <h1 class="product-title">{{ page.name }}</h1>
+  <h1 class="product-title">{{ page.title | upcase }}</h1>
 </header>
 
 <div class="product-collage">
@@ -15,53 +15,87 @@ layout: default
 <div class="product-body">
   <article class="product-article">
     <h2 class="product-article__title">Description & Features</h2>
-    <p>{{ page.description }}</p>
+    <div class="product-article__wrapper">
+      <div class="product-article__body">
+        <p>{{ page.description }}</p>
+
+        {% if page.specs.features %}
+        <section class="product-spec product-spec--features">
+          <h3 class="product-spec__title">
+            Features
+          </h3>
+
+          <ul class="product-spec__list">
+            {% for point in page.specs.features %}
+              <li>{{ point }}</li>
+            {% endfor %}
+          </ul>
+        </section>
+        {% endif %}
+
+        {% if page.specs.misc %}
+        <section class="product-spec product-spec--misc">
+          <h3 class="product-spec__title">
+            Extra Information
+          </h3>
+
+          <ul class="product-spec__list">
+            {% for point in page.specs.misc %}
+              <li>{{ point }}</li>
+            {% endfor %}
+          </ul>
+        </section>
+      </div>
+      {% endif %}
+
+      <aside class="product-details">
+
+        {% if page.specs.weather %}
+        <section class="product-spec spec--weather">
+          <h3 class="product-spec__title">
+            Weather
+            <span class="product-spec__icons">
+              {% for condition in page.specs.weather %}
+                <i class="icon--{{ condition }} product-spec__icon">{{ condition }}</i>
+              {% endfor %}
+            </span>
+          </h3>
+        </section>
+        {% endif %}
+
+        {% if page.specs.cost %}
+        <section class="product-spec product-spec--cost">
+          <h3 class="product-spec__title">
+            Cost
+            <span class="product-spec__icons">
+              {% for cost in (1..page.specs.cost) %}
+                <i class="icon--cost product-spec__icon">{{ cost }}</i>
+              {% endfor %}
+            </span>
+          </h3>
+        </section>
+        {% endif %}
+
+        {% if page.specs.safety %}
+        <section class="product-spec product-spec--safety">
+          <h3 class="product-spec__title">
+            Safety
+            <span class="product-spec__icons">
+            {% for rating in (1..page.specs.safety.score) %}
+              <i class="icon--safety product-spec__icon">{{ rating }}</i>
+            {% endfor %}
+            </span>
+          </h3>
+
+          <ul class="product-spec__list">
+            {% for point in page.specs.safety.details %}
+              <li>{{ point }}</li>
+            {% endfor %}
+          </ul>
+        </section>
+        {% endif %}
+      </aside>
+    </div>
   </article>
-
-  <aside class="products-specs">
-    <section class="spec-weather">
-      <h3>Weather</h3>
-      {% for condition in page.specs.weather %}
-        <i class="icon-{{ condition }}">{{ condition }}</i>
-      {% endfor %}
-    </section>
-
-    <section class="spec-cost">
-      <h3>Cost</h3>
-      {% for cost in (1..page.specs.cost) %}
-        <i class="icon-cost">{{ cost }}</i>
-      {% endfor %}
-    </section>
-
-    <section class="spec-safety">
-      <h3>Safety</h3>
-      {% for rating in (1..page.specs.safety.score) %}
-        <i class="icon-safety">{{ rating }}</i>
-      {% endfor %}
-
-      <ul class="product-safety">
-        {% for point in page.specs.safety.details %}
-          <li>{{ point }}</li>
-        {% endfor %}
-      </ul>
-    </section>
-
-    <section class="spec-features">
-      <h3>Features</h3>
-      <ul class="product-features">
-        {% for point in page.specs.features %}
-          <li>{{ point }}</li>
-        {% endfor %}
-      </ul>
-    </section>
-
-    <section class="spec-misc">
-      <h3>Extra Information</h3>
-      <ul class="product-details">
-        {% for point in page.specs.misc %}
-          <li>{{ point }}</li>
-        {% endfor %}
-      </ul>
-    </section>
-  </aside>
 </div>
+
