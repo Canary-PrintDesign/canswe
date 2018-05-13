@@ -5,6 +5,13 @@
 */
 
 .site-logo svg {
-  fill: $color-grey--lightest;
   height: 100%;
+
+  .leaf {
+    fill: #e2221e;
+  }
+
+  .text {
+    fill: #17245d;
+  }
 }
