@@ -1,0 +1,52 @@
+.family-operated-section {
+  background: $color-grey--dark;
+  @include font-body;
+  font-weight: 100;
+  color: $color-text--light;
+
+  .section__body {
+    max-width: 1200px;  
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .section__header {
+    text-align: center;
+    width: 600px;
+    @include margin-center;
+  }
+
+  .section__title {
+    @include h3;
+    @include font-display;
+    text-transform: uppercase;
+  }
+
+  .row {
+    display: flex;
+    
+    &--flip {
+      .img {
+        order: 2;
+      } 
+    }
+    
+    .content {
+      margin: 60px 20px; 
+    }
+  }
+  
+  .row + .row {
+    position: relative;
+    top: -80px; 
+    z-index: 100;
+    
+    .content {
+      margin-top: 100px;
+    }
+  }
+  
+  .img {
+    font-size: 0;
+  }
+}
