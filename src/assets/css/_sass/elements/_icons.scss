@@ -4,7 +4,7 @@
 
 */
 
-[class^=icon] {
+[class^="icon"] {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -14,3 +14,24 @@
     background-image: none;
   }
 }
+
+.icon--sun {
+  background-image: url('/assets/icons/sun.svg');
+}
+
+.icon--rain {
+  background-image: url('/assets/icons/rain.svg');
+}
+
+.icon--snow {
+  background-image: url('/assets/icons/snowflake.svg');
+}
+
+.icon--safety {
+  background-image: url('/assets/icons/safety.svg');
+}
+
+.icon--cost {
+  background-image: url('/assets/icons/money.svg');
+}
+
