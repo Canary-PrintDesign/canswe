@@ -1,7 +1,7 @@
 .family-operated-section {
   $sectionWidth: 1300px;
   $sectionPaddingLR: 25px;
-  $contentMarginLR: 20px;
+  $contentMarginLR: 30px;
   $topImageWidth: 890px;
   $bottomImageWidth: 680px;
 
@@ -27,6 +27,7 @@
     @include h3;
     @include font-display;
     text-transform: uppercase;
+    margin-bottom: 75px;
   }
 
   .row {
@@ -39,10 +40,15 @@
     }
 
     .content {
-      margin: 60px $contentMarginLR;
-      width: calc(#{$sectionWidth} - 2 * #{$sectionPaddingLR} - #{$topImageWidth} - 2 * #{$contentMarginLR});
-      min-width: calc(#{$sectionWidth} - 2 * #{$sectionPaddingLR} - #{$topImageWidth} - 2 * #{$contentMarginLR});
       flex: 0 8 auto;
+      margin: 60px $contentMarginLR;
+      $topContentWidth: calc(#{$sectionWidth} - 2 * #{$sectionPaddingLR} - #{$topImageWidth} - 2 * #{$contentMarginLR});
+      width: $topContentWidth;
+      min-width: calc(#{$sectionWidth} - 2 * #{$sectionPaddingLR} - #{$topImageWidth} - 2 * #{$contentMarginLR});
+
+      p {
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -53,13 +59,14 @@
 
     .content {
       margin-top: 14%;
-      width: calc(#{$sectionWidth} - 2 * #{$sectionPaddingLR} - #{$bottomImageWidth} - 2 * #{$contentMarginLR});
-      min-width: calc(#{$sectionWidth} - 2 * #{$sectionPaddingLR} - #{$bottomImageWidth} - 2 * #{$contentMarginLR});
+      $bottomContentWidth: calc(#{$sectionWidth} - 2 * #{$sectionPaddingLR} - #{$bottomImageWidth} - 2 * #{$contentMarginLR});
+      width: $bottomContentWidth;
+      min-width: $bottomContentWidth;
     }
   }
 
   .img {
-    font-size: 0;
     flex: 1 1 auto;
+    font-size: 0;
   }
 }
