@@ -1,0 +1,40 @@
+.map {
+  background-image: url('/assets/img/map-with-markers.svg');
+  background-size: 50%;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-color: -color($greys, 95);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: -size(406px);
+}
+
+.map__wrapper {
+  flex: 0 1 auto;
+}
+
+.map__title {
+  margin-bottom: -size(21px);
+  font-weight: 900;
+  text-transform: uppercase;
+  @include font-display;
+  @include h4;
+}
+
+.map__lead {
+  margin-bottom: -size(32px);
+}
+
+.map__link {
+  text-decoration: none;
+  color: $color-orange;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.icon--arrow {
+  content: '→';
+  display: inline-block;
+  color: orange;
+}
