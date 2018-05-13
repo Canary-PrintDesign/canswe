@@ -1,13 +1,20 @@
 .family-operated-section {
+  $sectionWidth: 1300px;
+  $sectionPaddingLR: 25px;
+  $contentMarginLR: 20px;
+  $topImageWidth: 890px;
+  $bottomImageWidth: 680px;
+
   background: $color-grey--dark;
   @include font-body;
   font-weight: 100;
   color: $color-text--light;
 
   .section__body {
-    max-width: 1200px;  
+    max-width: $sectionWidth;
     margin: 0 auto;
     position: relative;
+    padding: 100px $sectionPaddingLR 50px;
   }
 
   .section__header {
@@ -24,29 +31,35 @@
 
   .row {
     display: flex;
-    
+
     &--flip {
       .img {
         order: 2;
-      } 
+      }
     }
-    
+
     .content {
-      margin: 60px 20px; 
+      margin: 60px $contentMarginLR;
+      width: calc(#{$sectionWidth} - 2 * #{$sectionPaddingLR} - #{$topImageWidth} - 2 * #{$contentMarginLR});
+      min-width: calc(#{$sectionWidth} - 2 * #{$sectionPaddingLR} - #{$topImageWidth} - 2 * #{$contentMarginLR});
+      flex: 0 8 auto;
     }
   }
-  
+
   .row + .row {
     position: relative;
-    top: -80px; 
+    top: -80px;
     z-index: 100;
-    
+
     .content {
-      margin-top: 100px;
+      margin-top: 14%;
+      width: calc(#{$sectionWidth} - 2 * #{$sectionPaddingLR} - #{$bottomImageWidth} - 2 * #{$contentMarginLR});
+      min-width: calc(#{$sectionWidth} - 2 * #{$sectionPaddingLR} - #{$bottomImageWidth} - 2 * #{$contentMarginLR});
     }
   }
-  
+
   .img {
     font-size: 0;
+    flex: 1 1 auto;
   }
 }
