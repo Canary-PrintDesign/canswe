@@ -33,6 +33,20 @@ layout: default
         </section>
         {% endif %}
 
+        {% if page.specs.material %}
+        <section class="product-spec product-spec--material">
+          <h3 class="product-spec__title">
+            Material
+          </h3>
+
+          <ul class="product-spec__list">
+            {% for point in page.specs.material %}
+              <li>{{ point }}</li>
+            {% endfor %}
+          </ul>
+        </section>
+        {% endif %}
+
         {% if page.specs.misc %}
         <section class="product-spec product-spec--misc">
           <h3 class="product-spec__title">
@@ -49,6 +63,32 @@ layout: default
       {% endif %}
 
       <aside class="product-details">
+
+        {% if page.specs.model %}
+        <section class="product-spec spec--model">
+          <h3 class="product-spec__title">
+            Model:
+            <span class="product-spec__icons">
+              {% for condition in page.specs.model %}
+                {{ condition }}
+              {% endfor %}
+            </span>
+          </h3>
+        </section>
+        {% endif %}
+
+        {% if page.specs.sku %}
+        <section class="product-spec spec--sku">
+          <h3 class="product-spec__title">
+            Order SKU:
+            <span class="product-spec__icons">
+              {% for condition in page.specs.sku %}
+                {{ condition }}
+              {% endfor %}
+            </span>
+          </h3>
+        </section>
+        {% endif %}
 
         {% if page.specs.weather %}
         <section class="product-spec spec--weather">
