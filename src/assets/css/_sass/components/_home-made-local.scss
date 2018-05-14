@@ -31,10 +31,15 @@
     text-decoration: none;
     font-weight: 700;
 
+    svg {
+      margin-bottom: 3px;
+      vertical-align: middle;
+    }
+
     &:hover {
       color: $color-text--orange-hover;
 
-      img {
+      svg {
         opacity: 0.65;
       }
     }
