@@ -47,7 +47,8 @@ d3.json("canada-topo.json", function(ca) {
               .style("opacity", 1)
             div.html(d.properties.city)
               .style("left", (d3.event.pageX) + "px")
-              .style("top", (d3.event.pageY - 14) + "px");
+              .style("top", (d3.event.pageY - 20) + "px")
+              .attr('transform', 'translate('+190px+')')
           })
           .on("mouseout", function(d) {
             div.transition()

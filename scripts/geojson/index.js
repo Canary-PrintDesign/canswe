@@ -36,12 +36,9 @@ class Feature {
 
 class Properties {
   constructor(data) {
-    this.dealer_name = data.dealer_name;
-    this.city = data.city;
-    this.address = data.address;
-    this.province = data.province;
-    this.postal_code = data.postal_code;
-    this.phone = data.phone;
+    Object.keys(data).forEach((key) => {
+      this[key] = data[key];
+    });
   }
 }
 
