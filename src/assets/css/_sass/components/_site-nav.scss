@@ -5,6 +5,8 @@
     background-color: $color-grey--dark;
     display: flex;
     @include box-shadow;
+    margin-right: 6%;
+    box-shadow: 3px 1px 2px $color-grey--darker, 3px 3px 2px $color-grey--dark, 1px 3px 2px $color-grey--darker;
   }
 
   .site-nav__link {
@@ -20,4 +22,42 @@
       background-color: -color($greys, 20);
     }
   }
+
+  .site-nav__item.nav__item:last-child {
+    .site-nav__link {
+      padding-left: 65px;
+    }
+
+    &::before {
+      content: '';
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      top: 50px;
+      margin-left: 27.5px;
+      background-color: rgba(0,0,0,0.2);
+      box-shadow: 5px 5px 4px rgba(0,0,0,0.1), 5px -5px 4px rgba(0,0,0,0.1), -5px 5px 4px rgba(0,0,0,0.1), -5px -5px 4px rgba(0,0,0,0.1);
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: '';
+      background-image: url("../icons/location.svg");
+      background-size: cover;
+      width: 28px;
+      height: 28px;
+      position: absolute;
+      margin-left: 26px;
+      top: 38px;
+    }
+  }
+
+  .site-nav__text {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $color-grey--lighter;
+  }
 }
+
+// 0 1px 3px #1a1a1a, 0 1px 3px #1a1a1a, 0 1px 3px #1a1a1a, 0 1px 3px #1a1a1a
+// 4px 1px 2px #1a1a1a, 3px 3px 2px #1a1a1a, 1px 4px 2px #1a1a1a, 3px 3px 2px #1a1a1a

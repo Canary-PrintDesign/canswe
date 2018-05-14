@@ -37,8 +37,10 @@ $greys--alpha: (
 );
 
 $color-grey--lightest: -color($greys, 100);
+$color-grey--lighter: -color($greys, 85);
 $color-grey--light:    -color($greys,  75);
 $color-grey--darkest:  -color($greys,   0);
+$color-grey--darker:  -color($greys,   10);
 $color-grey--dark:     -color($greys,  15);
 $color-grey:           -color($greys,  50);
 
