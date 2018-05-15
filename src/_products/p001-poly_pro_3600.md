@@ -3,7 +3,11 @@ class: product
 category: safety-pants
 sku: P001
 title: Poly Pro 3600
-description: The P001 POLY PRO 3600 is the industry standard for comercial and recreational sawyers, and is the favorite amoung consumers. This all season pant is light weight and breathable with excellent range of motion. <p> The P001B Poly Pro Backpad 3600 offers the additional protection of ankle to knee wrapping around the calf.
+description: >
+  <p> The P001 POLY PRO 3600 is the industry standard for comercial and recreational sawyers, and is the favorite amoung consumers. This all season pant is light weight and breathable with excellent range of motion.
+
+
+  <p> The P001B Poly Pro Backpad 3600 offers the additional protection of ankle to knee wrapping around the calf.
 specs:
   model: Poly Pro 3600 / Backpad
   sku: P001 / P001B
@@ -18,9 +22,6 @@ specs:
     score: 1
     details:
       - Meets WCB PPE 1-1997 Threshold Chains Speed (TCS) 3600
-
-  material:
-
 
   features:
     - Nylon reinforced crotch with extra bar tacking
