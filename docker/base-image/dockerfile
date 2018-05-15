@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM node:9-alpine
 MAINTAINER Gregory Daynes <gregdaynes@gmail.com>
 
 # Build tooling
@@ -16,6 +16,3 @@ RUN gem install --no-document rdoc \
  && gem install --no-document bundler
 
 WORKDIR /opt
-
-EXPOSE 4000
-CMD jekyll --version

@@ -1,5 +1,5 @@
 CAN-SWE
-======
+=======
 
 Can-Swe manufactures quality outdoor work garments, protective apparel, rainwear, chainsaw chaps, and high-visibility garments.
 
