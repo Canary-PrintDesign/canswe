@@ -2,14 +2,8 @@
   "name": "project-hyde",
   "version": "1.0.0",
   "description": "",
-  "main": "README.md",
   "scripts": {
-    "start": "sh ./start",
-    "precommit": "npm run lint",
-    "prepush": "npm run lint",
-    "lint": "npm run lint:css & npm run lint:js",
-    "lint:css": "./node_modules/.bin/sass-lint -c .sass-lint.yml -v -s scss src/",
-    "lint:js": "./node_modules/.bin/eslint src/**/*.js",
+    "start": "node start.js",
     "dev:css": "./node_modules/.bin/node-sass src/assets/css/ -o dist/assets/css/ --source-map-embed true -w -s | npm run postcss:autoprefixer -s",
     "dev:js": "./node_modules/.bin/babel src/ --out-file dist/assets/js/app.js --watch --source-maps",
     "dev:jekyll": "bundle exec jekyll build --watch --config 'src/_config.yml,src/_config-common.yml,src/_config-development.yml' --source src/ --destination dist/ --incremental",
@@ -47,7 +41,6 @@
     "babel-cli": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "browser-sync": "^2.23.7",
     "chrome-remote-interface": "^0.25.5",
     "cssnano": "^3.10.0",
     "eslint": "^4.19.1",
@@ -55,9 +48,8 @@
     "eslint-plugin-import": "^2.10.0",
     "exorcist": "^1.0.1",
     "headless-chrome-crawler": "^1.5.0",
-    "husky": "^0.14.3",
     "minimist": "^1.2.0",
-    "node-sass": "^4.8.3",
+    "node-sass": "^4.9.0",
     "postcss-cli": "^5.0.0",
     "sass-lint": "^1.12.1",
     "slug": "^0.9.1",
@@ -76,8 +68,5 @@
         }
       ]
     ]
-  },
-  "devDependencies": {
-    "nodemon": "^1.17.4"
   }
 }

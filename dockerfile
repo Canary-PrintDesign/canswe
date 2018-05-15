@@ -2,16 +2,17 @@ FROM gregdaynes/project-hyde:latest
 
 COPY ./Gemfile /opt/Gemfile
 COPY ./Gemfile.lock /opt/Gemfile.lock
-#COPY ./docker-start.sh /opt/docker-start
-
 RUN bundle --path vendor
 
-# APK Cleanup
+COPY ./package.json /opt/package.json
+COPY ./package-lock.json /opt/package-lock.json
+RUN npm install
 
+# APK Cleanup
 RUN rm -rf /root/src /tmp/* /usr/share/man /var/cache/apk/* \
  && apk del build-base ruby-dev libxml2-dev \
  && apk search --update
 
-#COPY .git /opt/.git
-
-#CMD sh /opt/docker-start
+COPY ./docker-jekyll.sh /opt/docker-jekyll
+COPY ./docker-scss.sh /opt/docker-scss
+COPY ./docker-js.sh /opt/docker-js
