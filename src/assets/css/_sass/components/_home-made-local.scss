@@ -4,8 +4,9 @@
   color: $color-text--dark;
   padding-top: 120px;
   height: 1200px;
-  background-image: linear-gradient(rgba(255,255,255,0.7), transparent, transparent), url("/assets/img/wood-3241848_1920.jpg");
+  background-image: url("/assets/img/made-local.jpg");
   background-size: cover;
+  background-position: bottom center;
 
   .section__header {
     text-align: center;
