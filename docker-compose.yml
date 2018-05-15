@@ -3,7 +3,7 @@ version: '3'
 services:
   jekyll:
     build: .
-    command: sh docker-start
+    command: bundle exec jekyll build --config 'src/_config.yml,src/_config-common.yml,src/_config-development.yml' --source src/ --destination dist/ --incremental
     environment:
       - ENV
     volumes:

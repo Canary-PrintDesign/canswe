@@ -7,10 +7,10 @@ if [ ! -d ./node_modules ]; then
 fi
 
 # Remove any of our existing container
-if [ ! -z $(docker ps -q) ]; then
-  echo 'Removing old containers...'
-  docker rm $(docker stop $(docker ps -q --filter ancestor=canswe_jekyll))
-fi
+#if [ ! -z $(docker ps -q) ]; then
+#  echo 'Removing old containers...'
+#  docker rm $(docker stop $(docker ps -q --filter ancestor=canswe_jekyll))
+#fi
 
 # kill anything using 3000
 WEB=$(lsof -i :3000 | awk 'FNR > 1 {print $2}')
@@ -42,4 +42,4 @@ yarn build:js
 
 # Run the processes, but trap them to kill easier
 trap 'kill %1; kill %2; kill %3' SIGINT
-yarn dev:css & yarn dev:js & yarn dev:browsersync & docker-compose up
+yarn dev:css & yarn dev:js & yarn dev:browsersync
