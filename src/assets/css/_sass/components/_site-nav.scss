@@ -34,7 +34,7 @@
       height: 22px;
       position: absolute;
       top: 50px;
-      margin-left: 27.5px;
+      margin-left: 29px;
       background-color: rgba(0,0,0,0.2);
       box-shadow: 5px 5px 4px rgba(0,0,0,0.1), 5px -5px 4px rgba(0,0,0,0.1), -5px 5px 4px rgba(0,0,0,0.1), -5px -5px 4px rgba(0,0,0,0.1);
       border-radius: 50%;
@@ -42,7 +42,7 @@
 
     &::after {
       content: '';
-      background-image: url("../icons/location.svg");
+      background-image: url('../icons/location.svg');
       background-size: cover;
       width: 28px;
       height: 28px;
