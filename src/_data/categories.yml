@@ -24,19 +24,7 @@
     <p>Distinctive high visibility red or gold pocket flaps give an added
     margin of safety to the user.
 
-- name: Chaps & Workwear
-  safe: chaps-workwear
-  lead: Lorem ipsum
-  description: >
-    lorem
-
-- name: Accessories
-  safe: accessories
-  lead: Lorem ipsum
-  description: >
-    lorem
-
-- name: Rainwear
+- name: Hurricane Rainwear
   safe: rainwear
   lead: Designed to be light, comfortable, and waterproof in all conditions with the addition of being extremely durable and tear resistant.
   description: >
