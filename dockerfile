@@ -4,8 +4,7 @@ COPY ./Gemfile /opt/Gemfile
 COPY ./Gemfile.lock /opt/Gemfile.lock
 RUN bundle --path vendor
 
-COPY ./package.json /opt/package.json
-COPY ./package-lock.json /opt/package-lock.json
+COPY ./node_modules.json /opt/package.json
 RUN npm install
 
 # APK Cleanup

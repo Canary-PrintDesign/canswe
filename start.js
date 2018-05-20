@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { exec } = require('child_process');
+const { exec, execSync } = require('child_process');
 let m = [];
 let p = [];
 
@@ -41,7 +41,7 @@ function dockerStartContainer() {
   console.log('Starting new container');
 
   return new Promise((resolve, reject) => {
-    exec('docker run -d --rm -v $(pwd)/src:/opt/src -v $(pwd)/dist:/opt/dist --name canswe canswe sleep 3600', (err, stdout, stderr) => {
+    exec(`docker run -d --rm -v ${process.cwd()}/src:/opt/src -v ${process.cwd()}/dist:/opt/dist --name canswe canswe sleep 3600`, (err, stdout, stderr) => {
       if (err) throw(err);
       resolve();
     })
