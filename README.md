@@ -55,7 +55,7 @@ More can be read on the [Jekyll Documentation Site](https://jekyllrb.com/docs/da
 
 ### _includes
 
-Jekyll has the concept of "partials" or snippets of code that can be reused in any file, these are placed inside the _includes directory.
+Jekyll has the concept of "partials" or snippets of code that can be reused in any file, these are placed inside the \_includes directory.
 
 Can-Swe has 4 sub directories.
 
@@ -82,7 +82,7 @@ A post - the post layout or the default layout, if they exist, in that order
 
 ### assets
 
-- css: Site scss/css files go in here, broken down further into the _sass directory and it's child directories
+- css: Site scss/css files go in here, broken down further into the \_sass directory and it's child directories
 - js: Javascript files for the site go in here, organization is less important than the css
 - icons
 - images
@@ -95,9 +95,9 @@ This is where you will place site specific pages, preferably defining permalinks
 
 Can-Swe's configurations are split up into three types.
 
-- base: _config.yml - base level configurations are in here, these are things like, output directory; markdown parser; plugins used; It should be uncommon to alter this file.
-- common: _config-common.yml - All of the sites configurations are done in here. You will add/update this file for most of the site changes.
-- environment: _config-development.yml, _config-production.yml - Configurations specific to the environment in the name. You probably wont need to alter these much.
+- base: \_config.yml - base level configurations are in here, these are things like, output directory; markdown parser; plugins used; It should be uncommon to alter this file.
+- common: \_config-common.yml - All of the sites configurations are done in here. You will add/update this file for most of the site changes.
+- environment: \_config-development.yml, \_config-production.yml - Configurations specific to the environment in the name. You probably wont need to alter these much.
 
 Build Automations
 -----------------
@@ -197,11 +197,55 @@ An experimental script to diagnose a slow building jekyll process. If you find a
 
 There are other scripts besides the ones listed above. These are mostly supplemental scripts to make the scripts above more modular. You should not have a reason to run these on their own.
 
+Generating Maps
+---------------
+
+Maps are created using a combination of GeoJSON, TopoJSON, CSV, and D3.js
+The CSV should follow the format
+
+```
+dealer_name
+city
+address province
+postal_code
+phone
+longitude
+latitude
+```
+
+Lat/Long should be in decimal format, and are the only required fields
+
+## Building GeoJSON
+
+1) navigate to scripts/map-geojson-script
+
+```
+cd scripts/geojson
+```
+
+2) Run npm install to get the necessary packages
+
+```
+npm install
+```
+
+3) Compile CSV to geojson using node script
+
+```
+node index.js /path/to/your.csv
+```
+
+4) Move the output `geo-json.json` file to assets
+
+```
+mv geo-json.json ../../src/assets/maps/canswe-retailers.json
+```
+
+
 License
 -------
 
 This project is licensed under the GNU GPL V3 - see the [LICENSE](LICENSE) file for details
-
 
 
 #### Docker

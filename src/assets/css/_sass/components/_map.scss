@@ -1,17 +1,19 @@
 .map {
-  background-image: url('/assets/img/map-with-markers.svg');
-  background-size: 50%;
-  background-position: center right;
-  background-repeat: no-repeat;
   background-color: -color($greys, 95);
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  height: -size(406px);
 }
 
 .map__wrapper {
-  flex: 0 1 auto;
+  display: flex;
+  height: -size(406px);
+}
+
+.map__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include flex-half;
 }
 
 .map__title {
@@ -38,3 +40,37 @@
   display: inline-block;
   color: orange;
 }
+
+.map__holder {
+  position: relative;
+  @include flex-half;
+
+  svg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .region0 {  fill: -color($greys, 54) }
+  .region1 {  fill: -color($greys, 58) }
+  .region2 {  fill: -color($greys, 67) }
+  .region3 {  fill: -color($greys, 52) }
+  .region4 {  fill: -color($greys, 42) }
+  .region5 {  fill: -color($greys, 62) }
+  .region6 {  fill: -color($greys, 54) }
+  .region7 {  fill: -color($greys, 44) }
+  .region8 {  fill: -color($greys, 56) }
+  .region9 {  fill: -color($greys, 69) }
+  .region10 { fill: -color($greys, 60) }
+  .region11 { fill: -color($greys, 62) }
+  .region12 { fill: -color($greys, 60) }
+
+  [class^=point] {
+    position: relative;
+    z-index: 10000000;
+    fill: $color-orange;
+    r: 3px;
+    stroke: #fff;
+  }
+}
+

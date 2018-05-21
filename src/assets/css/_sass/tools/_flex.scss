@@ -49,7 +49,7 @@
 //
 // example: .columned-layout p { @include flex-half(10px) }
 //   will output elements with 10px spacing between them
-@mixin flex-half($space-between) {
+@mixin flex-half($space-between: null) {
   $basis: 50%;
 
   @if ($space-between) {
