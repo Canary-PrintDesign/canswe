@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+  svg {
+    position: absolute;
+  }
+
+  .tooltip {
+    position: relative;
+    background: white;
+    display: inline;
+  }
+
+  .region0 { fill: turquoise; }
+  .region1 { fill: red; }
+  .region2 { fill: orange; }
+  .region3 { fill: blue; }
+  .region4 { fill: green; }
+  .region5 { fill: yellow; }
+  .region6 { fill: purple; }
+  .region7 { fill: magenta; }
+  .region8 { fill: grey; }
+  .region9 { fill: silver; }
+  .region10 { fill: lime; }
+  .region11 { fill: teal; }
+  .region12 { fill: chartreuse; }
+
+  [class^=point] {
+    position: relative;
+    z-index: 10000000;
+    fill: orange;
+    r: 3px;
+    stroke: #fff;
+  }
+
+</style>
+
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="map.js"></script>
