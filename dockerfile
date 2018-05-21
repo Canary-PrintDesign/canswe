@@ -15,3 +15,5 @@ RUN rm -rf /root/src /tmp/* /usr/share/man /var/cache/apk/* \
 COPY ./docker-jekyll.sh /opt/docker-jekyll
 COPY ./docker-scss.sh /opt/docker-scss
 COPY ./docker-js.sh /opt/docker-js
+
+COPY ./build-production.sh /opt/build-production
