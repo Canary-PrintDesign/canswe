@@ -1,4 +1,38 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/topojson.v1.min.js"></script>
+<script src="http://unpkg.com/spritespin@x.x.x/release/spritespin.js"></script>
 <script src="/assets/js/app.js"></script>
+<script type='text/javascript'>
+  $(function() {
+    var spriteSpin = $(".spritespin");
+
+    if (spriteSpin.length > 0 && window.rotator == 'true') {
+      spriteSpin.spritespin({
+        // path to the source images.
+        source: [
+          "/assets/images/products/" + window.sku + "/1.jpg",
+          "/assets/images/products/" + window.sku + "/2.jpg",
+          "/assets/images/products/" + window.sku + "/3.jpg",
+          "/assets/images/products/" + window.sku + "/4.jpg",
+          "/assets/images/products/" + window.sku + "/5.jpg",
+          "/assets/images/products/" + window.sku + "/6.jpg",
+          "/assets/images/products/" + window.sku + "/7.jpg",
+          "/assets/images/products/" + window.sku + "/8.jpg",
+          "/assets/images/products/" + window.sku + "/9.jpg",
+          "/assets/images/products/" + window.sku + "/10.jpg",
+          "/assets/images/products/" + window.sku + "/11.jpg",
+          "/assets/images/products/" + window.sku + "/12.jpg",
+          "/assets/images/products/" + window.sku + "/13.jpg",
+          "/assets/images/products/" + window.sku + "/14.jpg",
+          "/assets/images/products/" + window.sku + "/15.jpg",
+          "/assets/images/products/" + window.sku + "/16.jpg",
+        ],
+        width: window.imageWidth * (378 / window.imageWidth),  // width in pixels of the window/frame
+        height: window.imageHeight * (508 / window.imageHeight),  // height in pixels of the window/frame
+        frames: 16,
+        frameTime: 150,
+      });
+    }
+  });
+</script>

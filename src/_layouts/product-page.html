@@ -7,12 +7,24 @@ layout: default
 </header>
 
 <div class="product-collage">
-  <span><img src="//placehold.it/790x500"></span>
-  <span><img src="//placehold.it/378x244"></span>
-  <span><img src="//placehold.it/378x244"></span>
+  <span><img src="//placehold.it/790x508"></span>
+  {% if page.rotator = 'true' %}
+    <span class="spritespin"></span>
+    <script>
+      var sku = "{{ page.sku | downcase}}",
+        imageWidth = 538,
+        imageHeight = 800,
+        rotator = "{{ page.rotator }}"
+    </script>
+  {% elsif %}
+    <span><img src="//placehold.it/378x507"></span>
+  {% endif %}
 </div>
 
+
+
 <div class="product-body">
+
   <article class="product-article">
     <h2 class="product-article__title">Description & Features</h2>
     <div class="product-article__wrapper">
