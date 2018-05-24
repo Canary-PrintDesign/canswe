@@ -22,7 +22,6 @@
   }
 
   .made-local__link {
-    @include tiny;
     text-transform: uppercase;
     color: $color-text--orange;
     text-decoration: none;
