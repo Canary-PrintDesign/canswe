@@ -1,36 +1,30 @@
-.made-local-section {
-  @include font-body;
-  font-weight: 100;
-  color: $color-text--dark;
+.made-local {
   padding-top: 120px;
   height: 1200px;
   background-image: url("/assets/img/made-local.jpg");
   background-size: cover;
   background-position: bottom center;
 
-  .section__header {
+  .made-local__header {
     text-align: center;
-    width: 600px;
+    width: 570px;
     @include margin-center;
   }
 
-  .section__title {
+  .made-local__title {
     @include h3;
     @include font-display;
     text-transform: uppercase;
   }
 
-  .section__lead {
-    width: 570px;
-    line-height: 30px;
-    margin: 20px auto;
-    font-weight: 400;
+  .made-local__lead {
+    line-height: 1.5;
   }
 
-  .section__link {
+  .made-local__link {
     @include tiny;
     text-transform: uppercase;
-    color: $color-text--orange;
+    color: $color-text--orange-dark;
     text-decoration: none;
     font-weight: 700;
 
@@ -40,10 +34,10 @@
     }
 
     &:hover {
-      color: $color-text--orange-hover;
+      color: $color-text--orange;
 
-      svg {
-        opacity: 0.65;
+      svg > .arrow-body {
+        fill: #e9512f;
       }
     }
   }

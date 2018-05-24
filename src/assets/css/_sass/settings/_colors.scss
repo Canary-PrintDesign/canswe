@@ -6,6 +6,7 @@
 */
 
 $orange: (
+  dark: hsl(11, 81%, 40%),
   base: hsl(11, 81%, 55%),
   hover: hsl(11, 81%, 70%)
 );
@@ -62,6 +63,7 @@ $color-orange: -color($orange);
 $color-text: $color-grey--darkest;
 $color-text--light: $color-grey--lightest;
 $color-text--dark: $color-grey--dark;
+$color-text--orange-dark: -color($orange, dark);
 $color-text--orange: -color($orange);
 $color-text--orange-hover: -color($orange, hover);
 
