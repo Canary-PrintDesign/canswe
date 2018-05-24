@@ -33,11 +33,12 @@
       margin-bottom: 3px;
       vertical-align: middle;
 
-      & > .arrow-outline {
-      }
-
       & > .arrow-body {
         fill: $color-text--orange;
+      }
+
+      & > .arrow-shadow {
+        stroke: $color-grey;
       }
     }
 
