@@ -24,20 +24,28 @@
   .made-local__link {
     @include tiny;
     text-transform: uppercase;
-    color: $color-text--orange-dark;
+    color: $color-text--orange;
     text-decoration: none;
     font-weight: 700;
+    @include text-shadow($blur: (1px, 2px));
 
     svg {
       margin-bottom: 3px;
       vertical-align: middle;
+
+      & > .arrow-outline {
+      }
+
+      & > .arrow-body {
+        fill: $color-text--orange;
+      }
     }
 
     &:hover {
-      color: $color-text--orange;
+      color: $color-text--orange-hover;
 
       svg > .arrow-body {
-        fill: #e9512f;
+        fill: $color-text--orange-hover;
       }
     }
   }
