@@ -73,10 +73,12 @@
      class="arrow-shadow"
      inkscape:connector-curvature="0"
      style="stroke-width:1.14999998;filter:url(#filter6512)"
-     transform="matrix(1.0045808,0,0,0.99955411,0.12595489,0.13791997)"
+     transform="matrix(1.305955,0,0,1.2994203,-3.4762062,-3.3919049)"
      sodipodi:nodetypes="cccccccc" />
   <path
      class="arrow-body"
-     d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"
-     id="path62" />
+     d="M 17.173052,10.728799 H 1.5600524 v 2.6 H 17.173052 v 3.9 l 5.187,-5.2 -5.187,-5.1999998 z"
+     id="path62"
+     inkscape:connector-curvature="0"
+     style="stroke-width:1.29999995" />
 </svg>
