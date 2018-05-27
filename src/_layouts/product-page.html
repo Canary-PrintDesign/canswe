@@ -8,15 +8,15 @@ layout: default
 
 <div class="product-collage">
   <span><img src="//placehold.it/790x508"></span>
-  {% if page.rotator = 'true' %}
+  {% if page.rotator == true %}
     <span class="spritespin"></span>
     <script>
-      var sku = "{{ page.sku | downcase}}",
+      var sku = "{{ page.sku | downcase }}",
         imageWidth = 538,
         imageHeight = 800,
         rotator = "{{ page.rotator }}"
     </script>
-  {% elsif %}
+  {% else %}
     <span><img src="//placehold.it/378x507"></span>
   {% endif %}
 </div>
