@@ -1,6 +1,7 @@
 .hero {
   background-image: url('/assets/img/sunrise.jpg');
   background-size: cover;
+  background-position: bottom;
   color: $color-text--light;
   display: flex;
   flex-direction: column;
