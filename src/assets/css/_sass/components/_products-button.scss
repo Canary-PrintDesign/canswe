@@ -6,7 +6,7 @@
     bottom: 25px;
     right: 6%;
     position: absolute;
-    box-shadow: 3px 1px 4px $color-grey, 1px 3px 4px $color-grey;
+    box-shadow: 0 2px 4px -color($greys--alpha, 50);
   }
 
   span {
