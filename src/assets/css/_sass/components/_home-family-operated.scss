@@ -6,9 +6,8 @@
   $bottomImageWidth: 680px;
 
   background: $color-grey--dark;
-  @include font-body;
-  font-weight: 100;
   color: $color-text--light;
+  font-weight: 300;
 
   .section__body {
     max-width: $sectionWidth;
