@@ -29,16 +29,13 @@
     @include text-shadow($blur: (1px, 2px));
 
     svg {
+      height: 20px;
       margin-bottom: 3px;
       margin-left: 5px;
       vertical-align: middle;
 
       & > .arrow-body {
         fill: $color-text--orange;
-      }
-
-      & > .arrow-shadow {
-        stroke: $color-grey;
       }
     }
 
