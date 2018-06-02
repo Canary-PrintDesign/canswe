@@ -9,3 +9,30 @@
 a {
   display: inline-block;
 }
+
+.orange-arrow-link {
+  text-transform: uppercase;
+  color: $color-text--orange;
+  text-decoration: none;
+  font-weight: 700;
+  @include text-shadow($blur: (1px, 2px));
+
+  svg {
+    height: 20px;
+    margin-bottom: 3px;
+    margin-left: 5px;
+    vertical-align: middle;
+
+    & > .arrow-body {
+      fill: $color-text--orange;
+    }
+  }
+
+  &:hover {
+    color: $color-text--orange-hover;
+
+    svg > .arrow-body {
+      fill: $color-text--orange-hover;
+    }
+  }
+}
