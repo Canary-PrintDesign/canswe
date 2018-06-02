@@ -1,6 +1,5 @@
 .product-boxes {
   @include font-body;
-  font-weight: 100;
   color: $color-text--light;
   height: 800px;
 
@@ -8,8 +7,6 @@
     padding-top: 75px;
     background: $color-grey--dark;
     height: 500px;
-    position: relative;
-    z-index: 1;
   }
 
   .product-boxes__header {
@@ -35,8 +32,15 @@
     height: 300px;
     text-align: center;
     position: relative;
-    margin-top: -100px;
-    z-index: 2;
+    margin-top: -180px;
+    overflow: hidden;
+    text-decoration: none;
+    color: $color-yellow;
+    font-weight: 700;
+    font-size: 1.5em;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
 
     &:first-child {
       background-image: url("/assets/images/products/p001/4.jpg");
@@ -47,9 +51,6 @@
       background-image: url("/assets/images/products/p004/4.jpg");
       background-size: cover;
     }
-  }
-
-  .product-boxes__body {
   }
 
   .product__link {
@@ -65,7 +66,9 @@
 
   .product-boxes__corner-ribbon {
     width: 200px;
-    background: #e43;
+    font-weight: 400;
+    font-size: 16px;
+    background: $color-text--orange;
     position: absolute;
     text-align: center;
     line-height: 50px;
