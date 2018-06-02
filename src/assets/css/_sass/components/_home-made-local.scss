@@ -16,35 +16,4 @@
     @include font-display;
     text-transform: uppercase;
   }
-
-  .made-local__lead {
-    line-height: 1.5;
-  }
-
-  .made-local__link {
-    text-transform: uppercase;
-    color: $color-text--orange;
-    text-decoration: none;
-    font-weight: 700;
-    @include text-shadow($blur: (1px, 2px));
-
-    svg {
-      height: 20px;
-      margin-bottom: 3px;
-      margin-left: 5px;
-      vertical-align: middle;
-
-      & > .arrow-body {
-        fill: $color-text--orange;
-      }
-    }
-
-    &:hover {
-      color: $color-text--orange-hover;
-
-      svg > .arrow-body {
-        fill: $color-text--orange-hover;
-      }
-    }
-  }
 }
