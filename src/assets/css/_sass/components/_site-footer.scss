@@ -38,6 +38,7 @@
 
 .site-footer-nav {
   a {
+    margin: 0 50px;
     color: $color-text--light;
     text-decoration: none;
     @include small;
