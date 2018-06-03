@@ -1,4 +1,6 @@
-<div class="map">
+{% assign mapclass = include.class %}
+
+<div class="map {% if mapclass %}{{ mapclass }}{% endif %}">
   <div class="map__wrapper">
     <div class="map__info">
     <h1 class="map__title">Retail Locations</h1>
