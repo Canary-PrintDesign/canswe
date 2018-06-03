@@ -33,39 +33,9 @@
     margin-top: -200px;
   }
 
-  .product-boxes__product {
-    width: 500px;
-    height: 400px;
-    text-align: center;
-    position: relative;
-    margin-top: -180px;
-    overflow: hidden;
-    text-decoration: none;
-    color: $color-yellow;
-    font-size: 1.5em;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    background-size: cover;
-
-    &:first-child {
-      background-image: url("/assets/images/products/p001/4.jpg");
-    }
-
-    &:last-child {
-      background-image: url("/assets/images/products/p004/4.jpg");
-    }
-  }
-
-  .product__link {
-    @include tiny;
-    text-transform: uppercase;
-    color: $color-text--orange;
-    text-decoration: none;
-
-    &:hover {
-      color: $color-text--orange-hover;
-    }
+  .product-boxes__item-wrapper {
+    max-width: 500px;
+    height: 300px;
   }
 
   .product-boxes__corner-ribbon {
