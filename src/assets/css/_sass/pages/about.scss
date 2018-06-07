@@ -1,18 +1,19 @@
 .about-page__section {
   height: 100vh;
+  position: relative;
   display: flex;
   flex-flow: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   color: $color-grey--lightest;
   background: linear-gradient(75deg, $color-grey--dark, $color-grey--dark, $color-grey--darker);
   padding: 5vh 5vw;
+  background-size: cover;
 }
 
 .about-page__hero {
-  justify-content: space-between;
   background-image: url("/assets/img/pexels-photo-113339-forest-logs-nature.jpg");
-  background-size: cover;
+  justify-content: space-between;
   padding: 35vh 0;
 }
 
@@ -20,7 +21,6 @@
   justify-content: center;
   color: white;
   background-image: url("/assets/img/ca-ku-441809-unsplash.jpg");
-  background-size: cover;
 }
 
 .about-page__heading-large {
@@ -30,7 +30,9 @@
 }
 
 .about-page__heading-small {
-  @include font-size(32);
+  @include font-size(24);
+  position: absolute;
+  top: 50px;
   color: $color-text--orange;
   font-weight: 600;
   text-transform: uppercase;
@@ -38,10 +40,17 @@
 
 .about-page__copy-text {
   margin: 0;
+  line-height: 2;
+}
+
+.about-page__testimonial-text {
+  width: 400px;
 }
 
 .about-page__drop-cap {
   @include font-size(48);
+  line-height: 0;
+  vertical-align: middle;
 }
 
 .about-page__copy-wrapper {
@@ -55,13 +64,12 @@
 }
 
 .about-page__testimonial-wrapper {
-  height: 400px;
   width: auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .about-page__testimonial-attribution {
-  margin-bottom: 15vh;
 }
 
