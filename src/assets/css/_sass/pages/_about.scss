@@ -68,7 +68,7 @@
   justify-content: center;
   align-items: center;
   background: linear-gradient(180deg, $color-grey--darker, $color-grey--dark);
-  padding: 100px 20px 0;
+  padding: 75px;
 
   &::after {
     content: '';
@@ -83,7 +83,12 @@
 
 .about-page__testimonial-text {
   width: 400px;
-  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.about-page__testimonial-image {
+  width: 400px;
+  order: -1;
 }
 
 .about-page__testimonial-attribution {
@@ -102,4 +107,5 @@
   background: #292929;
   margin-top: 100px;
   padding: 50px;
+  text-align: center;
 }
