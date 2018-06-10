@@ -5,7 +5,9 @@
 */
 
 .product-category {
-
+  &:last-child {
+    margin-bottom: 50px;
+  }
 }
 
 .product-category__header {
