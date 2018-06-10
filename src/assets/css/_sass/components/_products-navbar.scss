@@ -17,6 +17,7 @@
 
 .products-navbar__link {
   background-color: $color-grey--darkest;
+  flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
   color: $color-text--light;
@@ -29,6 +30,10 @@
   text-align: center;
   height: -size(45px);
   @include box-shadow($blur: (2px, 5px));
+
+  &:nth-child(2) {
+    order: 1;
+  }
 
   &:hover {
     background-color: $color-grey--dark;
