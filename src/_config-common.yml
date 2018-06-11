@@ -9,12 +9,6 @@ defaults:
     values:
       permalink: /products/:path/
       layout: product-page
-  - scope:
-      path: ""
-      type: "about"
-    values:
-      permalink: /about/
-      layout: about-page
 
 
 # !- Site Configuration
