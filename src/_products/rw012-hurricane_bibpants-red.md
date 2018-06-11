@@ -1,7 +1,7 @@
 ---
 category: rainwear
 sku: RW012
-title: Hurricane Bibpants (Red)
+title: Hurricane Bibpants
 description: The HURRICANE CLASSIC bib pants pair perfectly with the jacket as the toughest product on the market. 420 Dienier Nylon outer shell and 210 Denier nylon shell, Both polyurethan coated. Lining and shell are sewn "coating to coating" to reduce abrasive damage to coating and improve lopngevity. The soft finish provides added comfort, inside and out. Wide leg design allows for "boots on" access
 specs:
   features:

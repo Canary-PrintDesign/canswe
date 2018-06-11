@@ -1,7 +1,7 @@
 ---
-category: chaps-workwear
-sku: P008B
-title: Chap Pro BP (Zipper Back)
+category: safety-pants
+sku: P008
+title: Chap Pro
 description: The P008B CHAP PRO BACKPAD 3600 Provides added protection and
 specs:
   weather:
