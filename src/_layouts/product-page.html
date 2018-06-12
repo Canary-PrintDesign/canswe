@@ -125,6 +125,10 @@ layout: default
               {% for cost in (1..page.specs.cost) %}
                 <i class="icon--cost product-spec__icon">{{ cost }}</i>
               {% endfor %}
+              {% capture remainder %}{{ 3 | minus: page.specs.cost }}{% endcapture %}
+              {% for cost in (1..remainder) %}
+                <i class="icon--cost product-spec__icon product-spec__icon--faded">{{ cost }}</i>
+              {% endfor %}
             </span>
           </h3>
         </section>
@@ -137,6 +141,10 @@ layout: default
             <span class="product-spec__icons">
             {% for rating in (1..page.specs.safety.score) %}
               <i class="icon--safety product-spec__icon">{{ rating }}</i>
+            {% endfor %}
+            {% capture remainder %}{{ 3 | minus: page.specs.safety.score }}{% endcapture %}
+            {% for rating in (1..remainder) %}
+              <i class="icon--safety product-spec__icon product-spec__icon--faded">{{ rating }}</i>
             {% endfor %}
             </span>
           </h3>

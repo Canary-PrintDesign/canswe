@@ -15,23 +15,23 @@
   }
 }
 
-.icon--sun {
+.icon--sun::after {
   background-image: url('/assets/icons/sun.svg');
 }
 
-.icon--rain {
+.icon--rain::after {
   background-image: url('/assets/icons/rain.svg');
 }
 
-.icon--snow {
+.icon--snow::after {
   background-image: url('/assets/icons/snowflake.svg');
 }
 
-.icon--safety {
+.icon--safety::after {
   background-image: url('/assets/icons/safety.svg');
 }
 
-.icon--cost {
+.icon--cost::after {
   background-image: url('/assets/icons/money.svg');
 }
 
