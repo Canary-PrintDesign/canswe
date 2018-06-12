@@ -79,31 +79,31 @@ layout: default
       <aside class="product-details">
         <table>
           <tbody>
-            {% if page.specs.model %}
-              <tr class="product-spec spec--model">
-                <th class="product-spec__title">
-                  Model
+            <tr class="product-spec spec--model">
+              <th width=1 class="product-spec__title">
+                Model
                 </td>
                 <td class="product-spec__icons">
-                  {% for condition in page.specs.model %}
-                    {{ condition }}
-                  {% endfor %}
+                  {% if page.specs.model %}
+                    {{ page.specs.model }}
+                  {% else %}
+                    {{ page.title }}
+                  {% endif %}
                 </td>
-              </tr>
-            {% endif %}
+            </tr>
 
-            {% if page.specs.sku %}
-              <tr class="product-spec spec--sku">
-                <th class="product-spec__title">
-                  Order SKU
-                </th>
-                <td class="product-spec__icons">
-                  {% for condition in page.specs.sku %}
-                    {{ condition }}
-                  {% endfor %}
-                </td>
-              </tr>
-            {% endif %}
+            <tr class="product-spec spec--sku">
+              <th class="product-spec__title">
+                Order SKU
+              </th>
+              <td class="product-spec__icons">
+                {% if page.specs.sku %}
+                  {{ page.specs.sku }}
+                {% else %}
+                  {{ page.sku }}
+                {% endif %}
+              </td>
+            </tr>
 
             {% if page.specs.weather %}
               <tr class="product-spec spec--weather">
