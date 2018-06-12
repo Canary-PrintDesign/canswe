@@ -6,7 +6,10 @@
 
 .products-hero {
   align-items: center;
-  background-image: url('/assets/img/wood-3241848_1920.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to top, -color($greys, 15), transparent 250px), url("/assets/img/ca-ku-441809-unsplash.jpg");
   color: $color-text--light;
   display: flex;
   height: -size(488px);
@@ -19,12 +22,14 @@
   text-transform: uppercase;
   @include h1;
   @include font-display;
+  @include text-shadow;
 }
 
 .products-hero__intro {
   text-align: center;
   max-width: 600px;
   transform: translateY(-size(50px));
+  @include text-shadow;
 }
 
 .products-hero__lead {
