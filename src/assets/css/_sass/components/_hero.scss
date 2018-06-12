@@ -1,6 +1,6 @@
 .hero {
-  background-image: url('/assets/img/sunrise.jpg');
-  background: linear-gradient(to top, -color($greys, 15), transparent 250px), url("/assets/img/sunrise.jpg") no-repeat;
+  background-image: linear-gradient(to top, -color($greys, 15), transparent 250px), url("/assets/img/sunrise.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
   color: $color-text--light;
