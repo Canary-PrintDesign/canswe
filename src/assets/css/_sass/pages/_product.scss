@@ -102,6 +102,9 @@
 
 .product-spec {
   .product-spec__title {
+    text-align: left;
+    padding-right: -size(8px);
+    padding-bottom: -size(8px);
     @include h5;
     @include font-display;
   }
