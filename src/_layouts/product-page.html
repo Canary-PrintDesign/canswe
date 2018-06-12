@@ -77,85 +77,89 @@ layout: default
       {% endif %}
 
       <aside class="product-details">
+        <table>
+          <tbody>
+            {% if page.specs.model %}
+              <tr class="product-spec spec--model">
+                <th class="product-spec__title">
+                  Model
+                </td>
+                <td class="product-spec__icons">
+                  {% for condition in page.specs.model %}
+                    {{ condition }}
+                  {% endfor %}
+                </td>
+              </tr>
+            {% endif %}
 
-        {% if page.specs.model %}
-        <section class="product-spec spec--model">
-          <h3 class="product-spec__title">
-            Model:
-            <span class="product-spec__icons">
-              {% for condition in page.specs.model %}
-                {{ condition }}
-              {% endfor %}
-            </span>
-          </h3>
-        </section>
-        {% endif %}
+            {% if page.specs.sku %}
+              <tr class="product-spec spec--sku">
+                <th class="product-spec__title">
+                  Order SKU
+                </th>
+                <td class="product-spec__icons">
+                  {% for condition in page.specs.sku %}
+                    {{ condition }}
+                  {% endfor %}
+                </td>
+              </tr>
+            {% endif %}
 
-        {% if page.specs.sku %}
-        <section class="product-spec spec--sku">
-          <h3 class="product-spec__title">
-            Order SKU:
-            <span class="product-spec__icons">
-              {% for condition in page.specs.sku %}
-                {{ condition }}
-              {% endfor %}
-            </span>
-          </h3>
-        </section>
-        {% endif %}
+            {% if page.specs.weather %}
+              <tr class="product-spec spec--weather">
+                <th class="product-spec__title">
+                  Weather
+                </th>
+                <td class="product-spec__icons">
+                  {% for condition in page.specs.weather %}
+                    <i class="icon--{{ condition }} product-spec__icon">{{ condition }}</i>
+                  {% endfor %}
+                </td>
+              </tr>
+            {% endif %}
 
-        {% if page.specs.weather %}
-        <section class="product-spec spec--weather">
-          <h3 class="product-spec__title">
-            Weather
-            <span class="product-spec__icons">
-              {% for condition in page.specs.weather %}
-                <i class="icon--{{ condition }} product-spec__icon">{{ condition }}</i>
-              {% endfor %}
-            </span>
-          </h3>
-        </section>
-        {% endif %}
+            {% if page.specs.cost %}
+              <tr class="product-spec product-spec--cost">
+                <th class="product-spec__title">
+                  Cost
+                </th>
+                <td class="product-spec__icons">
+                  {% for cost in (1..page.specs.cost) %}
+                    <i class="icon--cost product-spec__icon">{{ cost }}</i>
+                  {% endfor %}
+                  {% capture remainder %}{{ 3 | minus: page.specs.cost }}{% endcapture %}
+                  {% for cost in (1..remainder) %}
+                    <i class="icon--cost product-spec__icon product-spec__icon--faded">{{ cost }}</i>
+                  {% endfor %}
+                </td>
+              </tr>
+            {% endif %}
 
-        {% if page.specs.cost %}
-        <section class="product-spec product-spec--cost">
-          <h3 class="product-spec__title">
-            Cost
-            <span class="product-spec__icons">
-              {% for cost in (1..page.specs.cost) %}
-                <i class="icon--cost product-spec__icon">{{ cost }}</i>
-              {% endfor %}
-              {% capture remainder %}{{ 3 | minus: page.specs.cost }}{% endcapture %}
-              {% for cost in (1..remainder) %}
-                <i class="icon--cost product-spec__icon product-spec__icon--faded">{{ cost }}</i>
-              {% endfor %}
-            </span>
-          </h3>
-        </section>
-        {% endif %}
-
-        {% if page.specs.safety %}
-        <section class="product-spec product-spec--safety">
-          <h3 class="product-spec__title">
-            Safety
-            <span class="product-spec__icons">
-            {% for rating in (1..page.specs.safety.score) %}
-              <i class="icon--safety product-spec__icon">{{ rating }}</i>
-            {% endfor %}
-            {% capture remainder %}{{ 3 | minus: page.specs.safety.score }}{% endcapture %}
-            {% for rating in (1..remainder) %}
-              <i class="icon--safety product-spec__icon product-spec__icon--faded">{{ rating }}</i>
-            {% endfor %}
-            </span>
-          </h3>
-
-          <ul class="product-spec__list">
+            {% if page.specs.safety %}
+              <tr class="product-spec product-spec--safety">
+                <th class="product-spec__title">
+                  Safety
+                </th>
+                <td class="product-spec__icons">
+                  {% for rating in (1..page.specs.safety.score) %}
+                    <i class="icon--safety product-spec__icon">{{ rating }}</i>
+                  {% endfor %}
+                  {% capture remainder %}{{ 3 | minus: page.specs.safety.score }}{% endcapture %}
+                  {% for rating in (1..remainder) %}
+                    <i class="icon--safety product-spec__icon product-spec__icon--faded">{{ rating }}</i>
+                  {% endfor %}
+                </td>
+              </tr>
+            {% endif %}
+          </tbody>
+          <tfoot class="product-spec__list">
             {% for point in page.specs.safety.details %}
-              <li>{{ point }}</li>
+              <tr>
+                <td colspan="2">{{ point }}</td>
+              </tr>
             {% endfor %}
-          </ul>
-        </section>
-        {% endif %}
+          </tfoot>
+        </table>
       </aside>
     </div>
   </article>
