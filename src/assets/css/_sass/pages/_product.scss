@@ -119,6 +119,23 @@
     width: 24px;
     color: transparent;
     @include h5;
+    position: relative;
+  }
+
+  .product-spec__icon::after {
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .product-spec__icon--faded {
+    opacity: 0.33;
   }
 }
 
