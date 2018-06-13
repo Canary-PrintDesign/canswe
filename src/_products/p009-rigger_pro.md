@@ -3,6 +3,7 @@ category: safety-pants
 sku: P009
 title: Rigger Pro
 description: The RIGGER PRO 3600 is made with a woven 600 denier polyester front and our classic polester knit back. The pant is made for longevity. The woven poly front can handle extreme abrasion and has excellent resistance to oil and gas.
+rotator: true
 specs:
   weather:
     - snow

@@ -3,6 +3,7 @@ category: safety-pants
 sku: P008
 title: Chap Pro
 description: The P008B CHAP PRO BACKPAD 3600 Provides added protection and
+rotator: true
 specs:
   weather:
     - snow
