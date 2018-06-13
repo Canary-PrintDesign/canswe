@@ -3,6 +3,7 @@ category: safety-pants
 sku: P002
 title: Denim Pro
 description: The time honoured P002 DENIM PRO 3600 would make your Grandad proud. Rugged 14oz denim is very durable and wears like a work jean. All the benefits of 100% cotton, break these in and you wont look back.
+rotator: true
 specs:
   features:
     - 100% Denim Outer Shell
