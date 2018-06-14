@@ -6,7 +6,7 @@
   .product-boxes__header-container {
     padding-top: 75px;
     background: $color-grey--dark;
-    height: 500px;
+    height: 530px;
   }
 
   .product-boxes__header {
@@ -34,8 +34,11 @@
   }
 
   .product-boxes__item-wrapper {
-    max-width: 500px;
-    height: 300px;
+    max-width: 530px;
+    height: 340px;
+    margin: 0;
+    padding: 20px;
+    background: white;
   }
 
   .product-boxes__corner-ribbon {
