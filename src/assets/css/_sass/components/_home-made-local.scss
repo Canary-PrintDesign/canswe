@@ -1,19 +1,16 @@
 .made-local {
-  padding-top: 120px;
-  height: 1200px;
-  background-image: url("/assets/img/made-local.jpg");
+  height: 100vh;
+  background-image: url('/assets/img/made-local.jpg');
   background-size: cover;
   background-position: bottom center;
 
-  .made-local__header {
+  .made-local__container {
     text-align: center;
-    width: 570px;
-    @include margin-center;
   }
 
   .made-local__title {
-    @include h3;
-    @include font-display;
     text-transform: uppercase;
+    @include font-display;
+    @include h3;
   }
 }
