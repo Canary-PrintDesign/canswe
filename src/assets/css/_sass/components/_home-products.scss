@@ -1,6 +1,7 @@
 .featured-products {
   color: $color-text--light;
   background: $color-grey--dark;
+  @include padding-vertical($gutter--large, $gutter);
 }
 
 .featured-products__header {
@@ -11,24 +12,32 @@
 
 .featured-products__title {
   text-transform: uppercase;
-  @include h3;
+  @include font-display;
+  @include h2;
 }
 
-.featured-products__product-grid  {
-  @include padding-bottom($gutter);
+.featured-products__product-grid.product-grid  {
+  @include screen($bp-tablet) {
 
-  > * {
+  }
+
+  .product-grid__item-wrapper {
+    flex-basis: calc((100% / 2) - #{$gutter / 2});
     background: $color-grey--lightest;
-    @include padding(20px);
+    @include padding($gutter--small);
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
-.page-home {
-  .button--link {
-    @include text-shadow($blur: (1px, 2px));
+.featured-products .button--link {
+  display: block;
+  @include margin-vertical($gutter--large);
+  @include text-shadow($blur: (1px, 2px));
 
-    svg {
-      margin-bottom: 3px; // fixme
-    }
+  svg {
+    margin-bottom: 3px; // fixme
   }
 }
