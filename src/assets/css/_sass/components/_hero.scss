@@ -1,6 +1,6 @@
 .hero {
-  background-image: linear-gradient(to top, -color($greys, 15), transparent 250px), url('/assets/img/sunrise.jpg');
-  background-position: bottom;
+  background-image: linear-gradient(to top, -color($greys, 15) 5%, transparent 30%), url('/assets/img/sunrise.jpg');
+  background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -17,26 +17,12 @@
   text-transform: uppercase;
   @include line-wrap;
   @include font-display;
-  @include margin-vertical(0);
   @include text-shadow;
-
-  @include screen($bp-desktop) {
-    @include h1;
-  }
-
-  small {
-    display: block;
-
-    @include screen($bp-desktop) {
-      letter-spacing: 5px;
-      font-weight: 400;
-      @include h3;
-    }
-  }
+  @include h1;
 }
 
 .hero__tagline {
+  @include h2;
   @include font-display;
   @include text-shadow;
 }
-
