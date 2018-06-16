@@ -1,12 +1,7 @@
-//  $sectionWidth: 1300px;
-//  $sectionPaddingLR: 25px;
-//  $contentMarginLR: 30px;
-//  $topImageWidth: 890px;
-//  $bottomImageWidth: 680px;
-
 .family-operated {
   background: $color-grey--dark;
   color: $color-text--light;
+  @include padding-vertical($gutter--large);
 }
 
 .family-operated__header {
@@ -15,23 +10,19 @@
 
 .family-operated__title {
   text-transform: uppercase;
-
-  @include screen($bp-desktop) {
-    @include h3;
-    @include font-display;
-  }
-}
-
-.family-operated__body {
-//  max-width: $sectionWidth;
-//  margin: 0 auto;
-//  position: relative;
-//  padding: 100px $sectionPaddingLR 50px;
+  @include font-display;
+  @include h2;
+  @include margin-bottom($gutter--large);
 }
 
 .family-operated__cluster {
   display: flex;
   @include flex-column-to-row;
+  @include margin-bottom($gutter);
+
+  @include screen($bp-tablet) {
+    @include margin-bottom($gutter--large);
+  }
 
   &--reverse {
     .family-operated__cluster-image {
@@ -43,33 +34,14 @@
 
   + #{&} {
     position: relative;
-//    top: -80px;
-    z-index: 100;
-
-//    .content {
-//      margin-top: 14%;
-//      $bottomContentWidth: calc(#{$sectionWidth} - 2 * #{$sectionPaddingLR} - #{$bottomImageWidth} - 2 * #{$contentMarginLR});
-//      width: $bottomContentWidth;
-//      min-width: $bottomContentWidth;
-//    }
+    z-index: 2;
   }
 }
 
 .family-operated__cluster-image {
-  flex: 1 1 auto;
-  font-size: 0;
+  @include margin-bottom($gutter);
 }
 
 .family-operated__cluster-content {
-  flex: 0 8 auto;
-  //margin: 60px $contentMarginLR;
-  //$topContentWidth: calc(#{$sectionWidth} - 2 * #{$sectionPaddingLR} - #{$topImageWidth} - 2 * #{$contentMarginLR});
-  //width: $topContentWidth;
-  //min-width: calc(#{$sectionWidth} - 2 * #{$sectionPaddingLR} - #{$topImageWidth} - 2 * #{$contentMarginLR});
-
-  p {
-    @include margin-bottom(30px);
-  }
+  line-height: 1.5;
 }
-
-
