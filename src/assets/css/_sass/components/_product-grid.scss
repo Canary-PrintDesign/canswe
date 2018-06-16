@@ -1,14 +1,17 @@
 .product-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  @include flex-column-to-row($bp-tablet);
 }
 
 .product-grid__item-wrapper {
-  flex-basis: calc(100% / 3);
+  flex-basis: calc((100% / 3) - 20px);
+  flex-grow: 0;
+  flex-shrink: 1;
   max-width: 400px;
   height: 255px;
-  margin: 20px;
+  @include margin-bottom(20px)
 }
 
 .product-grid__item {
@@ -17,6 +20,7 @@
   overflow: hidden;
   background-color: orange;
   position: relative;
+  color: $color-grey--lightest;
 
   &:hover {
     .product-grid__item-image::after {
@@ -65,4 +69,16 @@
   bottom: 0;
   z-index: 0;
   @include transition;
+}
+
+.product-grid__featured-banner {
+  width: -size(200px);
+  background: $color-orange;
+  position: absolute;
+  text-align: center;
+  line-height: -size(25px);
+  top: -size(20px);
+  right: -size(-66px);
+  transform: rotate(45deg);
+  @include tiny;
 }
