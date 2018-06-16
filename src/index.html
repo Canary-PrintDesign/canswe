@@ -35,37 +35,22 @@ layout: default
     </a>
   </header>
 
-  <div class="product-boxes__body">
-      <div class="product-grid__item-wrapper product-boxes__item-wrapper">
-        <a class="product-grid__item" href="/products/p001-fallers-poly-pro/">
+  {% for item in site.products %}
+    {% if item.feature == true %}
+      <div class="product-grid__item-wrapper">
+        <a class="product-grid__item" href="{{ item.url }}">
           <div class="product-grid__item-details">
-            <h2 class="product-grid__item-title">Faller's Poly Pro</h2>
+            <h2 class="product-grid__item-title">{{ item.title }}</h2>
             <span class="product-grid__item-link">See Product Details</span>
           </div>
 
           <div class="product-grid__item-image">
-            <img src="/assets/images/products/p001/4.jpg" />
+            {% include components/product-image.html item=item %}
           </div>
-
-          <div class="product-boxes__corner-ribbon">Best Seller!</div>
         </a>
       </div>
-
-      <div class="product-grid__item-wrapper product-boxes__item-wrapper">
-        <a class="product-grid__item" href="/products/p004-half-half-pro/">
-          <div class="product-grid__item-details">
-            <h2 class="product-grid__item-title">Half 'n' Half Pro</h2>
-            <span class="product-grid__item-link">See Product Details</span>
-          </div>
-
-          <div class="product-grid__item-image">
-            <img src="/assets/images/products/p004/4.jpg" />
-          </div>
-
-          <div class="product-boxes__corner-ribbon">Best Seller!</div>
-        </a>
-      </div>
-    </div>
+    {% endif %}
+  {% endfor %}
   </div>
 </section>
 
