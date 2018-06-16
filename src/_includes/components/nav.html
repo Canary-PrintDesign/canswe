@@ -7,9 +7,11 @@
     {% include components/nav-item.html item=item link=link navclass=navclass %}
 
     {% if include.recurse == true %}
-      <div class="{% if navclass %}{{ navclass }}__item {% endif %} nav__item--parent">
-        {% include components/nav-subitems.html item=item navclass=navclass %}
-      </div>
+      {% if item.subitems %}
+        <div class="{% if navclass %}{{ navclass }}__item {% endif %} nav__item--parent">
+          {% include components/nav-subitems.html item=item navclass=navclass %}
+        </div>
+      {% endif %}
     {% endif %}
   </span>
 {% endfor %}

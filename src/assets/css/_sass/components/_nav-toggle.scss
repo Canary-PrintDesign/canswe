@@ -1,0 +1,35 @@
+.mobile-nav-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex: none;
+  height: -size($size-header);
+  width: -size($size-header);
+  cursor: pointer;
+  display: flex;
+  z-index: 1000;
+
+  @include padding($gutter);
+
+  @media screen and (min-width: $bp-desktop) {
+    display: none;
+  }
+
+  i {
+    flex-grow: 1;
+    background-image: url('/assets/icons/bars.svg');
+  }
+}
+
+#mobile-nav {
+  &:checked {
+    ~ .site-nav {
+      display: block;
+      position: fixed;
+    }
+
+    ~ .site-header .mobile-nav-toggle i {
+      background-image: url('/assets/icons/times.svg');
+    }
+  }
+}
