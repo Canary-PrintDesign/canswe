@@ -6,6 +6,11 @@
 
 */
 
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 // sets an element to flex-column up to a certain breakpoint
 //
 // $switch-point: breakpoint to change to row
