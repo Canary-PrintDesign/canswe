@@ -1,38 +1,37 @@
 .hero {
-  background-image: linear-gradient(to top, -color($greys, 15), transparent 250px), url("/assets/img/sunrise.jpg");
+  background-image: linear-gradient(to top, -color($greys, 15), transparent 250px), url('/assets/img/sunrise.jpg');
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom;
-  color: $color-text--light;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
 }
 
 .hero__container {
-  display: flex;
-  flex-direction: column;
-  @include margin-left(60px);
+  color: $color-text--light;
+  height: 100vh;
+  justify-content: center;
+  @include flex-column;
 }
 
 .hero__title {
   color: $color-text--orange;
   text-transform: uppercase;
-  word-spacing: 999em;
-  @include h1;
+  @include line-wrap;
   @include font-display;
   @include margin-vertical(0);
   @include text-shadow;
 
+  @include screen($bp-desktop) {
+    @include h1;
+  }
+
   small {
-    color: $color-text--orange;
-    font-weight: 400;
-    letter-spacing: 5px;
     display: block;
-    word-spacing: normal;
-    @include h3;
-    @include margin-bottom(22px);
+
+    @include screen($bp-desktop) {
+      letter-spacing: 5px;
+      font-weight: 400;
+      @include h3;
+    }
   }
 }
 
@@ -40,3 +39,4 @@
   @include font-display;
   @include text-shadow;
 }
+
