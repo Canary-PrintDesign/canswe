@@ -13,7 +13,7 @@ defaults:
 
 # !- Site Configuration
 url: "" # primary url the website will reside at
-title: "Can-Swe" # Site title
+title: "Can-Swe Distributors Inc." # Site title
 title-safe: "can-swe" # Url safe version of site title. eg: "lowercase-dash-separated-text"
 title-delimiter: " • " # Symbol to separate page title and site title. Include spaces. eg: "Home • Site Title"
 tagline: "Premium Quality Industrial Safety Garments" # Website tagline
