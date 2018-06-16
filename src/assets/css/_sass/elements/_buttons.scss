@@ -21,6 +21,8 @@
     vertical-align: middle;
     width: 20px;
     @include margin-horizontal($gutter--small, 0);
+
+    fill: currentColor;
   }
 }
 
@@ -35,6 +37,20 @@ a.button {
   &:hover {
     background-color: $color-yellow--hover;
     @include transition;
+  }
+}
+
+
+.button--link {
+  box-shadow: none;
+  padding: 0;
+}
+
+.button--orange-link {
+  color: $color-text--orange;
+
+  &:hover {
+    color: $color-text--orange-hover;
   }
 }
 
