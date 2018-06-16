@@ -1,16 +1,17 @@
 .made-local {
   height: 100vh;
-  background-image: url('/assets/img/made-local.jpg');
   background-size: cover;
+  text-align: center;
   background-position: bottom center;
-
-  .made-local__container {
-    text-align: center;
-  }
+  @include padding-vertical($gutter--large)
+  @include body;
+  background-image:
+    linear-gradient(to bottom, -color($greys, 15), transparent 20%, transparent 80%, -color($greys, 15)),
+    url('/assets/img/made-local.jpg');
 
   .made-local__title {
     text-transform: uppercase;
+    @include h2;
     @include font-display;
-    @include h3;
   }
 }
