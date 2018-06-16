@@ -44,6 +44,7 @@ a.button {
 .button--link {
   box-shadow: none;
   padding: 0;
+  @include text-shadow($blur: (2px, 5px));
 }
 
 .button--orange-link {
