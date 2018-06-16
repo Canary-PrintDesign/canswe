@@ -35,11 +35,11 @@
 }
 
 @mixin h1 {
-  @include font-size(100);
+  @include font-size(100, 48, 100);
 }
 
 @mixin h2 {
-  @include font-size(64);
+  @include font-size(64, 32, 48, 64);
 }
 
 @mixin h3 {
@@ -59,7 +59,7 @@
 }
 
 @mixin body {
-  @include font-size(20);
+  @include font-size(20, 16, 20);
 }
 
 @mixin small {
