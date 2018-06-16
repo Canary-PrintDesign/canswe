@@ -22,35 +22,23 @@ layout: default
   </div>
 </header>
 
-<section class="product-boxes container">
-  <header class="product-boxes__header">
-    <h1 class="">Products by Can-Swe</h1>
     <p class="lead-paragraph">
       At Can-Swe, we manufacture quality outdoor work garments, protective
       apparel, rainwear, chainsaw chaps, high-visibility garments, etc.
     </p>
+
     <a class="button button--link button--orange-link" href="/products">
       View All Products
       {% include icons/arrow-right.svg %}
     </a>
   </header>
 
-  {% for item in site.products %}
-    {% if item.feature == true %}
-      <div class="product-grid__item-wrapper">
-        <a class="product-grid__item" href="{{ item.url }}">
-          <div class="product-grid__item-details">
-            <h2 class="product-grid__item-title">{{ item.title }}</h2>
-            <span class="product-grid__item-link">See Product Details</span>
-          </div>
-
-          <div class="product-grid__item-image">
-            {% include components/product-image.html item=item %}
-          </div>
-        </a>
-      </div>
-    {% endif %}
-  {% endfor %}
+  <div class="featured-products__product-grid product-grid container">
+    {% for item in site.products %}
+      {% if item.feature == true %}
+        {% include components/product-grid-item.html item=item %}
+      {% endif %}
+    {% endfor %}
   </div>
 </section>
 
