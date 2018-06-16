@@ -6,11 +6,13 @@
 
 .back-to-top-link {
   display: none;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  box-shadow: 0 2px 4px -color($greys--alpha, 50);
+
+  @include screen($bp-desktop) {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    @include margin(0, 5px, 5px, 0);
+    @include tiny;
+  }
 }
