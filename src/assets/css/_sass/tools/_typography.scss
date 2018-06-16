@@ -53,3 +53,8 @@
     white-space: pre;
   }
 }
+
+// Set lines be wrapped like they are in the markup
+@mixin line-wrap {
+  white-space: pre-line;
+}
