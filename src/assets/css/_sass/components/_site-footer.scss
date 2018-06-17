@@ -7,41 +7,41 @@
 .site-footer {
   background-color: $color-grey--dark;
   text-align: center;
-  @include padding-vertical(51px, 71px);
+  @include padding-vertical($gutter--large);
 }
 
 .site-footer__colophon {
   color: $color-text--light;
+  @include padding-bottom($gutter--large);
 
   .site-logo {
     fill: $color-grey--light;
-    @include margin-bottom(20px);
+    @include flex-column;
+
+    .site-logo__name {
+      order: 2;
+    }
 
     svg {
+      order: 1;
+      display: block;
       height: -size(81px);
+      @include margin-bottom(20px);
     }
-  }
-
-  p {
-    font-weight: 900;
-    @include font-display;
-    @include margin-bottom(19px);
   }
 
   a {
     color: $color-yellow;
     text-decoration: none;
     @include tiny;
-    @include margin-bottom(54px);
   }
 }
 
 .site-footer-nav {
   a {
-    margin: 0 50px;
     color: $color-text--light;
     text-decoration: none;
-    @include small;
+    @include tiny;
   }
 }
 
@@ -49,8 +49,8 @@
   background-color: $color-grey--dark;
   color: $color-text--light;
   text-align: center;
-  @include padding-bottom(10px);
   @include tiny;
+  @include padding-bottom($gutter);
 
   a {
     text-decoration: none;
