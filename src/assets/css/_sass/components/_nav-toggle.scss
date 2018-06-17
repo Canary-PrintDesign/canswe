@@ -23,7 +23,7 @@
 
 #mobile-nav {
   &:checked {
-    ~ .site-nav {
+    ~ .site-header .site-nav {
       display: block;
       position: fixed;
     }
