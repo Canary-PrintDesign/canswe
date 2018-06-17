@@ -1,75 +1,44 @@
 .map {
-  padding-bottom: 80px;
+  @include margin-vertical($gutter--large);
 }
 
-.map__wrapper {
-  display: flex;
-  flex-flow: column;
-  height: -size(800px);
-}
-
-.map__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  @include flex-half;
+.map__container {
+  text-align: center;
+  @include flex-column;
 }
 
 .map__title {
-  margin-bottom: -size(21px);
-  font-weight: 900;
   text-transform: uppercase;
+  @include h2;
   @include font-display;
-  @include h4;
-}
-
-.map__lead {
-  margin-bottom: -size(32px);
-}
-
-.map__link {
-  text-decoration: none;
-  color: $color-orange;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.icon--arrow {
-  content: '→';
-  display: inline-block;
-  color: orange;
 }
 
 .map__holder {
-  position: relative;
-  @include flex-half;
-
-  svg {
-    position: absolute;
-    right: calc(50% - 325px);
-    bottom: 0;
+  @include max-screen($bp-tablet) {
+    display: none;
   }
 
-  .region0 {  fill: -color($greys, 54) }
-  .region1 {  fill: -color($greys, 58) }
-  .region2 {  fill: -color($greys, 67) }
-  .region3 {  fill: -color($greys, 52) }
-  .region4 {  fill: -color($greys, 42) }
-  .region5 {  fill: -color($greys, 62) }
-  .region6 {  fill: -color($greys, 54) }
-  .region7 {  fill: -color($greys, 44) }
-  .region8 {  fill: -color($greys, 56) }
-  .region9 {  fill: -color($greys, 69) }
-  .region10 { fill: -color($greys, 60) }
-  .region11 { fill: -color($greys, 62) }
-  .region12 { fill: -color($greys, 60) }
+  .region0 {  fill: -color($greys, 54); }
+  .region1 {  fill: -color($greys, 58); }
+  .region2 {  fill: -color($greys, 67); }
+  .region3 {  fill: -color($greys, 52); }
+  .region4 {  fill: -color($greys, 42); }
+  .region5 {  fill: -color($greys, 62); }
+  .region6 {  fill: -color($greys, 54); }
+  .region7 {  fill: -color($greys, 44); }
+  .region8 {  fill: -color($greys, 56); }
+  .region9 {  fill: -color($greys, 69); }
+  .region10 { fill: -color($greys, 60); }
+  .region11 { fill: -color($greys, 62); }
+  .region12 { fill: -color($greys, 60); }
 
   [class^=point] {
-    position: relative;
-    z-index: 10000000;
     fill: $color-orange;
+    position: relative;
     r: 3px;
-    stroke: #fff;
+    stroke: $color-text--light;
+    z-index: 10000000; // it's ridiculous, but welcome to d3
   }
 }
+
+
