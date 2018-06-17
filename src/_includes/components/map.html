@@ -1,12 +1,14 @@
 {% assign mapclass = include.class %}
 
-<div class="map {% if mapclass %}{{ mapclass }}{% endif %}">
-  <div class="map__wrapper">
+<div class="map {% if mapclass %}map--{{ mapclass }}{% endif %}">
+  <div class="map__container container">
     <div class="map__info">
-    <h1 class="map__title">Retail Locations</h1>
-    <p class="map__lead">Our products are sold by retailers across Canada.</p>
-
-    <a class="map__link" href="/retailers">Find the closest store →</a>
+      <h1 class="map__title">Retail Locations</h1>
+      <p class="map__lead lead-paragraph">Our products are sold by retailers across Canada.</p>
+      <a class="button button--link button--orange-link" href="/retailers">
+        Find Your Local Store
+        {% include icons/arrow-right.svg %}
+      </a>
     </div>
     <div class="map__holder"></div>
   </div>
