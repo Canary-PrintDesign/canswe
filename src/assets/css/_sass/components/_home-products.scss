@@ -16,18 +16,23 @@
   @include h2;
 }
 
+.featured-products .lead-paragraph {
+  @include measure;
+  @include margin-center;
+}
+
 .featured-products__product-grid.product-grid  {
   @include screen($bp-tablet) {
-
+    justify-content: center;
   }
 
   .product-grid__item-wrapper {
-    flex-basis: calc((100% / 2) - #{$gutter / 2});
+    flex-basis: calc((100% / 2) - #{$gutter * 2});
     background: $color-grey--lightest;
     @include padding($gutter--small);
 
-    &:last-of-type {
-      margin-bottom: 0;
+    @include screen($bp-tablet) {
+      @include margin-horizontal($gutter / 2);
     }
   }
 }
