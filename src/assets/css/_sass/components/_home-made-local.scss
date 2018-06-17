@@ -3,15 +3,21 @@
   background-size: cover;
   text-align: center;
   background-position: bottom center;
-  @include padding-vertical($gutter--large)
-  @include body;
   background-image:
     linear-gradient(to bottom, -color($greys, 15), transparent 20%, transparent 80%, -color($greys, 15)),
     url('/assets/img/made-local.jpg');
+
+  @include padding-vertical($gutter--large)
+  @include body;
 
   .made-local__title {
     text-transform: uppercase;
     @include h2;
     @include font-display;
+  }
+
+  .lead-paragraph {
+    @include measure;
+    @include margin-center;
   }
 }
