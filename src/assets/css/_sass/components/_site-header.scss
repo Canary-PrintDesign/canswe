@@ -4,6 +4,24 @@
   height: -size($size-header);
   background-color: $color-grey--dark;
   position: fixed;
+
+  @include screen($bp-desktop) {
+    background-color: transparent;
+    position: absolute;
+  }
+}
+
+.site-header__container {
+  @include max-screen($bp-desktop) {
+    margin: 0;
+    max-width: none;
+  }
+
+  @include screen($bp-desktop) {
+    margin-top: $gutter;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .site-header__link {
@@ -12,28 +30,19 @@
   display: block;
   line-height: -size($size-header);
   text-align: center;
+
+  .site-logo__name {
+    margin: 0;
+
+    @include screen($bp-desktop) {
+      @include image-replacement;
+    }
+  }
+
+  .site-logo svg {
+    @include screen($bp-desktop) {
+      height: -size(93px);
+    }
+  }
 }
 
-//.site-header__name {
-//  @include screen($bp-tablet) {
-//    @include image-replacement;
-//  }
-//}
-
-//  align-items: flex-end;
-//  display: flex;
-//  //height: -size(93px);
-//  justify-content: space-between;
-//  left: 0;
-//  position: absolute;
-//  right: 0;
-//
-//  .site-header__link {
-//    outline: none;
-//  }
-//
-//  .site-logo {
-//    flex: 1 1;
-//    height: -size(65px);
-//  }
-//}

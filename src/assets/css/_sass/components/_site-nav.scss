@@ -1,55 +1,57 @@
-.site-nav__item {
-  display: block;
-}
-
-.site-nav__text {
-  color: $color-text--light;
-  text-transform: uppercase;
-  @include margin-vertical($gutter);
-  @include screen($bp-desktop) {
-    font-weight: 600;
-  }
-}
-
-.site-header .site-nav {
-  background-color: $color-grey--dark;
-  display: none;
-  position: absolute;
-  top: -size($size-header);
-  width: 100vw;
-  z-index: 10;
-  @include flex-column-to-row;
-  @include screen($bp-desktop) {
+.site-header {
+  .site-nav {
+    display: none;
+    background-color: $color-grey--dark;
     @include box-shadow;
+    @include flex-column-to-row($bp-desktop);
+
+    @include screen($bp-desktop) {
+      align-self: center;
+      display: flex;
+    }
+  }
+
+  .site-nav__item {
+  }
+
+  .site-nav__link {
+    color: $color-text--light;
+    display: block;
+    line-height: -size($size-header);
+    @include padding-horizontal(30px);
+    @include transition;
+
+    @include screen($bp-desktop) {
+      line-height: -size(70px);
+    }
+
+    &:hover {
+      background-color: -color($greys, 20);
+    }
+  }
+
+  .site-nav__text {
+    @include screen($bp-desktop) {
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  .site-nav > .site-nav__item:last-child {
+    position: relative;
+    padding-left: $gutter--small;
+
+    &::before {
+      content: '';
+      background-image: url('../icons/location.svg');
+      background-repeat: no-repeat;
+      background-position: 50% 100%;
+      width: 42px;
+      height: 100%;
+      position: absolute;
+      display: inline-block;
+      left: 0;
+    }
   }
 }
 
-
-//.site-header {
-//  .site-nav__link {
-//    align-items: center;
-//    display: flex;
-//    height: -size(73px);
-//    @include padding-horizontal(36px);
-//    @include transition;
-//
-//    &:hover {
-//      background-color: -color($greys, 20);
-//    }
-//  }
-//
-//  .site-nav > .site-nav__item:last-child {
-//    position: relative;
-//
-//    &::before {
-//      content: '';
-//      background-image: url('../icons/location.svg');
-//      background-size: cover;
-//      width: 42px;
-//      height: 42px;
-//      position: absolute;
-//      display: inline-block;
-//    }
-//  }
-//
-//}

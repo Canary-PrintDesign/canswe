@@ -1,9 +1,11 @@
 <header class="site-header">
-  <label class="mobile-nav-toggle" for="mobile-nav"><i class="icon"></i></label>
+  <div class="site-header__container container">
+    <label class="mobile-nav-toggle" for="mobile-nav"><i class="icon"></i></label>
 
-  <a class="site-header__link" href="/">
-    {% include components/site-logo.html %}
-  </a>
+    <a class="site-header__link" href="/">
+      {% include components/site-logo.html %}
+    </a>
 
-  {% include components/site-nav.html %}
+    {% include components/site-nav.html %}
+  </div>
 </header>

@@ -8,7 +8,6 @@
   cursor: pointer;
   display: flex;
   z-index: 1000;
-
   @include padding($gutter);
 
   @media screen and (min-width: $bp-desktop) {
@@ -24,8 +23,7 @@
 #mobile-nav {
   &:checked {
     ~ .site-header .site-nav {
-      display: block;
-      position: fixed;
+      display: flex;
     }
 
     ~ .site-header .mobile-nav-toggle i {
