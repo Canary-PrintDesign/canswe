@@ -1,22 +1,5 @@
-.site-nav {
-  position: absolute;
-  top: -size($size-header);
-  width: 100vw;
-  background-color: $color-grey--dark;
-  display: none;
-  z-index: 10;
-  @include flex-column-to-row;
-  @include screen($bp-desktop) {
-    @include box-shadow;
-  }
-}
-
 .site-nav__item {
   display: block;
-}
-
-.site-nav__link {
-
 }
 
 .site-nav__text {
@@ -25,6 +8,19 @@
   @include margin-vertical($gutter);
   @include screen($bp-desktop) {
     font-weight: 600;
+  }
+}
+
+.site-header .site-nav {
+  background-color: $color-grey--dark;
+  display: none;
+  position: absolute;
+  top: -size($size-header);
+  width: 100vw;
+  z-index: 10;
+  @include flex-column-to-row;
+  @include screen($bp-desktop) {
+    @include box-shadow;
   }
 }
 
