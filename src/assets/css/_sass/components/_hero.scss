@@ -8,21 +8,50 @@
 .hero__container {
   color: $color-text--light;
   height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  @include flex-column;
+  @include flex-column-to-row($bp-desktop);
+
+  @include screen($bp-desktop) {
+    @include padding-top($size-header);
+    max-width: 80%;
+    justify-content: space-between;
+  }
 }
 
 .hero__title {
   color: $color-text--orange;
   text-transform: uppercase;
-  @include line-wrap;
+  width: 100%;
+  align-self: flex-end;
   @include font-display;
   @include text-shadow;
   @include h1;
+
+  @include screen($bp-desktop) {
+  }
+
+  small {
+    display: block;
+    font-weight: 400;
+    @include h3;
+  }
+
+  span {
+    @include line-wrap;
+    line-height: 1;
+  }
 }
 
 .hero__tagline {
-  @include h2;
+  align-self: flex-start;
+  @include padding-vertical(12px);
+  @include h5;
   @include font-display;
   @include text-shadow;
+}
+
+.hero__cta {
+  align-self: flex-start;
 }
