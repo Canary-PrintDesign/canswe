@@ -17,13 +17,15 @@ specs:
     details:
       - Exceeds WCB PPE 1-1997 Threshold Chains Speed (TCS) 3600
 
-  features:
+  material:
     - 50% Woven 600 Denier Polyester front
     - 50% polyester knit back
+
+  features:
     - Nylon reinforced crotch with extra bar tacking
     - Full wrap protection extends around the calf
     - Belt Loops
-    - hip pockets are ergonomically located to prevent hang ups during cutting and bending
+    - Hip pockets are ergonomically located to prevent hang ups during cutting and bending
     - Signature pocket flaps keep chips out and allow quick easy access
 
   misc:
