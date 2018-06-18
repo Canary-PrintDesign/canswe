@@ -2,7 +2,7 @@
 category: safety-pants
 sku: P009
 title: Rigger Pro
-description: The RIGGER PRO 3600 is made with a woven 600 denier polyester front and our classic polester knit back. The pant is made for longevity. The woven poly front can handle extreme abrasion and has excellent resistance to oil and gas.
+description: The Rigger Pro is made with a woven 600 denier polyester front and our classic polyester knit back. The pant is made for longevity! The woven poly front can handle extreme abrasion and has excellent resistance to oil and gas.
 rotator: true
 specs:
   weather:
@@ -14,11 +14,12 @@ specs:
     score: 1
     details:
       - Meets WCB PPE 1-1997 Threshold Chains Speed (TCS) 3600
-  features:
+  material:
     - 50% Woven 600 Denier Polyester front
     - 50% polyester knit back
+  features:
     - Nylon reinforced crotch with extra bar tacking
-    - hip pockets are ergonomically located to prevent hang ups during cutting and bending
+    - Hip pockets are ergonomically located to prevent hang ups during cutting and bending
     - Signature pocket flaps keep chips out and allow quick easy access
   misc:
     - Light weight at 2.2lb / 992g (size 34-36)

@@ -1,8 +1,8 @@
 ---
 category: safety-pants
 sku: M001
-title: Poly Promax
-description: The Poly PROMAX is an all season pant that is light weight and breathable with excellent range of motion. The same design as our popular POLY PRO with added protection of 4100 TCS protective pad.
+title: Faller's Poly Promax
+description: The Faller's Poly PROMAX is an all season pant that is light weight and breathable with excellent range of motion. The same design as our popular POLY PRO with added protection of 4100 TCS protective pad.
 rotator: true
 specs:
   weather:
@@ -23,7 +23,7 @@ specs:
 
   features:
     - Nylon reinforced crotch with extra bar tacking
-    - hip pockets are ergonomically located to prevent hang ups during cutting and bending
+    - Hip pockets are ergonomically located to prevent hang ups during cutting and bending
     - Signature pocket flaps keep chips out and allow quick easy access
 
   misc:
