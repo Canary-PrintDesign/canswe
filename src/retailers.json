@@ -1,0 +1,28 @@
+---
+permalink: assets/map/retailers.json
+---
+{
+  "features": [
+  {% for retailer in site.data.retailers %}
+  {
+    "type": "Feature",
+    "properties": {
+      "dealer_name": "{{ retailer.dealer_name }}",
+      "city": "{{ retailer.city }}",
+      "address": "{{ retailer.address }}",
+      "postal_code": "{{ retailer.postal_code }}",
+      "phone": "{{ retailer.phone }}"
+    },
+    "geometry": {
+      "coordinates": [
+        {{ retailer.longitude }},
+        {{ retailer.latitude }}
+      ],
+      "type": "Point"
+    },
+    "id": "{{ forloop.index }}"
+  }{% if forloop.last == true %}{% else %},{% endif %}
+  {% endfor %}
+  ],
+  "type": "FeatureCollection"
+}
