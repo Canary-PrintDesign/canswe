@@ -1,0 +1,20 @@
+---
+layout: default
+permalink: retailers/index.html
+---
+
+<div style="height: 250px; "></div>
+
+<header class="retailers__header">
+  <h1 class="retailers__title">Can-Swe Retailers</h1>
+</header>
+
+{% assign province = '' %}
+{% for retailer in site.data.retailers %}
+  {% if province != retailer.province %}
+    {% assign province = retailer.province %}
+    <h1>{{ retailer.province }}</h1>
+  {% endif %}
+
+  {% include components/retailer.html retailer=retailer %}
+{% endfor %}

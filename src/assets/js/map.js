@@ -24,7 +24,7 @@ d3.json("/assets/map/canada-topo.json", function(ca) {
     .attr("d", path)
     .attr("class", function(d, i) { return "region" + i; });
 
-  d3.json("/assets/map/canswe-retailers.json", function(locations) {
+  d3.json("/assets/map/retailers.json", function(locations) {
     svg.selectAll("circle")
       .data(locations.features).enter()
         .append("circle")
