@@ -1,0 +1,99 @@
+.retailers__header {
+  align-items: center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to top, -color($greys, 15), transparent 250px), url("/assets/img/ca-ku-441809-unsplash.jpg");
+  color: $color-text--light;
+  display: flex;
+  height: -size(488px);
+  justify-content: center;
+  @include margin-bottom($gutter--xl);
+}
+
+.retailers__title {
+  text-align: center;
+  color: $color-yellow;
+  font-weight: 600;
+  text-transform: uppercase;
+  @include h1;
+  @include font-display;
+  @include text-shadow;
+}
+
+.retailers__list {
+
+}
+
+.retailers__location {
+  border-bottom: 1px solid -color($greys, 95);
+  text-align: center;
+  @include font-display;
+  @include h2;
+  @include padding-bottom($gutter);
+}
+
+.retailers__location-group {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include max-screen($bp-desktop) {
+    justify-content: space-around;
+  }
+}
+
+.retailer {
+  display: flex;
+  flex-shrink: 1;
+  @include padding-bottom($gutter);
+  @include margin-bottom($gutter);
+
+  @include max-screen($bp-tablet) {
+    border-bottom: 1px solid -color($greys, 95);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  @include screen($bp-tablet) {
+    flex-basis: calc(100% / 2);
+  }
+
+  @include screen($bp-desktop) {
+    flex-basis: calc(100% / 3);
+  }
+}
+
+.retailer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  @include padding-vertical($gutter);
+
+  @include screen($bp-tablet) {
+    @include padding-horizontal($gutter);
+  }
+}
+
+.retailer__name {
+  @include h3;
+  @include font-display;
+  @include margin(0);
+}
+
+.retailer__tel-link {
+  color: $color-text--orange;
+  display: block;
+  font-weight: 600;
+  @include margin($gutter--small);
+}
+
+.retailer__tel-text {
+
+}
+
+.retailer__address {
+  flex-align: end;
+}

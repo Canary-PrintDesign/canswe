@@ -43,7 +43,7 @@
 }
 
 @mixin h3 {
-  @include font-size(48);
+  @include font-size(48, 24, 24, 24, 48);
 }
 
 @mixin h4 {
