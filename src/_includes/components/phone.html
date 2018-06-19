@@ -1,3 +1,3 @@
-<a href="tel:{{ include.item }}">
-  <span itemprop="telephone">{{ include.item }}</span>
+<a href="tel:{{ include.item }}"{% if include.class-prefix %} class="{{ include.class-prefix }}__tel-link"{% endif %}>
+  <span itemprop="telephone"{% if include.class-prefix %} class="{{ include.class-prefix }}__tel-text"{% endif %}>{{ include.item | tel }}</span>
 </a>
