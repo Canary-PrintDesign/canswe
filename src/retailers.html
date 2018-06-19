@@ -3,18 +3,32 @@ layout: default
 permalink: retailers/index.html
 ---
 
-<div style="height: 250px; "></div>
-
 <header class="retailers__header">
-  <h1 class="retailers__title">Can-Swe Retailers</h1>
+  <div class="retailers__container container">
+    <h1 class="retailers__title">Can-Swe Retailers</h1>
+  </div>
 </header>
 
+<div class="retailers__list container">
 {% assign province = '' %}
 {% for retailer in site.data.retailers %}
   {% if province != retailer.province %}
+
+    {% if forloop.index != 1 %}
+    </section>
+    {% endif %}
+
     {% assign province = retailer.province %}
-    <h1>{{ retailer.province }}</h1>
+    <h1 class="retailers__location">{{ retailer.province }}</h1>
+
+    <section class="retailers__location-group">
   {% endif %}
 
   {% include components/retailer.html retailer=retailer %}
+
+  {% if province != retailer.province %}
+    </section>
+  {% endif %}
+
 {% endfor %}
+</div>
