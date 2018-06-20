@@ -1,43 +1,54 @@
-.contact-page__section {
-  padding-top: 175px;
-  height: 130vh;
-  position: relative;
-  display: flex;
-  flex-flow: column;
-  background: linear-gradient(to top, #292929, rgba(0, 0, 0, 0.5), transparent), url("/assets/img/pexels-photo-113339-forest-logs-nature.jpg") no-repeat;
-  background-position: bottom;
+.contact-hero {
+  align-items: center;
   background-size: cover;
-  //height: 490px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to top, -color($greys, 15), transparent 250px), url("/assets/img/pexels-photo-113339-forest-logs-nature.jpg");
+  color: $color-text--light;
+  display: flex;
+  height: -size(488px);
+  justify-content: center;
+}
+
+.contact-hero__title {
+  color: $color-yellow;
+  font-weight: 600;
+  text-transform: uppercase;
+  @include h1;
+  @include font-display;
+  @include text-shadow;
+}
+
+.contact-hero__intro {
+  text-align: center;
+  max-width: 900px;
+  transform: translateY(-size(50px));
+  @include text-shadow;
+}
+
+.contact-hero__lead {
+  line-height: 1.6;
+}
+
+.contact-page__section {
+  position: relative;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
 }
 
-.contact-page__heading-large {
-  @include h1;
-  @include font-display;
-  @include margin-vertical(0);
-  @include text-shadow;
-  text-align: center;
-  font-weight: 600;
-  color: $color-yellow;
-  text-transform: uppercase;
-  width: 80%;
-}
-
 .contact-page__form {
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  height: 800px;
-  padding: 50px;
-  margin: 100px;
-  width: 80%;
+  height: 600px;
+  padding: 25px;
+  margin: 60px auto 60px;
+  width: 800px;
+  max-width: 95%;
   background: white;
   @include box-shadow($blur: (2px, 5px));
 
-  input {
-    margin-bottom: 20px;
-    max-width: 400px;
+  label {
+    display: inline-block;
+    width: 150px;
   }
 
   button {
