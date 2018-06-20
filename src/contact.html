@@ -8,27 +8,27 @@ class: contact
   <header class="contact-hero">
     <div class="contact-hero__intro">
       <h1 class="contact-hero__title">Contact CAN-SWE</h1>
-      <p class="contact-hero__lead">Use the contact form below to for wholesale inquiries. For retail inquiries, please contact your local CAN-SWE dealer.</p>
+      <p class="contact-hero__lead">Use this contact form for wholesale inquiries. For retail inquiries, please contact your local CAN-SWE retailer.</p>
     </div>
   </header>
 
   <form class="contact-page__form" method="post" action="https://static-files.canaryprint.ca/canswe.com/mailer.php" id="ajax-contact">
-    <div>
+    <div class="contact-page__field">
       <label for="name">Name</label>
       <input name="name" id="name" />
     </div>
  
-    <div>
+    <div class="contact-page__field">
       <label for="email">Email</label>
       <input type="email" name="email" required id="email" />
     </div>
  
-    <div>
+    <div class="contact-page__field">
       <label for="phone">Phone Number</label>
       <input type="tel" name="phone" id="phone" />
     </div>
  
-    <div>
+    <div class="contact-page__textarea">
       <label for="message">Your Message</label>
       <textarea name="message" rows="8" required id="message"></textarea>
     </div>
