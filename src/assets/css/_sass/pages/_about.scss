@@ -1,5 +1,6 @@
 .about-page__section {
   height: 100vh;
+  min-height: 900px;
   position: relative;
   display: flex;
   flex-flow: column;
@@ -15,6 +16,7 @@
   background: linear-gradient(to top, #292929, transparent), url("/assets/img/pexels-photo-113339-forest-logs-nature.jpg") no-repeat;
   background-position: bottom;
   background-size: cover;
+  min-height: 800px;
 }
 
 .about-page__end-hero {
@@ -32,12 +34,15 @@
   font-weight: 600;
   color: $color-text--orange;
   text-transform: uppercase;
-  width: 80%;
   margin-bottom: 75px;
+  width: 95%;
+
+  @include screen($bp-desktop) {
+    width: 80%;
+  }
 }
 
 .about-page__heading-small {
-  @include margin-top(76px);
   @include font-display;
   @include h3;
   text-align: center;
@@ -49,6 +54,7 @@
   width: 80%;
 
   @include screen($bp-desktop) {
+    @include margin-top(76px);
     top: 10px;
   }
 }
@@ -91,7 +97,7 @@
   justify-content: center;
   align-items: center;
   background: linear-gradient(180deg, $color-grey--darker, $color-grey--dark);
-  padding: 75px;
+  padding: 50px 25px 0;
 
   &::after {
     content: '';
@@ -105,11 +111,13 @@
 
   @include screen($bp-desktop) {
     flex-flow: row;
+    padding: 75px;
   }
 }
 
 .about-page__testimonial-text {
   width: 400px;
+  max-width: 100%;
   line-height: 2;
   padding-top: 50px;
   margin: 0;
@@ -127,7 +135,7 @@
 }
 
 .about-page__testimonial-attribution {
-  margin-top: 40px;
+  margin-top: 100px;
   text-align: center;
 
   small {
@@ -135,6 +143,10 @@
     margin-top: 15px;
     display: block;
     text-align: center;
+  }
+
+  @include screen($bp-desktop) {
+    margin-top: 40px;
   }
 }
 
