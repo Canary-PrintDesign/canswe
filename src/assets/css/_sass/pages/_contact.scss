@@ -38,7 +38,10 @@
 }
 
 .contact-page__form {
-  height: 600px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 620px;
   padding: 25px;
   margin: 60px auto 60px;
   width: 800px;
@@ -46,9 +49,39 @@
   background: white;
   @include box-shadow($blur: (2px, 5px));
 
-  label {
-    display: inline-block;
-    width: 150px;
+  .contact-page__field {
+    display: flex;
+    flex-flow: column;
+
+    label {
+      margin-bottom: 5px;
+    }
+
+    input {
+      flex: 1 0;
+    }
+  }
+
+  .contact-page__textarea {
+    label {
+      display: block;
+      margin-bottom: 10px;
+    } 
+
+    textarea {
+      width: 100%;
+    }
+  }
+
+  @include screen($bp-tablet) {
+    .contact-page__field {
+      flex-flow: row;
+      align-items: center;    
+
+      label {
+        min-width: 200px;
+      }
+    }
   }
 
   button {
