@@ -23,6 +23,9 @@
   justify-content: center;
   color: white;
   background-image: url("/assets/img/ca-ku-441809-unsplash.jpg");
+  background: linear-gradient(to bottom, $color-grey--lighter 50px, transparent), url("/assets/img/ca-ku-441809-unsplash.jpg") no-repeat;
+  background-position: bottom;
+  background-size: cover;
 }
 
 .about-page__heading-large {
@@ -36,6 +39,10 @@
   text-transform: uppercase;
   margin-bottom: 75px;
   width: 95%;
+
+  &-yellow {
+    color: $color-yellow;
+  }
 
   @include screen($bp-desktop) {
     width: 80%;
@@ -161,8 +168,28 @@
 }
 
 .about-page__story-wrapper {
-  background: #292929;
-  margin-top: 100px;
+  height: 450px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 50px;
   text-align: center;
+
+  .about-page__story-text {
+    flex: 1 1 0;
+    max-width: 450px;
+    padding: 20px;
+    line-height: 1.6;
+    background: #292929;
+    border-radius: 2px;
+    font-size: 0.8em;
+
+    @include screen($bp-desktop) {
+      font-size: inherit;
+    }
+  }
+
+  .about-page__story-portrait {
+  }
 }
