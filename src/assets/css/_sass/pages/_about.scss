@@ -20,12 +20,19 @@
 }
 
 .about-page__end-hero {
-  justify-content: center;
+  justify-content: flex-start;
   color: white;
   background-image: url("/assets/img/ca-ku-441809-unsplash.jpg");
   background: linear-gradient(to bottom, $color-grey--lighter 50px, transparent), url("/assets/img/ca-ku-441809-unsplash.jpg") no-repeat;
   background-position: bottom;
   background-size: cover;
+  height: 130vh;
+  padding-top: 50px;
+
+  @include screen($bp-desktop) {
+    height: 100vh;
+    justify-content: center;
+  }
 }
 
 .about-page__heading-large {
@@ -168,28 +175,39 @@
 }
 
 .about-page__story-wrapper {
-  height: 450px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 50px;
   text-align: center;
+  flex-flow: column;
+
+  @include screen($bp-desktop) {
+    flex-flow: row;
+  }
 
   .about-page__story-text {
     flex: 1 1 0;
     max-width: 450px;
     padding: 20px;
-    line-height: 1.6;
+    line-height: 2;
     background: #292929;
     border-radius: 2px;
     font-size: 0.8em;
+    margin-top: 50px;
 
     @include screen($bp-desktop) {
       font-size: inherit;
+      margin-top: inherit;
     }
   }
 
   .about-page__story-portrait {
+    order: -1;
+
+    @include screen($bp-desktop) {
+      order: 1;
+    }
   }
 }
