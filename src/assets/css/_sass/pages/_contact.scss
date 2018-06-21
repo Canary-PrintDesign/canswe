@@ -28,6 +28,11 @@
 
 .contact-hero__lead {
   line-height: 1.6;
+
+  a {
+    color: $color-yellow;
+    text-decoration: none;
+  }
 }
 
 .contact-page__section {
@@ -84,8 +89,22 @@
     }
   }
 
-  button {
-    align-self: flex-end;
-    width: 200px;
+  .contact-page__submit-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    span {
+      float: left;
+      vertical-align: middle;
+      margin-right: 25px;
+    }
+
+    button {
+      float: right;
+      outline: none;
+      border: none;
+    }
   }
 }
