@@ -46,13 +46,14 @@
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  height: 620px;
+  height: 720px;
   padding: 25px;
   margin: 60px auto 60px;
   width: 800px;
   max-width: 95%;
   background: white;
   @include box-shadow($blur: (2px, 5px));
+  color: $color-grey--darker;
 
   .contact-page__field {
     display: flex;
@@ -71,6 +72,7 @@
     label {
       display: block;
       margin-bottom: 10px;
+      line-height: 30px;
     } 
 
     textarea {
