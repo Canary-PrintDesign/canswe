@@ -43,10 +43,10 @@
   @include margin-center;
   @include padding($gutter);
 
-  @include screen($bp-desktop) {
+  @include screen($bp-large) {
+    padding: -size(26px);
     transform: translateY(-size(-38px));
     width: 1240px;
-    padding: -size(26px);
   }
 
   .product-collage__image {
@@ -71,18 +71,19 @@
 }
 
 .product-body {
-  //width: 1240px;
   line-height: 1.5;
+  @include padding-top($gutter);
   @include margin-center;
 
-  @include screen($bp-desktop) {
-    @include padding(26px);
+
+  @include screen($bp-large) {
+    width: 1240px;
   }
 }
 
 .product-article__wrapper {
   display: flex;
-  flex-direction: column;
+  @include flex-column-to-row($bp-desktop);
 }
 
 .product-article__title {
