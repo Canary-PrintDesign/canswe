@@ -2,7 +2,9 @@
 layout: default
 ---
 <header class="product-header">
-  <h1 class="product-title">{{ page.title | upcase }}</h1>
+  <div class="container">
+    <h1 class="product-title">{{ page.title | upcase }}</h1>
+  </div>
 </header>
 
 <div class="product-collage">
@@ -13,21 +15,20 @@ layout: default
   {% if page.rotator %}
     <div class="product-collage__sprite spritespin"></div>
     <script>
-      var sku = "{{ page.sku | downcase }}",
-        imageWidth = 538,
-        imageHeight = 800,
-        rotator = {{ page.rotator }}
+      if (window.innerWidth >= 768) {
+        var sku = "{{ page.sku | downcase }}",
+          imageWidth = 538,
+          imageHeight = 800,
+          rotator = {{ page.rotator }}
+      }
     </script>
-  {% else %}
-    <div class="product-collage__image product-collage__image--sprite">
-      <img src="//placehold.it/378x507">
-    </div>
   {% endif %}
 </div>
 
 <div class="product-body">
-  <article class="product-article">
-  <h2 class="product-article__title">Description & Features</h2>
+  <article class="product-article container">
+    <h2 class="product-article__title">Description & Features</h2>
+
     <div class="product-article__wrapper">
       <div class="product-article__body">
         <p>{{ page.description }}</p>
