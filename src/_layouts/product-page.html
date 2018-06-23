@@ -15,7 +15,7 @@ layout: default
   {% if page.rotator %}
     <div class="product-collage__sprite spritespin"></div>
     <script>
-      if (window.innerWidth >= 768) {
+      if (window.outerWidth >= 768) {
         var sku = "{{ page.sku | downcase }}",
           imageWidth = 538,
           imageHeight = 800,
