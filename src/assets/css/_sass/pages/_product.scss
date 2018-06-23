@@ -12,12 +12,16 @@
 
   &:after {
     content: '';
-    height: -size(134px);
     width: 100%;
     display: block;
     background-color: $color-orange;
     position: absolute;
     top: 100%;
+    height: $gutter--tiny;
+
+    @include screen($bp-tablet) {
+      height: -size(134px);
+    }
   }
 }
 
@@ -32,14 +36,18 @@
 }
 
 .product-collage {
-  width: 1240px;
-  transform: translateY(-size(-38px));
   position: relative;
-  padding: -size(26px);
   background-color: -color($greys, 95);
   display: flex;
   justify-content: space-between;
   @include margin-center;
+  @include padding($gutter);
+
+  @include screen($bp-desktop) {
+    transform: translateY(-size(-38px));
+    width: 1240px;
+    padding: -size(26px);
+  }
 
   .product-collage__image {
     overflow: hidden;
@@ -52,7 +60,9 @@
 
   .product-collage__image--main {
     flex-grow: 2;
-    margin-right: -size(16px);
+    @include screen($bp-desktop) {
+      margin-right: -size(16px);
+    }
   }
 
   .product-collage__sprite {
@@ -61,14 +71,18 @@
 }
 
 .product-body {
-  width: 1240px;
+  //width: 1240px;
   line-height: 1.5;
-  @include padding(26px);
   @include margin-center;
+
+  @include screen($bp-desktop) {
+    @include padding(26px);
+  }
 }
 
 .product-article__wrapper {
   display: flex;
+  flex-direction: column;
 }
 
 .product-article__title {
