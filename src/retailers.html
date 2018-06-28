@@ -6,29 +6,63 @@ permalink: retailers/index.html
 <header class="retailers__header">
   <div class="retailers__container container">
     <h1 class="retailers__title">Can-Swe Retailers</h1>
+
+    <fieldgroup class="retailer-filter">
+      <label class="retailer-filter__label" for="filter">Search for a local retailer</label>
+      <input class="retailer-filter__input" id="filter" name="filter" class="retailer__input" placeholder="Find a local Can-Swe retailer..."/>
+      <small class="retailer-filter__help">Search by Province, City, or Company Name</small>
+    </fieldgroup>
   </div>
 </header>
 
 <div class="retailers__list container">
 {% assign province = '' %}
+{% assign city = '' %}
+
 {% for retailer in site.data.retailers %}
-  {% if province != retailer.province %}
-
+  {% comment %}
+  <!-- close previous city -->
+  {% if city != retailer.city %}
+    <!-- don't close before first city -->
     {% if forloop.index != 1 %}
-    </section>
+      </div>
     {% endif %}
-
-    {% assign province = retailer.province %}
-    <h1 class="retailers__location">{{ retailer.province }}</h1>
-
-    <section class="retailers__location-group">
+    <!-- /don't close before first city -->
   {% endif %}
+  <!-- /close previous city -->
+  {% endcomment %}
+
+  <!-- close previous province -->
+  {% if province != retailer.province %}
+    <!-- don't close before first province -->
+    {% if forloop.index != 1 %}
+        </div>
+      </div>
+    {% endif %}
+    <!-- /don't close before first province -->
+
+  {% endif %}
+  <!-- /close previous province -->
+
+  <!-- check new province -->
+  {% if province != retailer.province %}
+    {% assign province = retailer.province %}
+    <div class="province" data-province="{{ province | safe }}">
+      <h1 class="province__title">{{ province }}</h1>
+      <div class="retailers__location-group">
+  {% endif %}
+  <!-- /check new province -->
+
+  {% comment %}
+  <!-- check new city -->
+  {% if city != retailer.city %}
+    {% assign city = retailer.city %}
+    <div class="city retailers__location-group" data-city="{{ city | safe }}">
+  {% endif %}
+  <!-- /check new city -->
+  {% endcomment %}
 
   {% include components/retailer.html retailer=retailer %}
-
-  {% if province != retailer.province %}
-    </section>
-  {% endif %}
-
 {% endfor %}
+
 </div>

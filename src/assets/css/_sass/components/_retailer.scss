@@ -9,6 +9,7 @@
   height: -size(488px);
   justify-content: center;
   @include margin-bottom($gutter--xl);
+  @include padding-top($gutter--xl);
 }
 
 .retailers__title {
@@ -25,7 +26,7 @@
 
 }
 
-.retailers__location {
+.province__title {
   border-bottom: 1px solid -color($greys, 95);
   text-align: center;
   @include font-display;
@@ -96,4 +97,37 @@
 
 .retailer__address {
   flex-align: end;
+}
+
+
+
+.retailer-filter {
+  display: flex;
+  align-items: center;
+  @include flex-column;
+
+  .retailer-filter__label {
+    display: block;
+    text-transform: capitalize;
+    font-weight: 600;
+    @include text-shadow;
+    @include h2;
+    @include font-display;
+  }
+
+  .retailer-filter__input {
+    display: block;
+    border-radius: 3px;
+    border: none;
+    width: 100%;
+    max-width: $bp-tablet;
+    text-align: center;
+    @include padding($gutter);
+    @include box-shadow;
+    @include margin($gutter--small);
+  }
+
+  .retailer-filter__help {
+    @include small;
+  }
 }
