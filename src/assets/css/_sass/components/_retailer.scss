@@ -8,7 +8,6 @@
   display: flex;
   height: -size(488px);
   justify-content: center;
-  @include margin-bottom($gutter--xl);
   @include padding-top($gutter--xl);
 }
 
@@ -23,7 +22,7 @@
 }
 
 .retailers__list {
-
+  @include padding-vertical($gutter--xl);
 }
 
 .province__title {
@@ -130,4 +129,9 @@
   .retailer-filter__help {
     @include small;
   }
+}
+
+.retailers-map {
+  width: 100%;
+  height: 500px;
 }
