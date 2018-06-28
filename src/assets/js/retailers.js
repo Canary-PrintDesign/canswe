@@ -27,8 +27,8 @@ $(() => {
       $('[data-city*="'+val+'"]'),
       $('[data-province*="'+val+'"]'),
     ]
-      .filter(e => e[0]) // filter undefined
-      .forEach(showTree);
+    .filter(e => e[0]) // filter undefined
+    .forEach(showTree);
   }
 
   $('#filter').on('input', filterRetailer);

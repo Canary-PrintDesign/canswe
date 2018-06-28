@@ -65,4 +65,29 @@ permalink: retailers/index.html
   {% include components/retailer.html retailer=retailer %}
 {% endfor %}
 
+<!-- /fixes for nesting -->
+    </div>
+  </div>
 </div>
+<!-- /fixes for nesting -->
+
+<div id="map" class="retailers-map"></div>
+<script>
+  // Initialize and add the map
+  function initMap() {
+    // The location of Uluru
+    var uluru = {lng: -96.927234, lat: 51.322856 };
+    // The map, centered at Uluru
+    var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 5, center: uluru});
+    // The marker, positioned at Uluru
+    var marker = new google.maps.Marker({position: uluru, map: map});
+
+    map.data.loadGeoJson ('/assets/map/retailers.json');
+  }
+</script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCX1aZ9YuFupu4iMSHnWyt454nBt45uCIo&callback=initMap">
+</script>
+</div>
+
