@@ -6,7 +6,6 @@ description: The Summer Pro (previously Drill Cotton Pro 3600) is a welcome addt
 rotator: true
 specs:
   weather:
-    - snow
     - sun
   cost: 1
   safety:
@@ -14,6 +13,7 @@ specs:
     details:
       - Meets WCB PPE 1-1997 Threshold Chains Speed (TCS) 3600
   features:
+    - 11 Oz. Drill cotton is smooth, comfortable and very breathable
     - Nylon reinforced crotch with extra bar tacking
     - Hip pockets are ergonomically located to prevent hang ups during cutting and bending
     - Signature pocket flaps keep chips out and allow quick easy access

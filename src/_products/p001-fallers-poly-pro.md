@@ -9,7 +9,7 @@ description: >
 rotator: true
 feature: true
 specs:
-  model: Faller's Poly Pro
+  model: Faller's Poly Pro <br> + Backpad
   sku: P001 / P001B
   weather:
     - snow

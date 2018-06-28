@@ -18,10 +18,11 @@ specs:
       - Exceeds WCB PPE 1-1997 Threshold Chains Speed (TCS) 3600
 
   material:
-    - 50% Woven 600 Denier Polyester front
-    - 50% polyester knit back
+    - 100% Polyester Outer Shell
 
   features:
+    - Fabric is Heavy Double Knit 13oz for added durability
+    - Knit provides excellent ventilation and movement
     - Nylon reinforced crotch with extra bar tacking
     - Hip pockets are ergonomically located to prevent hang ups during cutting and bending
     - Signature pocket flaps keep chips out and allow quick easy access

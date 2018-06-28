@@ -23,6 +23,7 @@ specs:
 
   features:
     - Nylon reinforced crotch with extra bar tacking
+    - Nylon reinforced seat patch
     - Full wrap protection extends around the calf
     - Belt Loops
     - Hip pockets are ergonomically located to prevent hang ups during cutting and bending

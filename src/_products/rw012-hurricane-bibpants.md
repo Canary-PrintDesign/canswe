@@ -1,5 +1,6 @@
 ---
 category: rainwear
+feature: true
 sku: RW012
 title: Hurricane Bibpants
 description: The Hurricane Bibpants pair perfectly with the jacket as the toughest product on the market. The 420 Denier Nylon outer shell and 210 Denier Nylon shell are both polyurethane coated. Lining and shell are sewn "coating to coating" to reduce abrasive damage to coating and improve longevity. The soft finish provides added comfort, inside and out. Wide leg design allows for "boots on" access
