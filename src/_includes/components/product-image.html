@@ -1,6 +1,6 @@
 {% capture imagePath %}assets/images/products/{{ include.item.sku | downcase }}{% endcapture %}
 {% capture solo %}{{imagePath}}/solo.jpg{% endcapture %}
-{% capture first %}{{imagePath}}/1.jpg{% endcapture %}
+{% capture first %}{{imagePath}}/01.jpg{% endcapture %}
 
 {% capture soloExists %}{% file_exists {{ solo }} %}{% endcapture %}
 {% capture firstExists %}{% file_exists {{ first }} %}{% endcapture %}
