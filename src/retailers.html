@@ -47,7 +47,7 @@ permalink: retailers/index.html
   <!-- check new province -->
   {% if province != retailer.province %}
     {% assign province = retailer.province %}
-    <div class="province" data-province="{{ province | safe }}">
+    <div class="province" data-province="{{ province | safe }} {{ retailer.province_abbreviation | safe }}">
       <h1 class="province__title">{{ province }}</h1>
       <div class="retailers__location-group">
   {% endif %}
