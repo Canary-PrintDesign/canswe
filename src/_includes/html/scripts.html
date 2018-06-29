@@ -9,7 +9,6 @@
 
     if (spriteSpin.length > 0 && window.rotator === true) {
       spriteSpin.spritespin({
-        // path to the source images.
         source: SpriteSpin.sourceArray('/assets/images/products/'+window.sku+'/{frame}.jpg', {
           frame: [1, 15],
         }),
@@ -17,7 +16,9 @@
         height: window.imageHeight * (521 / window.imageHeight),  // height in pixels of the window/frame
         frames: 16,
         frameTime: 150,
+        animate: false,
       });
     }
   });
 </script>
+
