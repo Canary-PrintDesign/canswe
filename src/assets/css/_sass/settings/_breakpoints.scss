@@ -6,11 +6,11 @@
 
 */
 
-$bp-phone: 20em;
-$bp-tablet: 48em;
-$bp-desktop: 64em;
-$bp-large: 77em;
-$bp-extra-large: 90em;
+$bp-phone: 375px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-large: 1440px;
+$bp-extra-large: 1920px;
 
 $breakpoints: (
   'phone': $bp-phone,

@@ -14,7 +14,6 @@
 .site-header__container {
   @include max-screen($bp-desktop) {
     margin: 0;
-    max-width: none;
   }
 
   @include screen($bp-desktop) {
