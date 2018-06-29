@@ -6,7 +6,7 @@ description: The Hurricane Jacket's reputation lives up to its name. The toughes
 rotator: true
 specs:
   model: Hurricane Jacket <br> + Fleece Lined
-  sku: RW011 / RW011L
+  sku: RW011C / RW011L
   features:
     - Double lined sleeves, shoulder and upper torso.
     - Cape design allows for venting and mid torso
