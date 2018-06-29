@@ -13,15 +13,22 @@ layout: default
   </div>
 
   {% if page.rotator %}
-    <div class="product-collage__sprite spritespin"></div>
-    <script>
-      if (window.outerWidth >= 768) {
-        var sku = "{{ page.sku | downcase }}",
-          imageWidth = 538,
-          imageHeight = 800,
-          rotator = {{ page.rotator }}
-      }
-    </script>
+    <div class="product-collage__sprite">
+      <div class="spritespin"></div>
+      <script>
+        if (window.outerWidth >= 768) {
+          var sku = "{{ page.sku | downcase }}",
+            imageWidth = 538,
+            imageHeight = 800,
+            rotator = {{ page.rotator }}
+        }
+      </script>
+      <button class="product-collage__sprite-button button button--link button--orange-link">Click here to spin</button>
+    </div>
+  {% else %}
+    <div class="product-collage__image product-collage__image--sprite">
+      <img src="/assets/images/products/{{ page.sku | downcase }}/01.jpg">
+    </div>
   {% endif %}
 </div>
 
