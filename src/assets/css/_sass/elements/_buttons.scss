@@ -40,7 +40,6 @@ a.button {
   }
 }
 
-
 .button--link {
   box-shadow: none;
   padding: 0;
@@ -49,6 +48,13 @@ a.button {
   svg {
     margin-bottom: 3px; // fixme
   }
+}
+
+button.button--link {
+  border: none;
+  background: none;
+  outline: none;
+  display: inline;
 }
 
 .button--orange-link {

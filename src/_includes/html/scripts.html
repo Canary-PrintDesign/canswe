@@ -19,6 +19,18 @@
         animate: false,
       });
     }
+
+    if (spriteSpin.length) {
+      var api = $('.spritespin').spritespin('api');
+
+      $('.product-collage .button')
+        .click(function() {
+          api.toggleAnimation()
+          api.isPlaying()
+            ? $(this).html('Stop Spinning')
+            : $(this).html('Click here to spin');
+        });
+    }
   });
 </script>
 
