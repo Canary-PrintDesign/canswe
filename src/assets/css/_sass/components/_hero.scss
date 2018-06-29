@@ -15,7 +15,6 @@
 
   @include screen($bp-desktop) {
     @include padding-top($size-header);
-    max-width: 80%;
     justify-content: space-between;
   }
 }
