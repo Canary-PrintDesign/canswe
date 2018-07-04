@@ -53,7 +53,6 @@
   width: 800px;
   max-width: 95%;
   background: white;
-  @include box-shadow($blur: (2px, 5px));
   color: $color-grey--darker;
 
   .contact-page__field {
@@ -74,7 +73,7 @@
       display: block;
       margin-bottom: 10px;
       line-height: 30px;
-    } 
+    }
 
     textarea {
       width: 100%;
@@ -84,7 +83,7 @@
   @include screen($bp-tablet) {
     .contact-page__field {
       flex-flow: row;
-      align-items: center;    
+      align-items: center;
 
       label {
         min-width: 200px;
