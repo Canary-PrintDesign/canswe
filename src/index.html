@@ -23,6 +23,52 @@ class: home
   </div>
 </header>
 
+<section class="family-operated">
+  <div class="family-operated__container container">
+    <header class="family-operated__header">
+      <h1 class="family-operated__title">Family Operated</h1>
+    </header>
+
+    <div class="family-operated__body">
+      <div class="family-operated__cluster">
+        <div class="family-operated__cluster-image">
+          <img src="//via.placeholder.com/890x600" />
+        </div>
+
+        <div class="family-operated__cluster-content">
+          <p>At Can-Swe we take pride in our work, just like our users. Our family owned and operated business was the first to introduce the use of Kevlar for chainsaw safety protection. </p>
+          <p>We still lead the industry providing our users with excellent value and protection, doing everything we can to keep our users comfortable and get them home safely. </p>
+
+        </div>
+      </div>
+
+      <div class="family-operated__cluster family-operated__cluster--reverse">
+        <div class="family-operated__cluster-image">
+          <img src="//via.placeholder.com/890x600" />
+        </div>
+
+        <div class="family-operated__cluster-content">
+          <p>All Can-Swe branded garments are manufactured right here in the heart of the Canadian forestry industry on the West coast of Canada.</p>
+          <p>Through our network of dealers, our product reaches country wide to support the rural commercial fallers, as well as the urban arborist community.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="made-local">
+  <div class="made-local__container container">
+    <h1 class="made-local__title">Who we are</h1>
+    <p class="lead-paragraph">
+      At Can-Swe we believe that every person should have the opportunity to work and provide for their families, friends, loved ones and loved things. Relying upon over 30 years of tried, tested and true materials and innovating with user feedback and modern technology, we offer the highest quality professional work wear to help keep you safe.
+    </p>
+    <a class="button button--link button--yellow-link" href="/about">
+      Find out more about us
+      {% include icons/arrow-right.svg %}
+    </a>
+  </div>
+</section>
+
 <section class="featured-products">
   <div class="featured-products__container container">
     <header class="featured-products__header">
@@ -44,52 +90,6 @@ class: home
           {% include components/product-grid-item.html item=item %}
         {% endif %}
       {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="made-local">
-  <div class="made-local__container container">
-    <h1 class="made-local__title">Made Local</h1>
-    <p class="lead-paragraph">
-      All of our Can-Swe products are manufactured right here in Canada, in the Province of British Columbia and distributed in retailers across the country.
-    </p>
-    <a class="button button--link button--orange-link" href="/retailers">
-      Find Your Local Store
-      {% include icons/arrow-right.svg %}
-    </a>
-  </div>
-</section>
-
-<section class="family-operated">
-  <div class="family-operated__container container">
-    <header class="family-operated__header">
-      <h1 class="family-operated__title">Family Operated</h1>
-    </header>
-
-    <div class="family-operated__body">
-      <div class="family-operated__cluster">
-        <div class="family-operated__cluster-image">
-          <img src="//via.placeholder.com/890x600" />
-        </div>
-
-        <div class="family-operated__cluster-content">
-          <p>At Can-Swe we take pride in our work, just like our users. Our family owned and operated business was the first to introduce the use of Kevlar for chainsaw safety protection.</p>
-          <p>We still lead the industry providing our users with excellent value and protection, doing everything we can to get our users home safely.</p>
-
-        </div>
-      </div>
-
-      <div class="family-operated__cluster family-operated__cluster--reverse">
-        <div class="family-operated__cluster-image">
-          <img src="//via.placeholder.com/890x600" />
-        </div>
-
-        <div class="family-operated__cluster-content">
-          <p>All Can-Swe branded garments are manufactured right here in the heart of the Canadian forestry industry on the West coast of Canada.</p>
-          <p>Through our network of dealers, our product reaches country wide to support the rural commercial fallers, as well as the urban arborist community.</p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
