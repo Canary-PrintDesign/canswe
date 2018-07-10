@@ -1,6 +1,7 @@
 ---
 class: product
 category: safety-pants
+sub-category: 3600
 sku: P001
 title: Faller's Poly Pro
 description: >
@@ -24,7 +25,7 @@ specs:
       - Meets WCB PPE 1-1997 Threshold Chains Speed (TCS) 3600
 
   features:
-    - Fabric is Heavy Double Knit 13oz for added durability
+    - Fabric is Heavy Double Knit 13oz Stretch Polyester for added durability
     - Knit provides excellent ventilation and movement
     - Nylon reinforced crotch with extra bar tacking
     - Hip pockets are ergonomically located to prevent hang ups during cutting and bending

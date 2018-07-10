@@ -1,8 +1,9 @@
 ---
 category: safety-pants
+sub-category: 3600
 sku: P009
 title: Rigger Pro
-description: The Rigger Pro is made with a woven 600 denier polyester front and our classic polyester knit back. The pant is made for longevity! The woven poly front can handle extreme abrasion and has excellent resistance to oil and gas.
+description: The Rigger Pro is made with a woven 600 denier polyester front and our polyester knit back. This pant is made for longevity! The woven poly front can handle extreme abrasion and has excellent resistance to oil and gas.
 rotator: true
 specs:
   weather:

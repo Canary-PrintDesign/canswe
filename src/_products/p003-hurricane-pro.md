@@ -1,5 +1,6 @@
 ---
 category: safety-pants
+sub-category: 3600
 sku: P003
 title: Hurricane Pro
 description: The Hurricane Pro (previously Nylon Pro 3600) is your best friend through the cold, wet, soggy, snowy, fall/winter/spring of the Pacific Northwest. Made with the same polyurethane backed 420 denier nylon from our rainwear, these pants provide excellent moisture protection.

@@ -1,5 +1,6 @@
 ---
 category: safety-pants
+sub-category: chaps
 sku: P008
 title: Chap Pro
 description: Easy on Easy off - the Chap Pro 3600 is the most robust chap on the market and is great for intermittent use. Whether you are a commercial faller or out gathering firewood for the winter, these will help get you home with all your legs.
