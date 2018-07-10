@@ -65,3 +65,10 @@ button.button--link {
   }
 }
 
+.button--yellow-link {
+  color: $color-text--yellow;
+
+  &:hover {
+    color: $color-text--yellow-hover;
+  }
+}

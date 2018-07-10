@@ -14,10 +14,12 @@
     text-transform: uppercase;
     @include h2;
     @include font-display;
+    color: $color-text--light;
   }
 
   .lead-paragraph {
     @include measure;
     @include margin-center;
+    color: $color-text--light;
   }
 }

@@ -64,6 +64,8 @@ $color-text--light: $color-grey--lightest;
 $color-text--dark: $color-grey--dark;
 $color-text--orange: -color($orange);
 $color-text--orange-hover: -color($orange, hover);
+$color-text--yellow: -color($yellow);
+$color-text--yellow-hover: -color($yellow, hover);
 
 $color-box-shadow:   -color($greys--alpha, 20);
 $color-text-shadow:  -color($greys--alpha, 50);
