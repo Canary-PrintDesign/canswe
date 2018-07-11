@@ -53,8 +53,6 @@ $color-grey--darker:  -color($greys,   10);
 $color-grey--dark:     -color($greys,  15);
 $color-grey:           -color($greys,  55);
 
-
-
 $color-yellow: -color($yellow);
 $color-yellow--hover: -color($yellow, hover);
 $color-orange: -color($orange);
@@ -64,8 +62,8 @@ $color-text--light: $color-grey--lightest;
 $color-text--dark: $color-grey--dark;
 $color-text--orange: -color($orange);
 $color-text--orange-hover: -color($orange, hover);
-$color-text--yellow: -color($yellow);
-$color-text--yellow-hover: -color($yellow, hover);
+$color-text--yellow: $color-yellow;
+$color-text--yellow-hover: $color-yellow--hover;
 
 $color-box-shadow:   -color($greys--alpha, 20);
 $color-text-shadow:  -color($greys--alpha, 50);
