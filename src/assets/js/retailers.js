@@ -1,6 +1,6 @@
 $(() => {
   const hideRetailers = (function call() {
-    $('.province, .city, .retailer').hide();
+    $('.province, .city, .retailer, .retailers__list').hide();
     return call;
   })();
 
@@ -10,6 +10,7 @@ $(() => {
     el.find('.city').show();
     el.find('.retailer').show();
     el.find('.province').show();
+    el.closest('.retailers__list').show();
     el.show();
   }
 
