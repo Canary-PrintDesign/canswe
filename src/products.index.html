@@ -31,7 +31,7 @@ class: products
 </nav>
 
 {% for category in site.data.categories %}
-  <div class="product-category container">
+  <div class="product-category">
     <header class="product-category__header">
       <h1 id={{ category.safe }} class="product-category__title">{{ category.name }}</h1>
       <p class="product-category__lead">{{ category.lead }}</p>
