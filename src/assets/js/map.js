@@ -1,5 +1,5 @@
-var w = 650;
-var h = 550;
+var w = 750;
+var h = 600;
 
 var svg = d3.select(".map__holder")
   .append("svg")
@@ -9,7 +9,7 @@ var svg = d3.select(".map__holder")
 var projection = d3.geo.azimuthalEqualArea()
   .rotate([100, -45])
   .center([5, 20])
-  .scale(700)
+  .scale(800)
   .translate([w/2, h/2]);
 
 var path = d3.geo.path().projection(projection);
