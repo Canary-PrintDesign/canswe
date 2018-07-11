@@ -56,14 +56,13 @@
 }
 
 .site-copyright {
-  background-color: $color-grey--dark;
-  color: $color-text--light;
+  background-color: $color-grey--darker;
+  color: $color-text--grey;
   text-align: center;
   @include tiny;
-  @include padding-bottom($gutter);
+  @include padding-vertical($gutter);
 
   a {
-    text-decoration: none;
-    color: $color-text--light;
+    color: $color-text--grey;
   }
 }
