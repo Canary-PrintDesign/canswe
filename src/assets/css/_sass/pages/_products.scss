@@ -30,6 +30,8 @@
   max-width: 600px;
   transform: translateY(-size(50px));
   @include text-shadow;
+  @include wrapper;
+  @include margin-center;
 }
 
 .products-hero__lead {

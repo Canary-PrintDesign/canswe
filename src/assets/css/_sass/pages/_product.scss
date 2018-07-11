@@ -25,6 +25,11 @@
   }
 }
 
+.product-header__container {
+  @include wrapper;
+  @include margin-center;
+}
+
 .product-title {
   color: $color-yellow;
   text-align: center;
@@ -42,11 +47,11 @@
   justify-content: space-between;
   @include margin-center;
   @include padding($gutter);
+  @include wrapper;
 
   @include screen($bp-large) {
     padding: -size(26px);
     transform: translateY(-size(-38px));
-    width: 1240px;
   }
 
   .product-collage__image {
@@ -75,11 +80,11 @@
   line-height: 1.5;
   @include padding-top($gutter);
   @include margin-center;
+}
 
-
-  @include screen($bp-large) {
-    width: 1240px;
-  }
+.product-article {
+  @include margin-center;
+  @include wrapper;
 }
 
 .product-article__wrapper {

@@ -11,6 +11,11 @@
   @include padding-top($gutter--xl);
 }
 
+.retailers__container {
+  @include margin-center;
+  @include wrapper;
+}
+
 .retailers__title {
   text-align: center;
   color: $color-yellow;
@@ -22,6 +27,8 @@
 }
 
 .retailers__list {
+  @include wrapper;
+  @include margin-center;
   @include padding-vertical($gutter--xl);
 }
 

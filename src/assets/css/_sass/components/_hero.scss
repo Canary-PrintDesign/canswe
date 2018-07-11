@@ -11,6 +11,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  @include margin-center;
+  @include wrapper;
   @include flex-column-to-row($bp-desktop);
 
   @include screen($bp-desktop) {

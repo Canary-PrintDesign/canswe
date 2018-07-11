@@ -23,3 +23,8 @@
     color: $color-text--light;
   }
 }
+
+.made-local__container {
+  @include wrapper;
+  @include margin-center;
+}
