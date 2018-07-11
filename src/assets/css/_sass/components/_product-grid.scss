@@ -77,8 +77,9 @@
   position: absolute;
   text-align: center;
   line-height: -size(25px);
-  top: -size(20px);
-  right: -size(-66px);
+  top: -size(30px);
+  right: -size(-56px);
   transform: rotate(45deg);
+  text-transform: uppercase;
   @include tiny;
 }
