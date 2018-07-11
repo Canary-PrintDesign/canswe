@@ -30,12 +30,10 @@
   @include text-shadow;
   @include h1;
 
-  @include screen($bp-desktop) {
-  }
-
   small {
     display: block;
-    font-weight: 400;
+    font-weight: 600;
+    text-shadow: none;
     @include h3;
   }
 
