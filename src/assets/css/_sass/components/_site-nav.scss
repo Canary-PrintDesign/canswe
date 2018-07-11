@@ -12,13 +12,20 @@
   }
 
   .site-nav__item {
+    &:first-of-type {
+      @include padding-left($gutter);
+    }
+
+    &:last-of-type {
+      @include padding-right($gutter);
+    }
   }
 
   .site-nav__link {
     color: $color-text--light;
     display: block;
     line-height: -size($size-header);
-    @include padding-horizontal(30px);
+    @include padding-horizontal($gutter);
     @include transition;
 
     @include screen($bp-desktop) {
@@ -39,7 +46,7 @@
 
   .site-nav > .site-nav__item:last-child {
     position: relative;
-    padding-left: $gutter--small;
+    padding-left: $gutter;
 
     &::before {
       content: '';
