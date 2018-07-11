@@ -5,6 +5,8 @@
 */
 
 .product-category {
+  @include wrapper;
+  @include margin-center;
   &:last-child {
     margin-bottom: 50px;
   }

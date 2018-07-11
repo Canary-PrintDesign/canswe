@@ -4,6 +4,11 @@
   @include padding-vertical($gutter--large, $gutter);
 }
 
+.featured-products__container {
+  @include wrapper;
+  @include margin-center;
+}
+
 .featured-products__header {
   text-align: center;
   @include margin-center;

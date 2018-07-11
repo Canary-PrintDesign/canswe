@@ -4,6 +4,11 @@
   @include padding-vertical($gutter--large);
 }
 
+.family-operated__container {
+  @include wrapper;
+  @include margin-center;
+}
+
 .family-operated__header {
   text-align: center;
 }

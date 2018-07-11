@@ -5,6 +5,8 @@
 .map__container {
   text-align: center;
   @include flex-column;
+  @include margin-center;
+  @include wrapper;
 }
 
 .map__title {
