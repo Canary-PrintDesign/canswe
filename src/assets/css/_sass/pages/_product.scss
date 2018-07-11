@@ -127,12 +127,13 @@
 
 .product-spec {
   .product-spec__title {
+    height: 24px;
     text-align: left;
     padding-right: -size(16px);
-    padding-bottom: -size(8px);
     white-space: nowrap;
     @include h5;
     @include font-display;
+    @include padding-vertical($gutter--small);
   }
 
   .product-spec__list {
