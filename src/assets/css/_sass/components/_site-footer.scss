@@ -36,12 +36,18 @@
 
   a {
     color: $color-yellow;
-    text-decoration: none;
-    @include tiny;
+    text-decoration: none; @include tiny;
   }
 }
 
 .site-footer-nav {
+  .site-footer-nav__item {
+    @include max-screen($bp-desktop) {
+      display: block;
+      line-height: 25px;
+    }
+  }
+
   a {
     color: $color-text--light;
     text-decoration: none;
