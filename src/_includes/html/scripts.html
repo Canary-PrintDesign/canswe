@@ -12,11 +12,12 @@
         source: SpriteSpin.sourceArray('/assets/images/products/'+window.sku+'/{frame}.jpg', {
           frame: [1, 15],
         }),
-        width: window.imageWidth * (378 / window.imageWidth),  // width in pixels of the window/frame
-        height: window.imageHeight * (521 / window.imageHeight),  // height in pixels of the window/frame
+        //width: window.imageWidth * (378 / window.imageWidth),  // width in pixels of the window/frame
+        //height: window.imageHeight * (521 / window.imageHeight),  // height in pixels of the window/frame
         frames: 16,
         frameTime: 150,
         animate: false,
+        responsive: true,
       });
     }
 
