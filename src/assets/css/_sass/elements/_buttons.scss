@@ -43,11 +43,14 @@ a.button {
 .button--link {
   box-shadow: none;
   padding: 0;
-  @include text-shadow($blur: (2px, 5px));
 
   svg {
     margin-bottom: 3px; // fixme
   }
+}
+
+.button--shadow {
+  @include text-shadow($blur: (2px, 5px));
 }
 
 button.button--link {
