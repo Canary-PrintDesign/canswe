@@ -16,6 +16,10 @@
   @include margin-center;
 
   @include max-screen($bp-tablet) {
+    background-color: $color-grey--darkest;
+  }
+
+  @include max-screen($bp-tablet) {
     @include wrapper;
   }
 }
@@ -34,7 +38,11 @@
   position: relative;
   text-align: center;
   height: -size(45px);
-  @include box-shadow($blur: (2px, 5px));
+  @include padding-horizontal($gutter);
+
+  @include screen($bp-tablet) {
+    @include box-shadow($blur: (2px, 5px));
+  }
 
   &:nth-child(2) {
     order: 1;
@@ -55,6 +63,10 @@
   height : -size(70px);
   width: -size(97px);
   @include box-shadow($blur: (2px, 5px));
+
+  @include max-screen($bp-tablet) {
+    display: none;
+  }
 }
 
 .products-navbar__text {
