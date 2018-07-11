@@ -179,6 +179,10 @@
 }
 
 .product-collage__sprite-button {
+  @include max-screen($bp-desktop) {
+    display: none !important;
+  }
+
   position: absolute;
   left: 0;
   right: 0;
