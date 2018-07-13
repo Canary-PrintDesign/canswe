@@ -1,0 +1,49 @@
+{% capture product_collection %}{{page.collection}}{% endcapture %}
+
+{% if page.collection %}
+  {% assign document = site[product_collection]  %}
+{% endif %}
+
+{% for data in document  %}
+
+  {% if data.title == page.title %}
+    {% unless forloop.first %}
+      {% assign prevurl = prev.url %}
+      {% assign prevtitle = prev.title %}
+    {% endunless %}
+
+    {% unless forloop.last %}
+      {% assign next = document[forloop.index] %}
+      {% assign nexturl = next.url %}
+    {% endunless %}
+  {% endif %}
+
+  {% assign prev = data %}
+{% endfor %}
+
+<script>
+  document.body.onkeyup = function(e) {
+    if (e.keyCode == '37') window.location = '{{prevurl}}';
+    if (e.keyCode == '39') window.location = '{{nexturl}}';
+  };
+</script>
+
+<div class="product-pager">
+  <div class="product-pager__navigation">
+    <div>
+      {% if prevurl %}
+        <a href="{{prevurl}}" class="product-pager__previous-link button button--yellow-link">
+          <span>⇦ {{ prevtitle }}</span>
+        </a>
+      {% endif %}
+    </div>
+
+    <div>
+      {% if nexturl %}
+        <a href="{{nexturl}}" class="product-pager__next-link button button--yellow-link">
+          <span>{{ next.title }} ⇨</span>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>

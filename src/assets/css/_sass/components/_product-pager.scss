@@ -1,0 +1,10 @@
+.product-pager {
+  @include wrapper;
+  @include margin-center;
+  @include margin-vertical($gutter--large);
+}
+
+.product-pager__navigation {
+  display: flex;
+  justify-content: space-between;
+}

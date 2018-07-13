@@ -1,7 +1,7 @@
 .featured-products {
   color: $color-text--light;
   background: $color-grey--dark;
-  @include padding-vertical($gutter--large, $gutter);
+  @include padding-vertical($gutter--xl);
 }
 
 .featured-products__container {
