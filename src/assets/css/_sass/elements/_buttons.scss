@@ -9,9 +9,9 @@
 .button {
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
   @include padding(12px, 15px);
   @include font-body;
-  @include box-shadow($blur: (2px, 5px));
 
   span {
     vertical-align: middle;
@@ -28,6 +28,10 @@
 
 a.button {
   text-decoration: none;
+}
+
+.button--shadow {
+  @include box-shadow($blur: (2px, 5px));
 }
 
 .button--yellow {
