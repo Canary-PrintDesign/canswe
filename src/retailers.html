@@ -20,18 +20,6 @@ permalink: retailers/index.html
 {% assign city = '' %}
 
 {% for retailer in site.data.retailers %}
-  {% comment %}
-  <!-- close previous city -->
-  {% if city != retailer.city %}
-    <!-- don't close before first city -->
-    {% if forloop.index != 1 %}
-      </div>
-    {% endif %}
-    <!-- /don't close before first city -->
-  {% endif %}
-  <!-- /close previous city -->
-  {% endcomment %}
-
   <!-- close previous province -->
   {% if province != retailer.province %}
     <!-- don't close before first province -->
@@ -52,15 +40,6 @@ permalink: retailers/index.html
       <div class="retailers__location-group">
   {% endif %}
   <!-- /check new province -->
-
-  {% comment %}
-  <!-- check new city -->
-  {% if city != retailer.city %}
-    {% assign city = retailer.city %}
-    <div class="city retailers__location-group" data-city="{{ city | safe }}">
-  {% endif %}
-  <!-- /check new city -->
-  {% endcomment %}
 
   {% include components/retailer.html retailer=retailer %}
 {% endfor %}
