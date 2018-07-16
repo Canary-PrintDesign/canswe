@@ -36,21 +36,13 @@
   }
 }
 
-.contact-page__section {
-  position: relative;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 80px;
-}
-
 .contact-page__form {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  height: 720px;
-  padding: 30px 30px 0;
-  margin: 60px auto 60px;
+  height: 680px;
+  margin-top: 120px;
+  margin-bottom: 120px;
   width: 800px;
   max-width: 95%;
   background: white;
