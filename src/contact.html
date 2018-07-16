@@ -4,50 +4,48 @@ permalink: /contact/index.html
 class: contact
 ---
 
-<section class="contact-page__section">
-  <header class="contact-hero">
-    <div class="contact-hero__intro">
-      <h1 class="contact-hero__title">Contact CAN&#8209;SWE</h1>
-      <p class="contact-hero__lead">
-        Use our contact form for wholesale inquiries. For retail inquiries, please
-        <a href='/retailers'>contact your local CAN-SWE retailer.</a>
-      </p>
-    </div>
-  </header>
+<header class="contact-hero">
+  <div class="contact-hero__intro">
+    <h1 class="contact-hero__title">Contact CAN&#8209;SWE</h1>
+    <p class="contact-hero__lead">
+      Use our contact form for wholesale inquiries. For retail inquiries, please
+      <a href='/retailers'>contact your local CAN-SWE retailer.</a>
+    </p>
+  </div>
+</header>
 
-  <!-- POST louisritchie.com will return a 200. You can test the success alert that way !-->
-  <form class="contact-page__form" method="post" action="http://louisritchie.com" id="ajax-contact">
-    <div class="contact-page__field">
-      <h2>Wholesale Inquiries Contact Form</h2>
-    </div>
+<!-- POST louisritchie.com will return a 200. You can test the success alert that way !-->
+<form class="contact-page__form container" method="post" action="http://louisritchie.com" id="ajax-contact">
+  <div class="contact-page__field">
+    <h2>Wholesale Inquiries Contact Form</h2>
+  </div>
 
-    <br />
+  <br />
 
-    <div class="contact-page__field">
-      <label for="name">Name</label>
-      <input name="name" id="name" />
-    </div>
- 
-    <div class="contact-page__field">
-      <label for="email">Email</label>
-      <input type="email" name="email" required id="email" />
-    </div>
- 
-    <div class="contact-page__field">
-      <label for="phone">Phone Number</label>
-      <input type="tel" name="phone" id="phone" />
-    </div>
- 
-    <div class="contact-page__textarea">
-      <label for="message">Your Message</label>
-      <textarea name="message" rows="8" required id="message"></textarea>
-    </div>
- 
-    <div class="contact-page__submit-wrapper">
-      <span>*Wholesale inquiries only</span>
-      <button class="button button--yellow" type="submit">Submit</button>
-    </div>
-  </form>
-</section>
+  <div class="contact-page__field">
+    <label for="name">Name</label>
+    <input name="name" id="name" />
+  </div>
+
+  <div class="contact-page__field">
+    <label for="email">Email</label>
+    <input type="email" name="email" required id="email" />
+  </div>
+
+  <div class="contact-page__field">
+    <label for="phone">Phone Number</label>
+    <input type="tel" name="phone" id="phone" />
+  </div>
+
+  <div class="contact-page__textarea">
+    <label for="message">Your Message</label>
+    <textarea name="message" rows="8" required id="message"></textarea>
+  </div>
+
+  <div class="contact-page__submit-wrapper">
+    <span>*Wholesale inquiries only</span>
+    <button class="button button--yellow" type="submit">Submit</button>
+  </div>
+</form>
 
 {% include components/map.html %}
