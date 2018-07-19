@@ -11,17 +11,17 @@
 }
 
 .about-hero__intro {
-  text-align: center;
   @include text-shadow;
+  text-align: center;
 }
 
 .about-hero__title {
-  color: $color-yellow;
-  font-weight: 600;
-  text-transform: uppercase;
   @include h1;
   @include font-display;
   @include text-shadow;
+  color: $color-yellow;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .about-page__section {
@@ -34,9 +34,13 @@
 }
 
 .about-page__header {
-
+  @include h2;
+  @include font-display;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 40px;
 }
 
 .about-page__copy {
-
+  line-height: 1.5;
 }
