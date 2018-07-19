@@ -1,16 +1,16 @@
-.contact-hero {
+.about-hero {
   align-items: center;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: linear-gradient(to top, -color($greys, 15), transparent 250px), url("/assets/img/pexels-photo-113339-forest-logs-nature.jpg");
+  background-image: linear-gradient(to top, -color($greys, 15), transparent 250px), url("/assets/img/morning-fog.jpg");
   color: $color-text--light;
   display: flex;
   height: -size(488px);
   justify-content: center;
 }
 
-.contact-hero__title {
+.about-hero__title {
   color: $color-yellow;
   font-weight: 600;
   text-transform: uppercase;
@@ -19,13 +19,12 @@
   @include text-shadow;
 }
 
-.contact-hero__intro {
+.about-hero__intro {
   text-align: center;
-  transform: translateY(-size(50px));
   @include text-shadow;
 }
 
-.contact-hero__lead {
+.about-hero__lead {
   line-height: 1.6;
 
   a {
@@ -34,7 +33,7 @@
   }
 }
 
-.contact-page__form {
+.about-page__form {
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -43,7 +42,7 @@
   margin-bottom: 120px;
   width: 800px;
 
-  .contact-page__field {
+  .about-page__field {
     display: flex;
     flex-flow: column;
 
@@ -56,7 +55,7 @@
     }
   }
 
-  .contact-page__textarea {
+  .about-page__textarea {
     label {
       display: block;
       margin-bottom: 10px;
@@ -69,7 +68,7 @@
   }
 
   @include screen($bp-tablet) {
-    .contact-page__field {
+    .about-page__field {
       flex-flow: row;
       align-items: center;
 
@@ -79,7 +78,7 @@
     }
   }
 
-  .contact-page__submit-wrapper {
+  .about-page__submit-wrapper {
     width: 100%;
     display: flex;
     justify-content: flex-end;
