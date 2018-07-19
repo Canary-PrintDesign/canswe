@@ -1,68 +1,51 @@
 ---
 layout: default
-permalink: /about/index.html
-class: about
+permalink: /contact/index.html
+class: contact
 ---
 
-<section class="about-page__section about-page__hero">
-  <header class="about-page__heading-large">
-    CANSWE was started on a dream.
-  </header>
-  
-  <div class="about-page__lead-wrapper">
-    <p class="about-page__lead">
-      Our 27 Retailers, over 10,000 Customers, and 40 years of business have moved us closer to reaching it.
+<header class="contact-hero">
+  <div class="contact-hero__intro container">
+    <h1 class="contact-hero__title">Contact CAN&#8209;SWE</h1>
+    <p class="contact-hero__lead">
+      Use our contact form for wholesale inquiries. For retail inquiries, please
+      <a href='/retailers'>contact your local CAN-SWE retailer.</a>
     </p>
   </div>
-</section>
+</header>
 
-<section class="about-page__section">
-  <header class="about-page__heading-small">
-    We love our customers, and they love us.
-  </header>
-  
-  <figure class="about-page__testimonial-container">
-    <div class="about-page__testimonial">
-      <blockquote class="about-page__copy-text about-page__testimonial-text">
-        <span class="about-page__drop-cap">"</span>
-        The Hurricane jacket has been a great purchase for the BC Rap Attack... Our firefighters are safer, and can operate in a greater range of conditions.
-        Our crew is happier and safer with CANSWE
-
-        <!-- By wrapper together the final word of the testimonial and the dropcap that follows it, we prevent the dropcap from ever sitting on a newline all alone !-->
-        <span>
-          garments.
-          <span class="about-page__drop-cap">"</span>
-        </span>
-      </blockquote>
-
-      <img class="about-page__testimonial-image" src="/assets/images/products/p002/live.jpg" />
-    </div>
-
-    <figcaption class="about-page__testimonial-attribution">
-      <em>Dave Grohl, Ministry of Forests & Wetlands Preservation</em>
-      <small><em>Barriere, BC</em></small>
-    </figcaption>
-  </figure>
-</section>
-
-<section class="about-page__section about-page__end-hero">
-  <header class="about-page__heading-large about-page__heading-large-yellow">
-    CAN-SWE is a company with grit.
-  </header>
-
-  <div class="about-page__story-wrapper">
-    <div class="about-page__story-text">
-      <span class="about-page__drop-cap">"</span>
-      One thing I learned during my 15-year career as a feller in the commercial logging industry 
-      was that good chainsaw garments were either overpriced, offered too little protection, or both!
-      CAN-SWE is my attempt to create affordable protective equipment that was safer and more durable than 
-      what was on the
-      <span>
-        market.
-        <span class="about-page__drop-cap">"</span>
-      </span>
-    </div>
-
-    <img class="about-page__story-portrait" src="//via.placeholder.com/340x400" />
+<!-- POST louisritchie.com will return a 200. You can test the success alert that way !-->
+<form class="contact-page__form container" method="post" action="http://louisritchie.com" id="ajax-contact">
+  <div class="contact-page__field">
+    <h2>Wholesale Inquiries Contact Form</h2>
   </div>
-</section>
+
+  <br />
+
+  <div class="contact-page__field">
+    <label for="name">Name</label>
+    <input name="name" id="name" />
+  </div>
+
+  <div class="contact-page__field">
+    <label for="email">Email</label>
+    <input type="email" name="email" required id="email" />
+  </div>
+
+  <div class="contact-page__field">
+    <label for="phone">Phone Number</label>
+    <input type="tel" name="phone" id="phone" />
+  </div>
+
+  <div class="contact-page__textarea">
+    <label for="message">Your Message</label>
+    <textarea name="message" rows="8" required id="message"></textarea>
+  </div>
+
+  <div class="contact-page__submit-wrapper">
+    <span>*Wholesale inquiries only</span>
+    <button class="button button--yellow" type="submit">Submit</button>
+  </div>
+</form>
+
+{% include components/map.html %}
