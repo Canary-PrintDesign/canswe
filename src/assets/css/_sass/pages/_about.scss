@@ -11,6 +11,11 @@
   margin-bottom: 120px;
 }
 
+.about__container {
+  @include wrapper;
+  @include margin-center;
+}
+
 .about-hero__intro {
   @include text-shadow;
   text-align: center;
@@ -66,7 +71,7 @@
     width: 80vw;
 
     @include screen($bp-tablet) {
-      height: 420px;
+      height: 315px;
       width: auto;
     }
 
