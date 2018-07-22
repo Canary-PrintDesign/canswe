@@ -30,7 +30,11 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: linear-gradient(184deg, white, white, transparent 1000px), url("/assets/img/forest-fog.jpg");
+  background-image: linear-gradient(184deg, white, white, transparent 1800px), url("/assets/img/forest-fog.jpg");
+
+  @include screen($bp-tablet) {
+    background-image: linear-gradient(184deg, white, white, transparent 1000px), url("/assets/img/forest-fog.jpg");
+  }
 }
 
 .about-page__section {
