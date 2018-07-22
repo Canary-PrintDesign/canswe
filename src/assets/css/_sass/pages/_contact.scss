@@ -10,6 +10,11 @@
   justify-content: center;
 }
 
+.contact__container {
+  @include wrapper;
+  @include margin-center;
+}
+
 .contact-hero__title {
   color: $color-yellow;
   font-weight: 600;
