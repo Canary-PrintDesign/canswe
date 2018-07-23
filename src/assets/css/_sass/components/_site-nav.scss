@@ -6,8 +6,9 @@
     @include flex-column-to-row($bp-desktop);
     position: absolute;
     width: auto;
-    top: 60px;
+    top: -size($size-header);
     right: 0;
+    margin-right: 10px;
 
     @include screen($bp-desktop) {
       align-self: center;
@@ -17,6 +18,7 @@
       width: auto;
       top: inherit;
       right: inherit;
+      margin-right: 0;
     }
   }
 
@@ -45,7 +47,7 @@
     @include padding-horizontal($gutter);
     @include transition;
     width: 100%;
-    padding: 0 30px 0 40px;
+    padding: 0 25px 0 50px;
     text-align: right;
 
     @include screen($bp-desktop) {
