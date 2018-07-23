@@ -1,9 +1,9 @@
 .contact-hero {
   align-items: center;
   background-size: cover;
-  background-position: center center;
+  background-position: top center;
   background-repeat: no-repeat;
-  background-image: linear-gradient(to top, -color($greys, 15), transparent 250px), url("/assets/img/pexels-photo-113339-forest-logs-nature.jpg");
+  background-image: linear-gradient(to top, -color($greys, 15), transparent 250px), url("/assets/img/mountain-clouds2.jpg");
   color: $color-text--light;
   display: flex;
   height: -size(488px);

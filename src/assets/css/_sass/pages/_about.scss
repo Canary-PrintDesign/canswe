@@ -1,9 +1,9 @@
 .about-hero {
   align-items: center;
   background-size: cover;
-  background-position: center center;
+  background-position: top center;
   background-repeat: no-repeat;
-  background-image: linear-gradient(to top, -color($greys, 15), transparent 250px), url("/assets/img/morning-fog.jpg");
+  background-image: linear-gradient(to top, -color($greys, 15), transparent 250px), url("/assets/img/sunrise-mountain-clouds.jpg");
   color: $color-text--light;
   display: flex;
   height: -size(488px);
@@ -62,7 +62,7 @@
 }
 
 .about-page__images {
-  display: flex;  
+  display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   height: 50vw;
