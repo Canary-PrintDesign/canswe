@@ -8,6 +8,8 @@
   cursor: pointer;
   display: flex;
   z-index: 1000;
+  background-color: $color-grey--dark;
+  margin-right: $gutter;
   @include padding($gutter);
 
   @media screen and (min-width: $bp-desktop) {

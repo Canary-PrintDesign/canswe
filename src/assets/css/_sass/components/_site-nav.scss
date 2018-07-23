@@ -8,7 +8,7 @@
     width: auto;
     top: -size($size-header);
     right: 0;
-    margin-right: 10px;
+    margin-right: $gutter;
 
     @include screen($bp-desktop) {
       align-self: center;
@@ -47,7 +47,7 @@
     @include padding-horizontal($gutter);
     @include transition;
     width: 100%;
-    padding: 0 25px 0 50px;
+    padding: 0 25px 0 35px;
     text-align: right;
 
     @include screen($bp-desktop) {
