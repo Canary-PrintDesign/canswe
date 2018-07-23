@@ -2,13 +2,9 @@
   width: 100%;
   z-index: 10;
   height: -size($size-header);
-  background-color: $color-grey--dark;
-  position: fixed;
 
-  @include screen($bp-desktop) {
-    background-color: transparent;
-    position: absolute;
-  }
+  background-color: transparent;
+  position: absolute;
 }
 
 .site-header__container {
@@ -31,15 +27,11 @@
   .site-logo__name {
     margin: 0;
 
-    @include screen($bp-desktop) {
-      @include image-replacement;
-    }
+    @include image-replacement;
   }
 
   .site-logo svg {
-    @include screen($bp-desktop) {
-      height: -size(93px);
-    }
+    height: -size(93px);
   }
 }
 
