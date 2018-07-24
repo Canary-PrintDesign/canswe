@@ -4,24 +4,29 @@
 
 */
 
+.site-logo {
+  @include wrapper;
+  padding-top: 20px;
+
+  @include screen($bp-desktop) {
+    padding: 0;
+  }
+}
+
 .site-logo__name {
   @include font-display;
   @include h5;
 }
 
 .site-logo svg {
-  display: none;
+  display: block;
+  height: 100%;
 
-  @include screen($bp-desktop) {
-    display: block;
-    height: 100%;
+  .leaf {
+    fill: #e2221e;
+  }
 
-    .leaf {
-      fill: #e2221e;
-    }
-
-    .text {
-      fill: #17245d;
-    }
+  .text {
+    fill: #17245d;
   }
 }

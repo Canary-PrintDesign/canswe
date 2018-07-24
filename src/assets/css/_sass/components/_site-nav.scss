@@ -4,20 +4,39 @@
     background-color: $color-grey--dark;
     @include box-shadow;
     @include flex-column-to-row($bp-desktop);
+    position: absolute;
+    width: auto;
+    top: -size($size-header);
+    right: 0;
+    margin-right: $gutter;
 
     @include screen($bp-desktop) {
       align-self: center;
       display: flex;
+      justify-content: center;
+      position: inherit;
+      width: auto;
+      top: inherit;
+      right: inherit;
+      margin-right: 0;
     }
   }
 
   .site-nav__item {
-    &:first-of-type {
-      @include padding-left($gutter);
-    }
+    display: flex;
+    width: 100%;
 
-    &:last-of-type {
-      @include padding-right($gutter);
+    @include screen($bp-desktop) {
+      display: inline-block;
+      width: unset;
+
+      &:first-of-type {
+        @include padding-left($gutter);
+      }
+
+      &:last-of-type {
+        @include padding-right($gutter);
+      }
     }
   }
 
@@ -27,8 +46,14 @@
     line-height: -size($size-header);
     @include padding-horizontal($gutter);
     @include transition;
+    width: 100%;
+    padding: 0 25px 0 35px;
+    text-align: right;
 
     @include screen($bp-desktop) {
+      width: inherit;
+      padding: 0 20px;
+      text-align: center;
       line-height: -size(70px);
     }
 
@@ -45,19 +70,21 @@
   }
 
   .site-nav > .site-nav__item:last-child {
-    position: relative;
-    padding-left: $gutter;
+    @include screen($bp-desktop) {
+      position: relative;
+      padding-left: $gutter;
 
-    &::before {
-      content: '';
-      background-image: url('../icons/location.svg');
-      background-repeat: no-repeat;
-      background-position: 50% 100%;
-      width: 42px;
-      height: 100%;
-      position: absolute;
-      display: inline-block;
-      left: 0;
+      &::before {
+        content: '';
+        background-image: url('../icons/location.svg');
+        background-repeat: no-repeat;
+        background-position: 50% 100%;
+        width: 42px;
+        height: 100%;
+        position: absolute;
+        display: inline-block;
+        left: 0;
+      }
     }
   }
 }
