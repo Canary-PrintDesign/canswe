@@ -4,6 +4,15 @@
 
 */
 
+.site-logo {
+  @include screen($bp-desktop) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: -20px;
+  }
+}
+
 .site-logo__name {
   @include font-display;
   @include h5;
