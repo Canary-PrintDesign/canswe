@@ -21,10 +21,18 @@
 .site-logo__icon {
   background-size: cover;
   background-image: url('/assets/icons/Canswe-WHT.svg');
+  position: absolute;
+  top: -8px;
+  left: -6px;
+  height: 74px;
+  width: 102px;
 
   @include screen($bp-desktop) {
     height: 148px;
     width: 204px;
     background-image: url('/assets/icons/Canswe-CMYK.svg');
+    position: static;
+    top: unset;
+    left: unset;
   }
 }

@@ -39,11 +39,5 @@
       @include image-replacement;
     }
   }
-
-  .site-logo svg {
-    @include screen($bp-desktop) {
-      height: -size(93px);
-    }
-  }
 }
 
