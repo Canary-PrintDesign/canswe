@@ -28,6 +28,10 @@
   line-height: -size($size-header);
   text-align: center;
 
+  @include screen($bp-desktop) {
+    margin-left: -20px;
+  }
+
   .site-logo__name {
     margin: 0;
 
