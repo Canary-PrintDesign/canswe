@@ -58,6 +58,10 @@
   @include small;
 }
 
+.product-grid__item-image {
+  height: 100%;
+}
+
 .product-grid__item-image::after {
   content: '';
   display: block;
