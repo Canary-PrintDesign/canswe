@@ -9,19 +9,13 @@
   @include h5;
 }
 
-.site-logo svg {
-  display: none;
+.site-logo__icon {
+  background-size: cover;
+  background-image: url('/assets/icons/Canswe-WHT.svg');
 
   @include screen($bp-desktop) {
-    display: block;
-    height: 100%;
-
-    .leaf {
-      fill: #e2221e;
-    }
-
-    .text {
-      fill: #17245d;
-    }
+    height: 148px;
+    width: 204px;
+    background-image: url('/assets/icons/Canswe-CMYK.svg');
   }
 }
