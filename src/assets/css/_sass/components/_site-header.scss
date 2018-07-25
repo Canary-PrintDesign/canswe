@@ -34,6 +34,8 @@
 
   .site-logo__name {
     margin: 0;
+    padding-left: 81px;
+    padding-right: 60px;
 
     @include screen($bp-desktop) {
       @include image-replacement;
