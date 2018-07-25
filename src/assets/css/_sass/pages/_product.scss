@@ -44,10 +44,15 @@
   position: relative;
   background-color: -color($greys, 95);
   display: flex;
+  flex-flow: column;
   justify-content: space-between;
   @include margin-center;
   @include padding($gutter);
   @include wrapper;
+
+  @include screen($bp-tablet) {
+    flex-flow: row;
+  }
 
   @include screen($bp-large) {
     padding: -size(26px);
@@ -56,6 +61,14 @@
 
   .product-collage__image {
     overflow: hidden;
+
+
+    &:last-child {
+      padding-top: 20px;
+      @include screen($bp-tablet) {
+        display: none;
+      }
+    }
 
     img {
       min-width: 100%;
