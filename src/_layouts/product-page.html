@@ -25,11 +25,12 @@ layout: default
       </script>
       <button class="product-collage__sprite-button button button--link button--orange-link">Click here to spin</button>
     </div>
-  {% else %}
-    <div class="product-collage__image product-collage__image--sprite">
-      <img src="/assets/images/products/{{ page.sku | downcase }}/01.jpg">
-    </div>
+
   {% endif %}
+  <div class="product-collage__image product-collage__image--sprite">
+    <img src="/assets/images/products/{{ page.sku | downcase }}/01.jpg">
+  </div>
+
 </div>
 
 <div class="product-body">
