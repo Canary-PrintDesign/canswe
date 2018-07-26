@@ -5,7 +5,9 @@
 */
 
 .back-to-top-link {
-  display: none !important;
+  @media screen and (max-width: $bp-desktop) {
+    display: none !important;
+  }
 
   @include screen($bp-desktop) {
     position: fixed;
