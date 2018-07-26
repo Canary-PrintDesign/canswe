@@ -12,7 +12,6 @@
 
 .site-footer__colophon {
   color: $color-text--light;
-  @include padding-bottom($gutter--large);
 
   .site-logo {
     fill: $color-grey--light;
@@ -39,6 +38,8 @@
 }
 
 .site-footer-nav {
+  margin-top: 40px; 
+
   .site-footer-nav__item {
     @include max-screen($bp-desktop) {
       display: block;
