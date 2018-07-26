@@ -6,12 +6,17 @@
 }
 
 .product-grid__item-wrapper {
-  flex-basis: calc((100% / 3) - 20px);
   flex-grow: 0;
   flex-shrink: 1;
   max-width: 400px;
   height: 255px;
+  margin-right: auto;
+  margin-left: auto;
   @include margin-bottom(20px)
+
+  @include screen($bp-tablet) {
+    flex-basis: calc((100% / 3) - 20px);
+  }
 }
 
 .product-grid__item {
