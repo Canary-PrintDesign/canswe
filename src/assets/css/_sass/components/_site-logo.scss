@@ -19,21 +19,23 @@
   white-space: nowrap;
 }
 
-.site-logo__icon {
-  background-size: cover;
-  background-image: url('/assets/icons/Canswe-WHT.svg');
-  position: absolute;
-  top: -1px;
-  left: -2px;
-  height: 59px;
-  width: 81px;
+.site-header__link {
+  .site-logo__icon {
+    background-size: cover;
+    background-image: url('/assets/icons/Canswe-WHT.svg');
+    position: absolute;
+    top: -1px;
+    left: -2px;
+    height: 59px;
+    width: 81px;
 
-  @include screen($bp-desktop) {
-    height: 148px;
-    width: 204px;
-    background-image: url('/assets/icons/Canswe-CMYK.svg');
-    position: static;
-    top: unset;
-    left: unset;
+    @include screen($bp-desktop) {
+      height: 148px;
+      width: 204px;
+      background-image: url('/assets/icons/Canswe-CMYK.svg');
+      position: static;
+      top: unset;
+      left: unset;
+    }
   }
 }
