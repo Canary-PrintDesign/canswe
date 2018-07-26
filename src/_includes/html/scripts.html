@@ -10,14 +10,15 @@
     if (spriteSpin.length > 0 && window.rotator === true) {
       spriteSpin.spritespin({
         source: SpriteSpin.sourceArray('/assets/images/products/'+window.sku+'/{frame}.jpg', {
-          frame: [1, 15],
+          frame: [1, 16],
         }),
+        frame: 11,
         frames: 16,
         frameTime: 200,
         animate: true,
         reverse: true,
         loop: false,
-        stopFrame: 1,
+        stopFrame: 12,
       });
     }
 
