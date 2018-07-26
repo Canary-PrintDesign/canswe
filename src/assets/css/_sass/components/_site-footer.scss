@@ -19,22 +19,20 @@
     @include flex-column;
 
     .site-logo__name {
-      order: 2;
+      order: 1;
     }
 
-    svg {
-      order: 1;
-      display: block;
-      height: -size(81px);
-      @include margin-bottom(20px);
-
-      .text, .leaf {
-        fill: #ffffff;
-      }
+    .site-logo__icon {
+      margin: auto;
+      background-size: cover;
+      background-image: url('/assets/icons/Canswe-WHT.svg');
+      height: 118px;
+      width: 162px;
     }
   }
 
   a {
+    order: 2;
     color: $color-yellow;
     text-decoration: none; @include tiny;
   }
