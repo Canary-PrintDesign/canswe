@@ -3,6 +3,7 @@ category: safety-pants
 sub-category: 3600
 sku: P002
 title: Classic Pro
+mainmaterial: 100% Denim
 description: The time honoured Classic Pro (previously Denim Pro) would make your Grandad proud. Rugged 14oz denim is very durable and wears like a work jean. All the benefits of 100% cotton; break these in and you wont look back.
 rotator: true
 specs:

@@ -3,6 +3,7 @@ category: safety-pants
 sub-category: 3600
 sku: P004
 title: Half 'n' Half Pro
+mainmaterial: 50% Knit Poly <br> 50% Nylon
 description: If you are looking for some ventilation in the Nylon Pro we can meet half way with the Half 'n' Half Pro (previously Nylon/Poly Pro 3600). Dubbed the "Half Half" this pant keeps the snow and rain off the front and lets the heat out the back.
 rotator: true
 specs:

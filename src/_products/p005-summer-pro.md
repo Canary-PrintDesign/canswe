@@ -3,6 +3,7 @@ category: safety-pants
 sub-category: 3600
 sku: P005
 title: Summer Pro
+mainmaterial: 100% Cotton Drill
 description: The Summer Pro (previously Drill Cotton Pro 3600) is a welcome addtion for the warm season. 100% cotton wicks moisture and provides great ventilation for cool comfortable protection.
 rotator: true
 specs:

@@ -3,6 +3,7 @@ category: safety-pants
 sub-category: chaps
 sku: P008B
 title: Chap Pro Backpad
+mainmaterial: See Product Details
 description: Easy on Easy off - the Chap Pro 3600 with Backpad is the most robust chap on the market and is great for intermittent use. Whether you are a commercial faller or out gathering firewood for the winter, these will help get you home with all your legs.
  for added protection.
 

@@ -4,6 +4,7 @@ category: safety-pants
 sub-category: 3600
 sku: P001
 title: Faller's Poly Pro
+mainmaterial: 100% Knit Polyester
 description: >
   <p> The Faller's Poly Pro (previously known as Poly Pro 3600) is the industry standard for commercial and recreational sawyers, and is a favorite with  consumers. This all season pant is light-weight and breathable with excellent range of motion.
   <p> The P001B Faller's Poly Pro Backpad (previously Poly Pro 3600 Backpad) offers the additional protection of ankle-to-knee wrapping around the calf.
