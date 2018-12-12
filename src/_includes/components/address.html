@@ -1,5 +1,5 @@
 <span itemprop="address" itemscope itemtype="//schema.org/PostalAddress"{% if include.class-prefix %} class="{{ include.class-prefix }}__address address"{% endif %}>
   <span itemprop="streetAddress"{% if include.class-prefix %} class="{{ include.class-prefix }}__address-street address__street"{% endif %}>{{ include.item.address }}</span>
-  <span itemprop="addressLocality"{% if include.class-prefix %} class="{{ include.class-prefix }}__address-locality address__locality"{% endif %}>{{ include.item.city }}, {{ include.item.province }}</span>
+  <span itemprop="addressLocality"{% if include.class-prefix %} class="{{ include.class-prefix }}__address-locality address__locality"{% endif %}>{{ include.item.city }}, {{ include.item.province_abbreviation }}</span>
   <span itemprop="postalCode"{% if include.class-prefix %} class="{{ include.class-prefix }}__address-postal address__postal"{% endif %}>{{ include.item.postal_code }}</span>
 </span>
