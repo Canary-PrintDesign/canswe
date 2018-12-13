@@ -5,7 +5,9 @@
 
 # TEAM
 
-[NAME] - [Role] - [Handle]
+[Adam J. Piechnik @ Canary Print + Design] - [Manager] - [adam@canaryprint.ca]
+[Gregory Danes] - [Lead Programmer/Developer] - [https://github.com/gregdaynes]
+[Louis Ritchie] - [Programmer/Developer] - [https://github.com/LouisRitchie]
 
 # SITE
 
