@@ -1,0 +1,19 @@
+{
+    "name": "Canswe",
+    "short_name": "Canswe",
+    "icons": [
+        {
+            "src": "/favicon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon/android-chrome-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#e9512f",
+    "background_color": "#e9512f",
+    "display": "standalone"
+}
