@@ -74,7 +74,7 @@
 
   .family-operated__cluster-content {
     @include screen($bp-desktop) {
-      @include padding-top($gutter--xl);
+      @include padding-top($gutter--large);
     }
   }
 }
