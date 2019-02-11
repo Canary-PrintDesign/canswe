@@ -26,5 +26,5 @@ specs:
     - 'Three 1" quick-release buckles in back (Regular Version)'
   misc:
     - 100% 420 Denier Nylon shell
-    - Light weight at 2.3lb / 1162g (size 34-36)
+    - Light weight at 1.9lb / 875g (Universal Sizing)
 ---

@@ -27,5 +27,5 @@ specs:
     - Full wrap safety pad wraps around calf from ankle to knee (Backpad Version)
   misc:
     - 100% 420 Denier Nylon shell
-    - Light weight at 2.3lb / 1162g (size 34-36)
+    - Light weight at 2.3lb / 1045g (Universal Sizing)
 ---
