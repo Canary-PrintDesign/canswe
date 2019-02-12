@@ -37,7 +37,6 @@ class: products
       <p class="product-category__lead">{{ category.lead }}</p>
     </header>
 
-
     <div class="product-category__article">
       <input type="checkbox" class="product-category__checkbox" name="{{ category.safe }}-toggle" id="{{ category.safe }}-toggle" />
 
@@ -48,12 +47,30 @@ class: products
       <label class="product-category__label" for="{{ category.safe }}-toggle">Read More {% include icons/logic-or.svg %}</label>
     </div>
 
-    <div class="product-category__grid product-grid">
-      {% for item in site.products %}
-        {% if item.category == category.safe %}
-          {% include components/products-page-product.html item=item %}
-        {% endif %}
+    {% if category.sub-categories %}
+      {% for sub-cat in category.sub-categories %}
+        <header class="product-category__sub-category">
+          <h3 class="inline-header">{{ sub-cat.name }}</h3> {{ sub-cat.lead }}
+        </header>
+
+        <div class="product-category__grid product-grid">
+          {% for item in site.products %}
+            {% if item.category == category.safe %}
+              {% if item.sub-category == sub-cat.safe %}
+                {% include components/products-page-product.html item=item %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
       {% endfor %}
-    </div>
+    {% else %}
+      <div class="product-category__grid product-grid">
+        {% for item in site.products %}
+          {% if item.category == category.safe %}
+            {% include components/products-page-product.html item=item %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
 {% endfor %}
