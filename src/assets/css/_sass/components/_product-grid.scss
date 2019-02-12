@@ -1,7 +1,6 @@
 .product-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   @include flex-column-to-row($bp-tablet);
 }
 
@@ -16,6 +15,11 @@
 
   @include screen($bp-tablet) {
     flex-basis: calc((100% / 3) - 20px);
+  }
+
+  @include screen($bp-desktop) {
+    margin-right: 20px;
+    margin-left: 0;
   }
 }
 

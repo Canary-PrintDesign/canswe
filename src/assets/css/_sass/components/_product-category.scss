@@ -16,6 +16,14 @@
   text-align: center;
 }
 
+.product-category__sub-category {
+  text-align: center;
+
+  @include screen($bp-tablet) {
+    text-align: left;
+  }
+}
+
 .product-category__title {
   font-weight: 600;
   text-transform: uppercase;
