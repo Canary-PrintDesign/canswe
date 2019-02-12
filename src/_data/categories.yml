@@ -23,6 +23,16 @@
 
     <p>Distinctive high visibility red or gold pocket flaps give an added
     margin of safety to the user.
+  sub-categories:
+    - name: 3600 TCS
+      safe: 3600
+      lead: Meets WCB PPE 1997
+    - name: 4100 TCS
+      safe: 4100
+      lead: Exceeds WCB PPE 1997
+    - name: Chaps
+      safe: chaps
+      lead: Meets WCB PPE 1997
 
 - name: Hurricane Rainwear
   safe: rainwear
