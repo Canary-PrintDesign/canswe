@@ -62,7 +62,33 @@ permalink: retailers/index.html
     // The marker, positioned at Uluru
     var marker = new google.maps.Marker({position: uluru, map: map});
 
+    var infowindow = new google.maps.InfoWindow();
+
     map.data.loadGeoJson ('/assets/map/retailers.json');
+
+    map.data.addListener('click', function(event) {
+      var dealerName = event.feature.getProperty("dealer_name");
+      var city = event.feature.getProperty("city");
+      var address = event.feature.getProperty("address");
+      var postalCode = event.feature.getProperty("postal_code");
+      var phone = event.feature.getProperty("phone");
+
+      var infoWindowContent = [];
+      infoWindowContent.push('<div style="retailers-map__window">');
+      infoWindowContent.push('<span class="retailers-map__dealer-name">' + dealerName + '</span>');
+      infoWindowContent.push('<span class="retailers-map__city">' + city + '</span>');
+      infoWindowContent.push('<span class="map_address">' + address + '</span>');
+      infoWindowContent.push('<span class="retailers-map__postal-code">' + postalCode +'</span>');
+      infoWindowContent.push('<span class="retailers-map__phone">Phone <a href="tel:'+phone+'">' + phone +'</a></span>');
+      infoWindowContent.push('</div>');
+
+      infowindow.setContent(infoWindowContent.join(''));
+      // position the infowindow on the marker
+      infowindow.setPosition(event.feature.getGeometry().get());
+      // anchor the infowindow on the marker
+      infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
+      infowindow.open(map);
+    });
   }
 </script>
 <script async defer
