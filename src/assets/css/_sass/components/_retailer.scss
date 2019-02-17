@@ -143,3 +143,22 @@
   width: 100%;
   height: 500px;
 }
+
+.retailers-map__dealer-name {
+  display: block;
+  font-weight: bold;
+  @include margin-bottom($gutter--small);
+  @include h5;
+}
+
+.retailers-map__city,
+.map_address,
+.retailers-map__postal-code {
+  display: block;
+}
+
+.retailers-map__phone {
+  display: block;
+  font-weight: bold;
+  @include margin-top($gutter--small);
+}
